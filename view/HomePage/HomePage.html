@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History Website</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="./HomePage.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class=" mw-100 mh-100" style="font-family: 'Unica One', cursive;">
+        <div class="text-container d-flex">
+            <h1 class="">Viet Nam History</h1>
+        </div>
+        <div style="height: 100%;">
+
+            <!-- Thanh navbar -->
+            <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: black;">
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a class="nav-link h3" href="#"><i class="bi bi-house-fill"></i></a>
+                    </li>
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle h3" href="#" id="navbardrop" data-toggle="dropdown">
+                            Events
+                </a>
+                        <div class="dropdown-menu ">
+                            <a class="dropdown-item  list-group-item-action list-group-item-warning" href="#">List Of Events</a>
+                            <a class="dropdown-item list-group-item-action list-group-item-warning" href="#">Add Events</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle h3 " href="#" id="navbardrop" data-toggle="dropdown">
+                  Character
+                </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item  list-group-item-action list-group-item-warning" href="#">List Of Character</a>
+                            <a class="dropdown-item  list-group-item-action list-group-item-warning" href="#">Add Characters</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class=" navbar-nav ml-auto">
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle h5 " href="#" id="navbardrop" data-toggle="dropdown"><i class="h3 bi bi-person-circle"></i>
+                  
+                </a>
+                        <div class="dropdown-menu ">
+                            <a class="dropdown-item  list-group-item-action list-group-item-warning" href="#">Log-in</a>
+                            <a class="dropdown-item  list-group-item-action list-group-item-warning" href="#">Register</a>
+                        </div>
+                    </li>
+                    <li class="btn btn-danger h5">
+                        Log-out
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Ảnh content page -->
+            <div class=" " style="background-image: url(/./wikiHistory/view/HomePage/Image/content1.jpg);height: 55px; background-size: 200px; ">.</div>
+
+            <!-- Tóm tắt và video -->
+            <div class=" " style="display: flex; width: 100%;height: 100%; ">
+                <div class=" col-sm-3 " style="background-image: radial-gradient(circle, #000000, #160b0a, #21150c, #281e0c, #29290f); width: 40%; ">
+                    <p class="h5 text-secondary" style="text-align: center;font-weight: bold;">Giới thiệu lịch sử Việt Nam</p>
+                    <br>
+                    <p class="text-secondary">- Lịch sử Việt Nam nếu tính từ lúc có mặt con người sinh sống thì đã có hàng vạn năm trước Công nguyên, còn tính từ khi cơ cấu nhà nước được hình thành thì mới khoảng từ 700 năm trước công nguyên.</p>
+                    <p class="text-secondary">- Đến thời kỳ đồ sắt, vào khoảng thế kỷ 8 TCN đã xuất hiện nhà nước đầu tiên của người Việt trên miền Bắc Việt Nam ngày nay. Theo sử sách, đó là Nhà nước Văn Lang của các vua Hùng. Thời kỳ Vua Hùng được nhiều người ghi nhận là quốc
+                        gia có tổ chức đầu tiên của người Việt Nam, bắt đầu với truyền thuyết Con Rồng cháu Tiên mà người Việt Nam tự hào truyền miệng từ đời này qua đời khác.</p>
+                </div>
+                <div class="d-flex justify-content-end" style="width: 100%;">
+                    <video width="100% " height="100%" autoplay muted>
+                        <source src="./video/video.mp4 " type="video/mp4 ">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <!-- Link Sự kiện và Nhân vật -->
+        <div class="col-container " style="display:flex;height: 770px;">
+            <div class="d-flex justify-content-center align-items-center col-sm-6  " style="background-image: url(./Image/Event.jpg); background-size: 100% 100%">
+                <a class="h1 text-secondary p-0 mb-5  text-white" href="#" style="text-decoration: none;">Event</a>
+
+            </div>
+
+            <div class="d-flex justify-content-center align-items-center col-sm-6 " style="background-image: url(./Image/Auco.jpg); background-size: 100% 100%;">
+                <a class="h1 text-secondary p-0 mb-5 text-white" href="#" style="text-decoration: none;">Character</a>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
