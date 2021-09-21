@@ -21,20 +21,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 
 <body>
     <div class=" mw-100 mh-100" style="font-family: 'Unica One', cursive;">
         <div class="text-container d-flex">
-            <h1 class="">Viet Nam History</h1>
+            <h1 class="mb-0">VietNam History</h1>
         </div>
         <div style="height: 100%;">
-
             <!-- Thanh navbar -->
-            <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: black;">
+            <nav class="navbar navbar-expand-sm navbar-dark pl-0" style="background-color: black;">
                 <ul class="navbar-nav">
-                    <li class="nav-item ">
-                        <a class="nav-link h3" href="#"><i class="bi bi-house-fill"></i></a>
+                    <li class="nav-item">
+                        <img class="" src="./Image/logo.png" alt="" style="width: 100px; height: 50px;object-fit: cover;">
                     </li>
                     <li class="nav-item dropdown ">
                         <a class="nav-link dropdown-toggle h3" href="#" id="navbardrop" data-toggle="dropdown">
@@ -65,8 +66,8 @@
                             <a class="dropdown-item  list-group-item-action list-group-item-warning" href="#">Register</a>
                         </div>
                     </li>
-                    <li class="btn btn-danger h5">
-                        Log-out
+                    <li class="btn btn-danger h6">
+                        Logout
                     </li>
                 </ul>
             </nav>
@@ -92,7 +93,7 @@
         </div>
 
         <!-- Link Sự kiện và Nhân vật -->
-        <div class="col-container " style="display:flex;height: 770px;">
+        <!-- <div class="col-container " style="display:flex;height: 770px;">
             <div class="d-flex justify-content-center align-items-center col-sm-6  " style="background-image: url(./Image/Event.jpg); background-size: 100% 100%">
                 <a class="h1 text-secondary p-0 mb-5  text-white" href="#" style="text-decoration: none;">Event</a>
 
@@ -102,8 +103,25 @@
                 <a class="h1 text-secondary p-0 mb-5 text-white" href="#" style="text-decoration: none;">Character</a>
 
             </div>
+        </div> -->
+        <div class="d-flex">
+            <figure class="snip1573">
+                <img src="/wikiHistory/view/HomePage/Image/Event.jpg" alt="sample89" />
+                <figcaption>
+                    <h1>Event</h1>
+                </figcaption>
+                <a href="#"></a>
+            </figure>
+            <figure class="snip1573 hover "><img src="./Image/Auco.jpg" style="height: 752px;" />
+                <figcaption>
+                    <h1>Character</h1>
+                </figcaption>
+                <a href="#"></a>
+            </figure>
         </div>
     </div>
+
+    <script src="./app.js"></script>
 </body>
 
 </html>
