@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.infor-character{
+    background-color: lightslategrey;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+}
+
+.img-character{
+    background-color: cadetblue;
+
+    width: 60%;
+    height: 400px;
+
+}
+
+.boxText{
+
+    width: 40%;
+    height: auto;
+
+    margin: 15px;
+}
+
+.text-group{
+    padding: 10px;
+}
+.text-group p{
+    padding-right: 20px;
+}
+
+div.life-character{
+    /* background-color: darkcyan; */
+
+    margin-top: 50px;
+}
+
+div.group-life{
+    border-width: 2px;
+   border-style: solid;
+
+   border-radius: 5px;
+}
+
+.group-life{
+    /* background-color: darkgreen; */
+
+    
+    
+    margin-top: 80px;
+}
+
+.time-life{
+    padding-left: 30px;
+}
+
+.img-life{
+    background-color: darkgrey;
+
+    height: 300px;
+}
+
+.details{
+    padding-left: 50px;
+}

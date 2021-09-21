@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container-fluid" style="margin-bottom: 10px;">
+        <div class="mx-auto jumbotron text-center display-5" style="position: relative;">
+            <h1>Event details</h1>
+        </div>
+
+        <div class="box-event d-flex bg-dark" style="height: 645px;">
+            <div class="event w-50 bg-warning">
+                <div class="d-flex">
+                    <div class="name bg-danger col-sm-6" >
+                        <h4>Name</h4>
+                    </div>
+                    <div class="date bg-info col-sm-6">
+                        <h4>Date</h4>
+                    </div>
+                </div>
+                <div class="image h-25 bg-dark">
+                    <img src="" alt="">
+                </div>
+                <div class="location bg-info" style="height: 30px;">
+                    <h5>Đia điểm: </h5>
+                </div>
+                <div class="introduction h-25 bg-dark">
+                    <p>Khái quát chung: </p>
+                </div>
+                <div class="result bg-info" style="height: 257px;">
+                    <p>Kết quả và ý nghĩa lịch sử</p>
+                </div>
+            </div>
+            <div class="details col-sm-8 bg-success"></div>
+        </div>
+        <div class="comment bg-secondary" style="height: 450px; padding: 0px 20px 20px 20px">
+            <div class=" text-center">
+                <h2>Bình luận</h2>
+            </div>
+
+            <div class="name-user">
+                <h6 class="pl-1">name</h6>
+            </div>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Viết bình luận..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+
+                    <div class="input-group-append"></div>
+                    <button class="btn btn-outline-secondary dropdown-toggle bg-warning" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp; Đánh giá! &nbsp;</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" >5 </a>
+                        <a class="dropdown-item" >4 </a>
+                        <a class="dropdown-item" >3 </a>
+                        <a class="dropdown-item" >2 </a>
+                        <a class="dropdown-item" >1 </a>
+                    </div>
+
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary bg-success" type="button">&emsp;Gửi&emsp;</button>
+                    </div>
+                </div>
+                <div class=" bg-white" style="height: 70%; border-radius: 5px;">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
