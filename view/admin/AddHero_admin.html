@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/index.css">
+    <title>Thêm mới nhân vật lịch sử</title>
+</head>
+<body>
+   
+     <h5 class="mx-auto d-flex justify-content-center display-4"><p> Thêm mới nhân vật lịch sử  </p></h5> 
+            <form action="" class="border border-dark border-2 w-75 mx-auto">
+                <table class="table table-borderless row no-gutters" width="100%"> 
+                    <div class="form-group form-group-lg">
+                    <thead>
+                    <tbody >
+                        <tr>
+                            <td width="20%" > Tên nhân vật </td>
+                            <td> <input type="text" id ="name" placeholder="Điền tên tại đây" required 
+                            minlength="4" class="form-control" style="width: 100%" > </td>
+                        </tr>
+                        <tr> <td> Ảnh nhân vật </td>
+                            <td> <input  type="file" id ="image" > </td>
+                        </tr>
+                        <tr>
+                            <td> Chức danh </td>
+                            <td> <input type="text" id="title" required 
+                                minlength="4" maxlength="10" class="form-control" style="width: 100%" > </td>
+                        </tr>
+                        <tr>
+                            <td> Ngày sinh </td>
+                            <td> <input type="date" id="birth" required class="form-control" style="width: 100%"> </td>
+                        </tr>
+                        <tr>
+                            <td> Ngày mất </td>
+                            <td> <input type="date" id="death" required class="form-control" style="width: 100%"> </td>
+                        </tr>
+                        <tr>
+                            <td> Quê quán </td>
+                            <td> <input type="text" id ="adress" required class="form-control" style="width: 100%" > </td>
+                        </tr>
+                        <tr>
+                            <td> Khái quát nhân vật </td>
+                            <td> <textarea id ="general" rows="10" class="form-control" style="width: 100%" > </textarea> </td>
+                        </tr>
+                        <tr>
+                            <td> Mô tả chi tiết nhân vật </td>
+                            <td> <textarea id ="detail" rows="10" class="form-control" style="width: 100%" ></textarea> </td>
+                        </tr>
+                        <tr> 
+                            <td> </td>
+                            <td> <button type="submit" class="btn btn-primary float-right"> Hoàn tất </button> </td>  
+                        </tr>
+                    </tbody>
+                    </div>
+                </table>
+            </form>
+    
+    
+    
+</body>
+</html>
