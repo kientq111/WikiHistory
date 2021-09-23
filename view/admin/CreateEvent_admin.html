@@ -31,50 +31,49 @@
     <div class=" mw-100 mh-100" style="font-family: 'Unica One', cursive;background-image: radial-gradient(circle, #000000, #160b0a, #21150c, #281e0c, #29290f);">
         <div style="height: 100%;">
 
-
-            <!-- Thanh navbar -->
-            <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: black;">
-                <ul class="navbar-nav">
+            <!-- thanh nav-bar -->
+            <nav class="navbar navbar-expand-sm navbar-dark pl-0" style="background-color: black;">
+                <ul class="navbar-nav d-flex">
                     <li class="nav-item ">
-                        <img class="" src="/wikiHistory/view/HomePage/Image/logo.png" alt="" style="width: 100px; height: 50px;object-fit: cover;">
+                        <img class="" src="../admin/image/logo.png" alt="" style="width: 100px; height: 50px;object-fit: cover;">
                     </li>
                     <li class="nav-item dropdown ">
-                        <a class="nav-link dropdown-toggle h3" href="#" id="navbardrop" data-toggle="dropdown">
-                            Events
-                </a>
-                        <div class="dropdown-menu ">
-                            <a class="dropdown-item  list-group-item-action list-group-item-warning" href="#">List Of Events</a>
-                            <a class="dropdown-item list-group-item-action list-group-item-warning" href="#">Add Events</a>
+                        <div class="nav-link dropdown-toggle h3 " href="#" id="navbardrop" data-toggle="dropdown">
+                            Sự kiện
+                        </div>
+                        <div class="dropdown-menu bg-dark ">
+                            <a class="dropdown-item text-white " href="#">Danh sách sự kiện</a>
+                            <a class="dropdown-item text-white " href="#">Thêm sự kiện</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle h3 " href="#" id="navbardrop" data-toggle="dropdown">
-                  Character
-                </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item  list-group-item-action list-group-item-warning" href="#">List Of Character</a>
-                            <a class="dropdown-item  list-group-item-action list-group-item-warning" href="#">Add Characters</a>
+                    <li class="nav-item dropdown ">
+                        <div class="nav-link dropdown-toggle h3" href="#" id="navbardrop" data-toggle="dropdown">
+                            Nhân vật
+                        </div>
+                        <div class="dropdown-menu bg-dark">
+                            <a class="dropdown-item text-white " href="#">Danh sách nhân vật</a>
+                            <a class="dropdown-item text-white " href="#">Thêm nhân vật</a>
                         </div>
                     </li>
                 </ul>
                 <ul class=" navbar-nav ml-auto">
                     <li class="nav-item dropdown ">
-                        <a class="nav-link dropdown-toggle h3 " href="#" id="navbardrop" data-toggle="dropdown"><i class="bi bi-person-circle"></i>
-                 
-                </a>
-                        <div class="dropdown-menu ">
-                            <a class="dropdown-item  list-group-item-action list-group-item-warning" href="#">Log-in</a>
-                            <a class="dropdown-item  list-group-item-action list-group-item-warning" href="#">Register</a>
+                        <a class="nav-link dropdown-toggle h3 " href="#" id="navbardrop" data-toggle="dropdown"><i class="h3 bi bi-person-circle"></i>
+      
+    </a>
+                        <div class="dropdown-menu bg-dark ">
+                            <a class="dropdown-item text-white " href="#">Đăng nhập</a>
+                            <a class="dropdown-item text-white " href="#">Đăng kí</a>
                         </div>
                     </li>
-                    <li class="btn btn-danger h5">
-                        Log-out
-                    </li>
                 </ul>
+                <li class="btn btn-warning h3" style="text-align: center;">
+                    Thoát
+                </li>
             </nav>
 
             <!-- Ảnh content page -->
-            <div class=" " style="background-image: url(/wikiHistory/view/HomePage/Image/content1.jpg);height: 55px; background-size: 200px; ">.</div>
+            <div class=" " style="background-image: url(../admin/image/content1.jpg);height: 55px; background-size: 200px; ">.</div>
 
             <!-- Tạo sự kiện -->
             <div class=" container mt-2 text-white" style=" height: 100%;">
@@ -86,26 +85,26 @@
                     </div>
                     <!-- Thông tin -->
                     <div class="col-sm-9 ">
-                        <p class="text-center h3">Create Event</p>
+                        <p class="text-center h3">Tạo sự kiện</p>
                         <div>
                             <div class="form-group ">
-                                <label for="usr ">Event Name:</label>
+                                <label for="usr ">Tên sự kiện:</label>
                                 <input type="text " class="form-control " id="usr ">
                             </div>
                             <div class="form-group ">
-                                <label for="pwd ">Star Day:</label>
+                                <label for="pwd ">Ngày bắt đầu:</label>
                                 <input type="date" class="form-control " id="pwd ">
                             </div>
                             <div class="form-group ">
-                                <label for="pwd ">End Day:</label>
+                                <label for="pwd ">Ngày kết thúc</label>
                                 <input type="date" class="form-control " id="pwd ">
                             </div>
                             <div class="form-group ">
-                                <label for="usr ">Location:</label>
+                                <label for="usr ">Địa điểm</label>
                                 <input type="text " class="form-control " id="usr ">
                             </div>
                             <div class="form-group ">
-                                <label for="usr ">Introduction:</label>
+                                <label for="usr ">Giới thiệu chung:</label>
                                 <input type="text " class="form-control " id="usr ">
                             </div>
                         </div>
@@ -114,11 +113,11 @@
                 <!-- Khung dưới -->
                 <div class="form-group text-white" style="display: flex;">
                     <div class="col-sm-6 ">
-                        <label for="comment">Result:</label>
+                        <label for="comment">Kết quả:</label>
                         <textarea class="form-control" rows="5" id="comment"></textarea>
                     </div>
                     <div class="col-sm-6">
-                        <label for="comment">Signification:</label>
+                        <label for="comment">Ý nghĩa lịch sử:</label>
                         <textarea class="form-control" rows="5" id="comment"></textarea>
                     </div>
                 </div>
@@ -135,18 +134,18 @@
                         </div>
                         <!-- Thông tin -->
                         <div class="col-sm-9 ">
-                            <p class="text-center h3">Create Detail Event</p>
+                            <p class="text-center h3">Tạo chi tiết sự kiện</p>
                             <div>
                                 <div class="form-group ">
-                                    <label for="usr ">Stage name:</label>
+                                    <label for="usr ">Tên chi tiết:</label>
                                     <input type="text " class="form-control " id="usr ">
                                 </div>
                                 <div class="form-group ">
-                                    <label for="pwd ">Start Day:</label>
+                                    <label for="pwd ">Ngày bắt đầu:</label>
                                     <input type="date" class="form-control " id="pwd ">
                                 </div>
                                 <div class="form-group ">
-                                    <label for="pwd ">End Day:</label>
+                                    <label for="pwd ">Ngày kết thúc</label>
                                     <input type="date" class="form-control " id="pwd ">
                                 </div>
                             </div>
@@ -155,16 +154,19 @@
                     <!-- Khung dưới -->
                     <div class="form-group text-white" style="display: flex;">
                         <div class="col-sm-12 ">
-                            <label for="comment">Introduction:</label>
+                            <label for="comment">Mô tả chi tiết:</label>
                             <textarea class="form-control" rows="5" id="comment"></textarea>
                         </div>
+                    </div>
+                    <!-- 
+                    <button type="button" class="btn btn-success ">+</button> -->
 
-                    </div>
-                    <!-- Button thêm -->
-                    <div class="d-flex justify-content-end mb-2">
-                        <button type="button" class="btn btn-success ">Create</button>
-                    </div>
                 </div>
+                <!-- Button thêm -->
+                <div class="d-flex justify-content-end mb-2">
+                    <button type="button" class="btn btn-success ">Tạo</button>
+                </div>
+            </div>
 
 </body>
 
