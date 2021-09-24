@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS_user/EventDetails_user.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://www.csslab.cl/ejemplos/timelinr/latest/js/jquery.timelinr-0.9.54.js"></script>
+</head>
+
+<body>
+    <!-- Thanh nav-bar -->
+    <nav class="navbar navbar-expand-sm navbar-dark pl-0" style="background-color: black;">
+        <ul class="navbar-nav d-flex">
+            <li class="nav-item ">
+                <img class="" src="./Image/logo.png" alt="" style="width: 100px; height: 50px;object-fit: cover;">
+            </li>
+            <li class="nav-item ml-3 ">
+                <a class="nav-link h3" href="#">
+                    Sự kiện
+                 </a>
+            </li>
+            <li class="nav-item ml-3 ">
+                <a class="nav-link h3 " href="#">
+                     Nhân vật
+                </a>
+            </li>
+        </ul>
+        <ul class=" navbar-nav ml-auto">
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle h3 " href="#" id="navbardrop" data-toggle="dropdown"><i class="h3 bi bi-person-circle"></i>
+          
+        </a>
+                <div class="dropdown-menu bg-dark ">
+                    <a class="dropdown-item text-white " href="#">Đăng nhập</a>
+                    <a class="dropdown-item text-white " href="#">Đăng kí</a>
+                </div>
+            </li>
+        </ul>
+        <li class="btn btn-warning h3" style="text-align: center;">
+            Thoát
+        </li>
+    </nav>
+
+    <!-- Ảnh content page -->
+    <div class=" " style="background-image: url(./Image/content1.jpg);height: 55px; background-size: 200px; ">.</div>
+
+    <!-- Chữ chi tiết sự kiện -->
+    <div style="background-image: radial-gradient(circle, #000000, #160b0a, #21150c, #281e0c, #29290f);">
+        <div class=" container-fluid " style="margin-bottom: 10px; ">
+            <div class="mx-auto text-center display-5 " style="position: relative; ">
+                <h1 class="text-white">Chi tiết sự kiện</h1>
+            </div>
+
+            <div class="box-event d-flex bg-dark text-white" style="height: 645px; ">
+                <div class="event w-50 bg-warning ">
+                    <div class="d-flex ">
+                        <div class="name bg-danger col-sm-6 ">
+                            <h4>Tên sự kiện</h4>
+                        </div>
+                        <div class="date bg-info col-sm-6 ">
+                            <h4>Ngày</h4>
+                        </div>
+                    </div>
+                    <div class="image h-25 bg-dark ">
+                        <img src=" " alt=" ">
+                    </div>
+                    <div class="location bg-info " style="height: 30px; ">
+                        <h5>Đia điểm: </h5>
+                    </div>
+                    <div class="introduction h-25 bg-dark ">
+                        <p>Khái quát chung: </p>
+                    </div>
+                    <div class="result bg-info " style="height: 257px; ">
+                        <p>Kết quả và ý nghĩa lịch sử</p>
+                    </div>
+                </div>
+
+                <!-- Timeline -->
+                <div class="details w-50 text-white ">
+                    <div id="timeline">
+                        <ul id="dates">
+                            <li><a href="#1900" class="selected">1900</a></li>
+                            <li><a href="#1930">1930</a></li>
+                            <li><a href="#1944">1944</a></li>
+                            <li><a href="#1950">1950</a></li>
+                            <li><a href="#1971">1971</a></li>
+                            <li><a href="#1977">1977</a></li>
+                            <li><a href="#1989">1989</a></li>
+                            <li><a href="#1999">1999</a></li>
+                            <li><a href="#2001">2001</a></li>
+                            <li><a href="#2011">2011</a></li>
+                        </ul>
+                        <ul id="issues">
+                            <li id="1900" class="selected">
+                                <img src="http://www.csslab.cl/ejemplos/timelinr/latest/images/1.png" />
+                                <h1>1900</h1>
+                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+                            </li>
+                            <li id="1930">
+                                <img src="http://www.csslab.cl/ejemplos/timelinr/latest/images/2.png" />
+                                <h1>1930</h1>
+                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+                            </li>
+                            <li id="1944">
+                                <img src="http://www.csslab.cl/ejemplos/timelinr/latest/images/3.png" />
+                                <h1>1944</h1>
+                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+                            </li>
+                            <li id="1950">
+                                <img src="http://www.csslab.cl/ejemplos/timelinr/latest/images/4.png" />
+                                <h1>1950</h1>
+                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+                            </li>
+                            <li id="1971">
+                                <img src="http://www.csslab.cl/ejemplos/timelinr/latest/images/5.png" />
+                                <h1>1971</h1>
+                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+                            </li>
+                            <li id="1977">
+                                <img src="http://www.csslab.cl/ejemplos/timelinr/latest/images/6.png" />
+                                <h1>1977</h1>
+                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+                            </li>
+                            <li id="1989">
+                                <img src="http://www.csslab.cl/ejemplos/timelinr/latest/images/7.png" />
+                                <h1>1989</h1>
+                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+                            </li>
+                            <li id="1999">
+                                <img src="http://www.csslab.cl/ejemplos/timelinr/latest/images/8.png" />
+                                <h1>1999</h1>
+                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+                            </li>
+                            <li id="2001">
+                                <img src="http://www.csslab.cl/ejemplos/timelinr/latest/images/9.png" />
+                                <h1>2001</h1>
+                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+                            </li>
+                            <li id="2011">
+                                <img src="http://www.csslab.cl/ejemplos/timelinr/latest/images/10.png" />
+                                <h1>2011</h1>
+                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+                            </li>
+                        </ul>
+                        <div id="grad_top"></div>
+                        <div id="grad_bottom"></div>
+                        <a href="#" id="next">+</a>
+                        <a href="#" id="prev">-</a>
+                    </div>
+                </div>
+            </div>
+            <div class="comment bg-secondary " style="height: 450px; padding: 0px 20px 20px 20px ">
+                <div class=" text-center ">
+                    <h2>Bình luận</h2>
+                </div>
+
+                <div class="name-user ">
+                    <h6 class="pl-1 ">name</h6>
+                </div>
+                <div class="input-group mb-3 ">
+                    <input type="text " class="form-control " placeholder="Viết bình luận... " aria-label="Recipient 's username" aria-describedby="basic-addon2">
+
+                    <div class="input-group-append"></div>
+                    <button class="btn btn-outline-secondary dropdown-toggle bg-warning" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp; Đánh giá! &nbsp;</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item">5 </a>
+                        <a class="dropdown-item">4 </a>
+                        <a class="dropdown-item">3 </a>
+                        <a class="dropdown-item">2 </a>
+                        <a class="dropdown-item">1 </a>
+                    </div>
+
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary bg-success" type="button">&emsp;Gửi&emsp;</button>
+                    </div>
+                </div>
+                <div class=" bg-white" style="height: 70%; border-radius: 5px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../controller/EventDetails_Timeline.js"></script>
+</body>
+
+</html>
