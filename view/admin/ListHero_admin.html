@@ -20,6 +20,25 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-auth-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyB-q_tQfy62e46AE6wHg0jEg9HcZA3OhMQ",
+            authDomain: "historydb-team1.firebaseapp.com",
+            projectId: "historydb-team1",
+            storageBucket: "historydb-team1.appspot.com",
+            messagingSenderId: "456407580200",
+            appId: "1:456407580200:web:c475537af2b40742203f1d",
+            measurementId: "G-P7CQFHL86B"
+        };
+
+        const firebaseApp = firebase.initializeApp(firebaseConfig);
+        const db = firebaseApp.firestore();
+        const auth = firebaseApp.auth();
+    </script>
+
 </head>
 
 <body>
@@ -28,8 +47,7 @@
         <nav class="navbar navbar-expand-sm navbar-dark pl-0" style="background-color: black;">
             <ul class="navbar-nav d-flex">
                 <li class="nav-item ">
-                    <img class="" src="../media/Image/logo.png" alt=""
-                        style="width: 100px; height: 50px;object-fit: cover;">
+                    <img class="" src="../media/Image/logo.png" alt="" style="width: 100px; height: 50px;object-fit: cover;">
                 </li>
                 <li class="nav-item dropdown ">
                     <div class="nav-link dropdown-toggle h3 " href="#" id="navbardrop" data-toggle="dropdown">
@@ -68,27 +86,25 @@
         </nav>
 
         <!-- Ảnh content page -->
-        <div class=" "
-            style="background-image: url(../media/Image/content1.jpg);height: 55px; background-size: 200px; ">.</div>
+        <div class=" " style="background-image: url(../media/Image/content1.jpg);height: 55px; background-size: 200px; ">.</div>
         <!-- Danh sách nhân vật -->
-        <div class=" mw-100 mh-100 pb-5 text-white"
-            style="background-image: radial-gradient(circle, #000000, #160b0a, #21150c, #281e0c, #29290f);">
+        <div class=" mw-100 mh-100 pb-5 text-white" style="background-image: radial-gradient(circle, #000000, #160b0a, #21150c, #281e0c, #29290f);">
             <div class="d-flex justify-content-center display-4">Danh Sách Anh Hùng Lịch Sử</div>
             <table class="table table-bordered text-white mt-4">
                 <thead>
                     <tr>
-                        <th>id</th>
                         <th>Tên nhân vật</th>
                         <th>Ảnh nhân vật</th>
                         <th>Chức danh</th>
-                        <th>Ngày sinh-Ngày mất</th>
+                        <th>Ngày sinh</th>
+                        <th>Ngày mất</th>
                         <th>Quê quán</th>
                         <th>Khái quát nhân vật</th>
                         <th colspan="2" style="text-align: center;">Hành động</th>
                     </tr>
                 </thead>
                 <tbody>
-                
+                    <script src="../../controller/ListHistoryCharacter_admin.js" type="module"></script>
                 </tbody>
             </table>
         </div>
