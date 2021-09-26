@@ -5,22 +5,26 @@
 }
 
 .infor-character {
-    background-color: lightslategrey;
+    /* background-color: lightslategrey; */
     width: 100%;
     height: auto;
     display: flex;
+
+    border: solid;
 }
 
 .img-character {
     background-color: cadetblue;
-    width: 60%;
+    width: 100%;
     height: 400px;
+    object-fit: cover;
 }
 
 .boxText {
     width: 40%;
     height: auto;
     margin: 15px;
+    margin-left: 30px;
 }
 
 .text-group {
@@ -54,6 +58,8 @@ div.group-life {
 .img-life {
     background-color: darkgrey;
     height: 300px;
+    width: 100%;
+    object-fit: cover;
 }
 
 .details {

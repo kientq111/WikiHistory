@@ -1,0 +1,103 @@
+import data from '../data/eventDAO.js';
+
+let $detailCharacter = document.getElementById('#inforCharacter');
+
+let $divImageCharacter = document.createElement('div');
+
+let $imgCharacter = document.createElement('img');
+$imgCharacter.className = 'img-character';
+$imgCharacter.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Statue_of_Tran_Hung_Dao%2C_Ho_Chi_Minh_City%2C_Vietnam.jpg/408px-Statue_of_Tran_Hung_Dao%2C_Ho_Chi_Minh_City%2C_Vietnam.jpg';
+$imgCharacter.alt = 'Img';
+
+let $boxText = document.createElement('div');
+$boxText.className = 'boxText';
+
+//Job
+let $textGroupJob = document.createElement('div');
+$textGroupJob.className = 'text-group position-group d-flex';
+
+let $titleJob = document.createElement('p');
+$titleJob.innerHTML = 'Chức danh/Nghề nghiệp:';
+
+let $textJob = document.createElement('p');
+$textJob.innerHTML = 'aaa';
+
+$textGroupJob.append($titleJob, $textJob);
+
+//Date 
+let $textGroupDate = document.createElement('div');
+$textGroupDate.className = 'text-group position-group d-flex';
+
+let $titleDate = document.createElement('p');
+$titleDate.innerHTML = 'Ngày sinh/mất:';
+
+let $textdate = document.createElement('p');
+$textdate.innerHTML = 'aaa';
+
+$textGroupDate.append($titleDate, $textdate);
+
+//Country
+let $textGroupCountry = document.createElement('div');
+$textGroupCountry.className = 'text-group position-group d-flex';
+
+let $titleCountry = document.createElement('p');
+$titleCountry.innerHTML = 'Quê quán:';
+
+let $textCountry = document.createElement('p');
+$textCountry.innerHTML = 'aaa';
+
+$textGroupCountry.append($titleCountry, $textCountry);
+
+//General
+let $textGroupGeneral = document.createElement('div');
+$textGroupGeneral.className = 'text-group position-group d-flex';
+
+let $titleGeneral = document.createElement('p');
+$titleGeneral.innerHTML = 'Khái quát:';
+
+let $textGeneral = document.createElement('p');
+$textGeneral.innerHTML = 'aaa';
+
+$textGroupGeneral.append($titleGeneral, $textGeneral);
+
+$divImageCharacter.append($imgCharacter);
+$boxText.append($textGroupJob, $textGroupDate, $textGroupCountry, $textGroupGeneral);
+$detailCharacter.append($divImageCharacter, $boxText);
+
+console.log($detailCharacter);
+
+
+let $timeline = document.getElementsByClassName('life-character')[0];
+
+for(let item of data) {
+    let $groupTimeline = document.createElement('div');
+    $groupTimeline.className = 'group-life';
+
+    let $time = document.createElement('div');
+    $time.className = 'time-life';
+
+    let $timeText = document.createElement('h2');
+    $timeText.innerHTML = 'Ngày ??? - ???' + item.Name;
+
+    let $divImageTimeline = document.createElement('div');
+    $divImageTimeline.className = '';
+
+    let $imgTimeline = document.createElement('img');
+    $imgTimeline.className = 'img-life';
+    $imgTimeline.src = 'https://upload.wikimedia.org/wikipedia/commons/4/49/C%E1%BB%8Dc_B%E1%BA%A1ch_%C4%90%E1%BA%B1ng.jpg';
+    $imgTimeline.alt = 'Img';
+
+    let $detailTimeline = document.createElement('div');
+    $detailTimeline.className = 'details';
+
+    let $textDetailTimeline = document.createElement('p');
+    $textDetailTimeline.innerHTML = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem voluptatum adipisci veritatis animi harum? Aut reiciendis maxime eius animi ducimus at omnis voluptates consequatur nemo quidem natus architecto, cupiditate ipsam.'
+
+    $time.append($timeText);
+    $divImageTimeline.append($imgTimeline);
+    $detailTimeline.append($textDetailTimeline);
+    $groupTimeline.append($time, $divImageTimeline, $detailTimeline);    
+    $timeline.append($groupTimeline);
+}
+
+console.log($timeline);
