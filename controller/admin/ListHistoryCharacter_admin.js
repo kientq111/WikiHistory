@@ -47,6 +47,7 @@ async function getConversation() {
         $btnDel.onclick = () => {
             //c1
             doc.ref.delete();
+            // window.location.reload();
             //c2 *
             // db.collection('...').doc(id).delete();
             //get detail

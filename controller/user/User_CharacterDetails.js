@@ -1,4 +1,4 @@
-import data from '../data/eventDAO.js';
+import data from '../../data/eventDAO.js';
 
 let $detailCharacter = document.getElementById('#inforCharacter');
 
@@ -69,7 +69,7 @@ console.log($detailCharacter);
 
 let $timeline = document.getElementsByClassName('life-character')[0];
 
-for(let item of data) {
+for (let item of data) {
     let $groupTimeline = document.createElement('div');
     $groupTimeline.className = 'group-life';
 
@@ -96,7 +96,7 @@ for(let item of data) {
     $time.append($timeText);
     $divImageTimeline.append($imgTimeline);
     $detailTimeline.append($textDetailTimeline);
-    $groupTimeline.append($time, $divImageTimeline, $detailTimeline);    
+    $groupTimeline.append($time, $divImageTimeline, $detailTimeline);
     $timeline.append($groupTimeline);
 }
 

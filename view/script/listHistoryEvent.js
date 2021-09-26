@@ -1,4 +1,4 @@
-import data from '../data/eventDAO.js';
+import data from '../../data/eventDAO.js';
 
 let $container = document.getElementById('container');
 

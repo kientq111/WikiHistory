@@ -1,5 +1,3 @@
-import data from '../data/ListHero_data.js';
-
 let $ul = document.getElementsByClassName('list')[0];
 
 
