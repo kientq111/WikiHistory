@@ -34,6 +34,11 @@ async function getConversation() {
         $btnDeltail.href = "#";
         $btnDeltail.style.textDecoration = 'none';
         $btnDeltail.className = 'text-warning'
+        $btnDeltail.onclick = () => {
+            db.collection('characters').doc(id).get();
+        }
+
+
         let $btnDel = document.createElement('a');
         $btnDel.href = "#";
         $btnDel.innerHTML = 'Xóa';
@@ -46,6 +51,7 @@ async function getConversation() {
             // db.collection('...').doc(id).delete();
             //get detail
             // db.collection('...').doc(id).get();
+            // window.onload();
         }
         $detail.append($btnDeltail);
         $del.append($btnDel);

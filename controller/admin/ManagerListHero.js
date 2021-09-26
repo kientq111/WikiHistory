@@ -1,5 +1,3 @@
-import data from '../data/eventDAO.js';
-
 let $lstHeroTable = document.getElementsByTagName('tbody')[0];
 
 for (let item of data) {
