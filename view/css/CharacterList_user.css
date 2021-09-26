@@ -26,6 +26,7 @@
     position: relative;
     max-width: 100%;
     vertical-align: top;
+    object-fit: cover;
 }
 
 .snip1273 figcaption {
