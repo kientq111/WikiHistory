@@ -43,6 +43,4 @@ for (let item of data) {
     );
     console.dir($row);
     $listCharacter.append($row)
-
-
 }
