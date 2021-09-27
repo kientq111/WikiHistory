@@ -4,10 +4,7 @@ async function getConversation() {
 
     for (let doc of response.docs) {
         let id = doc.id; //get id
-
         let data = doc.data();
-        console.log(data.name);
-
 
 
         let $name = document.createElement('td');
@@ -22,7 +19,7 @@ async function getConversation() {
 
 
         $name.innerHTML = data.name;
-        $image.innerHTML = data.picture;
+        $image.innerHTML = '#';
         $title.innerHTML = data.title;
         $birthDay.innerHTML = data.birth;
         $deathDay.innerHTML = data.death;
@@ -31,12 +28,16 @@ async function getConversation() {
 
         let $btnDeltail = document.createElement('a');
         $btnDeltail.innerHTML = 'Xem chi tiết';
-        $btnDeltail.href = "#";
+        $btnDeltail.href = '#'
         $btnDeltail.style.textDecoration = 'none';
         $btnDeltail.className = 'text-warning'
-        $btnDeltail.onclick = () => {
-            db.collection('characters').doc(id).get();
+            //detail
+        $btnDeltail.onclick = async() => {
+            let id1 = await db.collection('characters').doc(doc.id).get();
+            console.log(id1.id);
         }
+
+
 
 
         let $btnDel = document.createElement('a');
@@ -44,15 +45,17 @@ async function getConversation() {
         $btnDel.innerHTML = 'Xóa';
         $btnDel.style.textDecoration = 'none';
         $btnDel.className = 'text-warning'
+            //delete
         $btnDel.onclick = () => {
-            //c1
-            doc.ref.delete();
-            // window.location.reload();
-            //c2 *
-            // db.collection('...').doc(id).delete();
-            //get detail
-            // db.collection('...').doc(id).get();
-            // window.onload();
+            doc.ref.delete().then(() => {
+                    window.location.reload()
+                })
+                // window.location.reload();
+                //c2 *
+                // db.collection('...').doc(id).delete();
+                //get detail
+                // db.collection('...').doc(id).get();
+                // window.onload();
         }
         $detail.append($btnDeltail);
         $del.append($btnDel);
@@ -61,7 +64,6 @@ async function getConversation() {
         $row.append(
             $name, $image, $title, $birthDay, $deathDay, $location, $detail, $del
         );
-        console.dir($row);
         $listCharacter.append($row)
     }
 }
