@@ -53,10 +53,10 @@
                     <a class="nav-link dropdown-toggle h5 " href="#" id="navbardrop" data-toggle="dropdown"><i class="h3 bi bi-person-circle"></i>
               
             </a>
-                    <div class="dropdown-menu bg-dark ">
-                        <a class="dropdown-item text-white " href="#">Đăng nhập</a>
-                        <a class="dropdown-item text-white " href="#">Đăng kí</a>
-                    </div>
+            <div class="dropdown-menu bg-dark ">
+                <a class="dropdown-item text-black " href="../login.html">Đăng nhập</a>
+                <a class="dropdown-item text-black " href="../register.html">Đăng kí</a>
+            </div>
                 </li>
             </ul>
             <li class="btn btn-warning " style="text-align: center;">
@@ -81,23 +81,23 @@
                         <div>
                             <div class="form-group ">
                                 <label for="usr ">Tên sự kiện:</label>
-                                <input type="text " class="form-control " id="usr ">
+                                <input type="text " class="form-control " id="usr "  required maxlength="255">
                             </div>
                             <div class="form-group ">
                                 <label for="pwd ">Ngày bắt đầu:</label>
-                                <input type="date" class="form-control " id="pwd ">
+                                <input type="date" class="form-control " id="pwd " required>
                             </div>
                             <div class="form-group ">
                                 <label for="pwd ">Ngày kết thúc</label>
-                                <input type="date" class="form-control " id="pwd ">
+                                <input type="date" class="form-control " id="pwd " required>
                             </div>
                             <div class="form-group ">
                                 <label for="usr ">Địa điểm</label>
-                                <input type="text " class="form-control " id="usr ">
+                                <input type="text " class="form-control " id="usr " required>
                             </div>
                             <div class="form-group ">
                                 <label for="usr ">Giới thiệu chung:</label>
-                                <input type="text " class="form-control " id="usr ">
+                                <input type="text " class="form-control " id="usr "  required maxlength="255">
                             </div>
                         </div>
                     </div>
@@ -106,11 +106,11 @@
                 <div class="form-group text-white" style="display: flex;">
                     <div class="col-sm-6 ">
                         <label for="comment">Kết quả:</label>
-                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                        <textarea class="form-control" rows="5" id="comment" required></textarea>
                     </div>
                     <div class="col-sm-6">
                         <label for="comment">Ý nghĩa lịch sử:</label>
-                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                        <textarea class="form-control" rows="5" id="comment" required></textarea>
                     </div>
                 </div>
                 <br>
@@ -126,19 +126,19 @@
                         </div>
                         <!-- Thông tin -->
                         <div class="col-sm-9 ">
-                            <p class="text-center h3">Tạo chi tiết sự kiện</p>
+                            <p class="text-center h3">Tạo giai đoạn sự kiện</p>
                             <div>
                                 <div class="form-group ">
-                                    <label for="usr ">Tên chi tiết:</label>
-                                    <input type="text " class="form-control " id="usr ">
+                                    <label for="usr ">Tên giai đoạn:</label>
+                                    <input type="text " class="form-control " id="usr "  required maxlength="255">
                                 </div>
                                 <div class="form-group ">
                                     <label for="pwd ">Ngày bắt đầu:</label>
-                                    <input type="date" class="form-control " id="pwd ">
+                                    <input type="date" class="form-control " id="pwd " required>
                                 </div>
                                 <div class="form-group ">
                                     <label for="pwd ">Ngày kết thúc</label>
-                                    <input type="date" class="form-control " id="pwd ">
+                                    <input type="date" class="form-control " id="pwd " required>
                                 </div>
                             </div>
                         </div>
@@ -147,7 +147,7 @@
                     <div class="form-group text-white" style="display: flex;">
                         <div class="col-sm-12 ">
                             <label for="comment">Mô tả chi tiết:</label>
-                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                            <textarea class="form-control" rows="5" id="comment" required></textarea>
                         </div>
                     </div>
                     <!-- 
@@ -156,7 +156,7 @@
                 </div>
                 <!-- Button thêm -->
                 <div class="d-flex justify-content-end mb-2">
-                    <button type="button" class="btn btn-success ">Tạo</button>
+                    <button type="button" class="btn btn-success " href="./ListHistoryEvent_admin.html">Tạo</button>
                 </div>
             </div>
 
