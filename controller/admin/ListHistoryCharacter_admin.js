@@ -2,6 +2,8 @@ let $listCharacter = document.getElementsByTagName('tbody')[0];
 async function getConversation() {
     let response = await db.collection('characters').get();
 
+
+
     for (let doc of response.docs) {
         let id = doc.id; //get id
         let data = doc.data();
@@ -35,6 +37,8 @@ async function getConversation() {
         $btnDeltail.onclick = async() => {
             let id1 = await db.collection('characters').doc(doc.id).get();
             console.log(id1.id);
+            localStorage.setItem('id', id1.id);
+            location.href = '../user/CharacterDetails_user.html'
         }
 
 

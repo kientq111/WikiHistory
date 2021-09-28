@@ -1,9 +1,12 @@
 import data from '../../data/eventDAO.js';
 
+
+let id = localStorage.getItem('id');
+let id1 = await db.collection('characters').doc(id).get();
+console.log('don: ', id1.data());
+let getChar = id1.data();
 let $detailCharacter = document.getElementById('#inforCharacter');
-
 let $divImageCharacter = document.createElement('div');
-
 let $imgCharacter = document.createElement('img');
 $imgCharacter.className = 'img-character';
 $imgCharacter.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Statue_of_Tran_Hung_Dao%2C_Ho_Chi_Minh_City%2C_Vietnam.jpg/408px-Statue_of_Tran_Hung_Dao%2C_Ho_Chi_Minh_City%2C_Vietnam.jpg';
@@ -20,7 +23,7 @@ let $titleJob = document.createElement('p');
 $titleJob.innerHTML = 'Chức danh/Nghề nghiệp:';
 
 let $textJob = document.createElement('p');
-$textJob.innerHTML = 'aaa';
+$textJob.innerHTML = getChar.title;
 
 $textGroupJob.append($titleJob, $textJob);
 
@@ -32,7 +35,7 @@ let $titleDate = document.createElement('p');
 $titleDate.innerHTML = 'Ngày sinh/mất:';
 
 let $textdate = document.createElement('p');
-$textdate.innerHTML = 'aaa';
+$textdate.innerHTML = `Sinh: ${getChar.birth} - Mất:${getChar.death}`;
 
 $textGroupDate.append($titleDate, $textdate);
 
@@ -44,7 +47,7 @@ let $titleCountry = document.createElement('p');
 $titleCountry.innerHTML = 'Quê quán:';
 
 let $textCountry = document.createElement('p');
-$textCountry.innerHTML = 'aaa';
+$textCountry.innerHTML = getChar.home;
 
 $textGroupCountry.append($titleCountry, $textCountry);
 
@@ -56,7 +59,7 @@ let $titleGeneral = document.createElement('p');
 $titleGeneral.innerHTML = 'Khái quát:';
 
 let $textGeneral = document.createElement('p');
-$textGeneral.innerHTML = 'aaa';
+$textGeneral.innerHTML = getChar.general;
 
 $textGroupGeneral.append($titleGeneral, $textGeneral);
 
@@ -69,7 +72,7 @@ console.log($detailCharacter);
 
 let $timeline = document.getElementsByClassName('life-character')[0];
 
-for (let item of data) {
+for (let item of getChar.details) {
     let $groupTimeline = document.createElement('div');
     $groupTimeline.className = 'group-life';
 
@@ -77,11 +80,13 @@ for (let item of data) {
     $time.className = 'time-life';
 
     let $timeText = document.createElement('h2');
-    $timeText.innerHTML = 'Ngày ??? - ???' + item.Name;
+    $timeText.innerHTML = item.date;
 
     let $divImageTimeline = document.createElement('div');
     $divImageTimeline.className = '';
 
+
+    //Picture
     let $imgTimeline = document.createElement('img');
     $imgTimeline.className = 'img-life';
     $imgTimeline.src = 'https://upload.wikimedia.org/wikipedia/commons/4/49/C%E1%BB%8Dc_B%E1%BA%A1ch_%C4%90%E1%BA%B1ng.jpg';
@@ -91,7 +96,7 @@ for (let item of data) {
     $detailTimeline.className = 'details';
 
     let $textDetailTimeline = document.createElement('p');
-    $textDetailTimeline.innerHTML = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem voluptatum adipisci veritatis animi harum? Aut reiciendis maxime eius animi ducimus at omnis voluptates consequatur nemo quidem natus architecto, cupiditate ipsam.'
+    $textDetailTimeline.innerHTML = item.description;
 
     $time.append($timeText);
     $divImageTimeline.append($imgTimeline);

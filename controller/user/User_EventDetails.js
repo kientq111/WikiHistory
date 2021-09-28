@@ -1,10 +1,10 @@
 import data from '../../data/eventDAO.js'
 
 //Timeline
-    //dates
+//dates
 let $ulDates = document.getElementsByClassName('dates')[0];
 
-for(let item of data){
+for (let item of data) {
     let $liDates = document.createElement('li');
 
     let $aDates = document.createElement('a');
@@ -18,10 +18,10 @@ for(let item of data){
 
 
 
-    //Issues
+//Issues
 let $ulIssues = document.getElementsByClassName('issues')[0];
 
-for(let item of data){
+for (let item of data) {
     let $liIssues = document.createElement('li');
     $liIssues.id = '1990';
 
@@ -30,7 +30,7 @@ for(let item of data){
 
     let $h1Issues = document.createElement('h1');
     $h1Issues.innerHTML = '1990';
-    
+
     let $pIssuses = document.createElement('p');
     $pIssuses.innerHTML = 'Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.'
 

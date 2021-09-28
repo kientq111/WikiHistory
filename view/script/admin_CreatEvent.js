@@ -1,6 +1,9 @@
+let index = 0;
+
 function creatEvent() {
     let $stageEvent = document.getElementsByClassName('stageEvent')[0];
-
+    index += 1;
+    console.log(index);
     let $top = document.createElement('div');
     $top.style.display = 'flex';
     $top.style.paddingTop = '60px';

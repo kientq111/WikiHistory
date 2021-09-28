@@ -7,7 +7,6 @@ async function getListCharacter() {
     let response = await db.collection('characters').get();
     for (let doc of response.docs) {
         let data = doc.data();
-
         let $li = document.createElement('li');
         $li.className = 'character mr-3 mb-3';
 
@@ -39,7 +38,12 @@ async function getListCharacter() {
         $figcaption.append($name, $job, $date, $countryside, $general);
 
         let $link = document.createElement('a');
-        $link.href = '#link';
+        $link.onclick = async() => {
+            let id1 = await db.collection('characters').doc(doc.id).get();
+            console.log(id1.id);
+            localStorage.setItem('id', id1.id);
+            location.href = 'CharacterDetails_user.html';
+        }
 
         $figure.append($img, $figcaption, $link);
         $li.append($figure);
