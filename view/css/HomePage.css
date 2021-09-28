@@ -42,7 +42,7 @@ body {
 }
 
 .text-container {
-    height: 150px;
+    height: 60px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -51,7 +51,7 @@ body {
 
 .text-container h1 {
     margin: 0;
-    font-size: 70px;
+    font-size: 45px;
     color: rgba(225, 225, 225, .01);
     background-image: url("https://cdn1.tuoitre.vn/zoom/600_315/tto/i/s626/2016/07/09/2ce4879d.jpg");
     background-repeat: repeat;
