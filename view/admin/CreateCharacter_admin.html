@@ -61,20 +61,18 @@
 
 
         <!-- bảng thêm nhân vật -->
-        <div style="height: 100%; ">
-            <h5 class=" d-flex justify-content-center display-5">
-                <p> Thêm mới nhân vật lịch sử </p>
-            </h5>
+        <div class="createInfor">
+            <h5 class=" d-flex justify-content-center display-5">Thêm mới nhân vật lịch sử</h5>
 
             <!-- form tạo nhân vật -->
-            <form action="" class=" border-5 w-75 mx-auto">
-                <table class="table table-borderless row no-gutters" width="100%">
+            <form action="" class="form border-5 w-75 mx-auto">
+                <table class="table table-borderless row no-gutters">
                     <div class="form-group form-group-lg">
                         <thead>
                             <tbody class="text-white">
                                 <tr>
                                     <td width="20%"> Tên nhân vật </td>
-                                    <td> <input type="text" id="name" placeholder="Điền tên tại đây" required maxlength="255" class="form-control" style="width: 100%"> </td>
+                                    <td> <input type="text" id="name" placeholder="Điền tên tại đây" required maxlength="255" class="form-control" > </td>
                                 </tr>
                                 <tr>
                                     <td> Ảnh nhân vật </td>
@@ -82,39 +80,48 @@
                                 </tr>
                                 <tr>
                                     <td> Chức danh </td>
-                                    <td> <input type="text" id="title" required maxlength="255" class="form-control" style="width: 100%"> </td>
+                                    <td> <input type="text" id="title" required maxlength="255" class="form-control" > </td>
                                 </tr>
                                 <tr>
                                     <td> Ngày sinh </td>
-                                    <td> <input type="date" id="birth" class="form-control" style="width: 100%"> </td>
+                                    <td> <input type="date" id="birth" class="form-control" > </td>
                                 </tr>
                                 <tr>
                                     <td> Ngày mất </td>
-                                    <td> <input type="date" id="death" class="form-control" style="width: 100%"> </td>
+                                    <td> <input type="date" id="death" class="form-control" > </td>
                                 </tr>
                                 <tr>
                                     <td> Quê quán </td>
-                                    <td> <input type="text" id="adress" required maxlength="255" class="form-control" style="width: 100%"> </td>
+                                    <td> <input type="text" id="adress" required maxlength="255" class="form-control" > </td>
                                 </tr>
                                 <tr>
                                     <td> Khái quát nhân vật </td>
-                                    <td> <textarea id="general" rows="10" required maxlength="255" class="form-control" style="width: 100%"> </textarea> </td>
+                                    <td> <textarea id="general" rows="10" required maxlength="255" class="form-control" > </textarea> </td>
                                 </tr>
                                 <tr>
                                     <td> Mô tả chi tiết nhân vật </td>
-                                    <td> <textarea required id="detail" rows="10" class="form-control" style="width: 100%"></textarea> </td>
+                                    <td> <textarea id="detail" rows="10" required class="form-control" ></textarea> </td>
                                 </tr>
-                                <tr>
+                                <!-- <tr>
                                     <td> </td>
                                     <td> <button type="submit" class="btn btn-primary float-right" href="./ListHero_admin.html"> Hoàn tất </button> </td>
-                                </tr>
-                            </tbody>
+                                </tr> -->
+                            </tbody>  
                     </div>
                 </table>
+                <!-- Button tạo -->
+                
             </form>
-
+            <div class="d-flex justify-content-center mb-2">
+                <button type="button" class="btn btn-success " onclick="createCharacter()"> &ensp;✚&ensp; </button>
+            </div>
+            <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-success " href="./ListHistoryEvent_admin.html">&ensp;Tạo&ensp;</button>
+            </div>
         </div>
     </div>
+
+    <script src="../script/admin_CreateCharacter.js"></script>
 </body>
 
 </html>
