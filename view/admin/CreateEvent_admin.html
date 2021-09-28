@@ -16,7 +16,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="./css/HomePage.css">
+    <!-- <link rel="stylesheet" href="./css/HomePage.css"> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -113,13 +113,12 @@
                         <textarea class="form-control" rows="5" id="comment" required></textarea>
                     </div>
                 </div>
-                <br>
-                <br>
+                
 
                 <!-- Tạo chi tiết sự kiện -->
-                <div class=" container mt-2 text-white" style=" height: 100%;">
+                <div class="stageEvent container text-white" style=" height: 100%; margin-top: 50px;">
                     <!-- Khung trên -->
-                    <div style="display: flex;">
+                    <div style="display: flex; padding-top: 60px;">
                         <!-- Ảnh -->
                         <div class="mt-1 col-sm-3 d-flex align-items-end form-control-file border ">
                             <input type="file" class="">
@@ -152,11 +151,20 @@
                     </div>
                     <!-- 
                     <button type="button" class="btn btn-success ">+</button> -->
+                    
+                    
 
                 </div>
+
+                <!-- Button thêm giai đoạn sự kiện -->
+                <div class="d-flex justify-content-center mb-2">
+                    <button type="button" class="btn btn-success " onclick="creatEvent()"> &ensp;✚&ensp; </button>
+                </div>
+
+
                 <!-- Button thêm -->
-                <div class="d-flex justify-content-end mb-2">
-                    <button type="button" class="btn btn-success " href="./ListHistoryEvent_admin.html">Tạo</button>
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn btn-success " href="./ListHistoryEvent_admin.html">&ensp;Tạo&ensp;</button>
                 </div>
             </div>
 

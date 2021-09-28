@@ -1,3 +1,5 @@
+import data from '../../data/ListHero_data.js';
+
 let $lstHeroTable = document.getElementsByTagName('tbody')[0];
 
 for (let item of data) {
