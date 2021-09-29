@@ -8,7 +8,6 @@ async function getConversation() {
         let id = doc.id; //get id
         let data = doc.data();
 
-
         let $name = document.createElement('td');
         let $image = document.createElement('td');
         let $title = document.createElement('td');
@@ -35,15 +34,12 @@ async function getConversation() {
         $btnDeltail.className = 'text-warning'
             //detail
         $btnDeltail.onclick = async() => {
-            let id1 = await db.collection('characters').doc(doc.id).get();
-            console.log(id1.id);
-            localStorage.setItem('id', id1.id);
-            location.href = '../user/CharacterDetails_user.html'
-        }
-
-
-
-
+                let id1 = await db.collection('characters').doc(doc.id).get();
+                console.log(id1.id);
+                localStorage.setItem('id', id1.id);
+                location.href = '../user/CharacterDetails_user.html'
+            }
+            //del
         let $btnDel = document.createElement('a');
         $btnDel.href = "#";
         $btnDel.innerHTML = 'Xóa';
