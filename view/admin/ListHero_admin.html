@@ -43,32 +43,41 @@
 
 <body>
     <div style="font-family: 'Unica One', cursive;">
-         <!-- Thanh nav-bar -->
-         <nav class="navbar navbar-expand-sm navbar-dark pl-0 pb-0 pt-1" style="background-color: black;height: 50px;">
+        <!-- Thanh nav-bar -->
+        <nav class="navbar navbar-expand-sm navbar-dark pl-0 pb-0 pt-1" style="background-color: black;height: 50px;">
             <ul class="navbar-nav d-flex">
                 <li class="nav-item ">
-                    <a href="./HomePage_admin.html"><img class="pb-2" src="../media/Image/logo.png" alt="" style="width: 70px; height: 50px;object-fit: cover;"></a>
+                    <a href="./HomePage_admin.html"><img class="pb-2" src="../media/Image/logo.png" alt=""
+                            style="width: 70px; height: 50px;object-fit: cover;"> </a>
                 </li>
-                <li class="nav-item ml-3 ">
-                    <a class="nav-link h5" href="./ListHistoryEvent_admin.html">
+                <li class="nav-item ml-3 dropdown ">
+                    <a class="nav-link h5" href="#" id="navbardrop" data-toggle="dropdown">
                         Sự kiện
-                     </a>
-                </li>
-                <li class="nav-item ml-3 ">
-                    <a class="nav-link h5 " href="./ListHero_admin.html">
-                         Nhân vật
                     </a>
+                    <div class="dropdown-menu bg-dark ">
+                        <a class="dropdown-item text-black " href="./ListHistoryEvent_admin.html">Danh sách sự kiện</a>
+                        <a class="dropdown-item text-black " href="./CreateEvent_admin.html">Thêm sự kiện</a>
+                    </div>
+                </li>
+                <li class="nav-item ml-3 dropdown ">
+                    <a class="nav-link h5 " href="#" id="navbardrop" data-toggle="dropdown">
+                        Nhân vật
+                    </a>
+                    <div class="dropdown-menu bg-dark">
+                        <a class="dropdown-item text-black " href="./ListHero_admin.html">Danh sách nhân vật</a>
+                        <a class="dropdown-item text-black " href="./CreateCharacter_admin.html">Thêm nhân vật</a>
+                    </div>
                 </li>
             </ul>
             <ul class=" navbar-nav ml-auto">
-                <li class="nav-item dropdown mr-2 ">
-                    <li class="text-warning mt-3 mr-3">Đạt nghiện vào sửa nhé.................. </li>
-                    <a class="nav-link dropdown-toggle h5 " href="#" id="navbardrop" data-toggle="dropdown">
-                        <i class="h3 bi bi-person-circle"></i> 
+                <li class="text-warning mt-3 mr-3">Đạt nghiện vào sửa nhé.................. </li>
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle h5 mr-3 " href="#" id="navbardrop" data-toggle="dropdown">
+                        <i class="h3 bi bi-person-circle"></i>
                     </a>
-                    <div class="dropdown-menu bg-dark ">
-                        <a class="dropdown-item text-black " href="../login.html">Đăng nhập</a>
-                        <a class="dropdown-item text-black " href="../register.html">Đăng kí</a>
+                    <div class="dropdown-menu bg-dark text-white ">
+                        <a class="dropdown-item " href="../login.html">Đăng nhập</a>
+                        <a class="dropdown-item " href="../register.html">Đăng kí</a>
                     </div>
                 </li>
             </ul>
@@ -78,10 +87,12 @@
         </nav>
 
         <!-- Ảnh content page -->
-        <div class=" " style="background-image: url(../media/Image/content1.jpg);height: 40px; background-size: 200px; ">.</div>
+        <div class=" "
+            style="background-image: url(../media/Image/content1.jpg);height: 40px; background-size: 200px; ">.</div>
 
         <!-- Danh sách nhân vật -->
-        <div class=" mw-100 mh-100 pb-5 text-white" style="background-image: radial-gradient(circle, #000000, #160b0a, #21150c, #281e0c, #29290f);">
+        <div class=" mw-100 mh-100 pb-5 text-white"
+            style="background-image: radial-gradient(circle, #000000, #160b0a, #21150c, #281e0c, #29290f);">
             <div class="d-flex justify-content-center display-4">Danh Sách Anh Hùng Lịch Sử</div>
             <table class="table table-bordered text-white mt-4">
                 <thead>
