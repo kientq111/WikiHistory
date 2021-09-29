@@ -1,14 +1,15 @@
+let count = 1;
 function createCharacter() {
+    count++;
+    console.log(count);
     let $form = document.getElementsByClassName('form')[0];
 
+    let $order = document.createElement('h3');
+    $order.className = 'ml-4';
+    $order.innerHTML = 'Nhân vật' +' '+ count;
 
     let $table = document.createElement('table');
     $table.className = 'table table-borderless row no-gutters';
-
-    let $formGroup = document.createElement('div');
-    $formGroup.className = 'form-group form-group-lg';
-
-    let $thead = document.createElement('thead');
 
     let $tbody = document.createElement('tbody');
     $tbody.className = 'text-white';
@@ -156,13 +157,12 @@ function createCharacter() {
     $trDetails.append($tdDetails, $tdInputDetails);
 
     $tbody.append($trName, $trImage, $trJob, $trBirth, $trDeath, $trCountry, $trGeneral, $trDetails);
-    $thead.append($tbody);
-    $formGroup.append($thead);
-    $table.append($formGroup);
-    $form.append($table);
+    $table.append($tbody);
+    $form.append($order ,$table);
+
+    console.log($form);
 }
 
 
 
 
-console.log($form);
