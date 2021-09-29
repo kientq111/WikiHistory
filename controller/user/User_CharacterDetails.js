@@ -7,6 +7,7 @@ console.log('don: ', id1.data());
 let getChar = id1.data();
 let $detailCharacter = document.getElementById('#inforCharacter');
 let $divImageCharacter = document.createElement('div');
+$divImageCharacter.className = 'imgForm';
 let $imgCharacter = document.createElement('img');
 $imgCharacter.className = 'img-character';
 $imgCharacter.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Statue_of_Tran_Hung_Dao%2C_Ho_Chi_Minh_City%2C_Vietnam.jpg/408px-Statue_of_Tran_Hung_Dao%2C_Ho_Chi_Minh_City%2C_Vietnam.jpg';
@@ -19,8 +20,8 @@ $boxText.className = 'boxText';
 let $textGroupJob = document.createElement('div');
 $textGroupJob.className = 'text-group position-group d-flex';
 
-let $titleJob = document.createElement('p');
-$titleJob.innerHTML = 'Chức danh/Nghề nghiệp:';
+let $titleJob = document.createElement('h6');
+$titleJob.innerHTML = 'Chức danh/Nghề nghiệp: ';
 
 let $textJob = document.createElement('p');
 $textJob.innerHTML = getChar.title;
@@ -31,8 +32,8 @@ $textGroupJob.append($titleJob, $textJob);
 let $textGroupDate = document.createElement('div');
 $textGroupDate.className = 'text-group position-group d-flex';
 
-let $titleDate = document.createElement('p');
-$titleDate.innerHTML = 'Ngày sinh/mất:';
+let $titleDate = document.createElement('h6');
+$titleDate.innerHTML = 'Ngày sinh/mất: ';
 
 let $textdate = document.createElement('p');
 $textdate.innerHTML = `Sinh: ${getChar.birth} - Mất:${getChar.death}`;
@@ -43,8 +44,8 @@ $textGroupDate.append($titleDate, $textdate);
 let $textGroupCountry = document.createElement('div');
 $textGroupCountry.className = 'text-group position-group d-flex';
 
-let $titleCountry = document.createElement('p');
-$titleCountry.innerHTML = 'Quê quán:';
+let $titleCountry = document.createElement('h6');
+$titleCountry.innerHTML = 'Quê quán: ';
 
 let $textCountry = document.createElement('p');
 $textCountry.innerHTML = getChar.home;
@@ -55,8 +56,8 @@ $textGroupCountry.append($titleCountry, $textCountry);
 let $textGroupGeneral = document.createElement('div');
 $textGroupGeneral.className = 'text-group position-group d-flex';
 
-let $titleGeneral = document.createElement('p');
-$titleGeneral.innerHTML = 'Khái quát:';
+let $titleGeneral = document.createElement('h6');
+$titleGeneral.innerHTML = 'Khái quát: ';
 
 let $textGeneral = document.createElement('p');
 $textGeneral.innerHTML = getChar.general;

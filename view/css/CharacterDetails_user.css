@@ -11,28 +11,41 @@
     display: flex;
 
     border: solid;
+
+}
+
+.imgForm {
+    width: 50%;
 }
 
 .img-character {
     background-color: cadetblue;
-    width: 100%;
+    width: 75%;
     height: 400px;
     object-fit: cover;
 }
 
 .boxText {
-    width: 40%;
+    width: 55%;
     height: auto;
     margin: 15px;
     margin-left: 30px;
 }
 
 .text-group {
-    padding: 10px;
+    padding: 5px;
 }
 
 .text-group p {
-    padding-right: 20px;
+    /* padding-right: 20px; */
+
+    width: 65%;
+}
+
+.text-group h6 {
+    /* padding-right: 20px; */
+
+    width: 35%;
 }
 
 div.life-character {
@@ -63,5 +76,6 @@ div.group-life {
 }
 
 .details {
-    padding-left: 50px;
+    padding-left: 20px;
+    width: 1086px;
 }
