@@ -1,10 +1,16 @@
+*{
+  font-family: 'Lora';
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Unica One', cursive;
     background-color: #000;
 }
 
+.mb-0 {
+  font-family: Arial, Helvetica, sans-serif;
+}
 .video-wrapper {
     position: relative;
 }
