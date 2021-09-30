@@ -22,30 +22,11 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://www.csslab.cl/ejemplos/timelinr/latest/js/jquery.timelinr-0.9.54.js"></script>
-
-    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-firestore-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-auth-compat.js"></script>
-    <script>
-        const firebaseConfig = {
-            apiKey: "AIzaSyB-q_tQfy62e46AE6wHg0jEg9HcZA3OhMQ",
-            authDomain: "historydb-team1.firebaseapp.com",
-            projectId: "historydb-team1",
-            storageBucket: "historydb-team1.appspot.com",
-            messagingSenderId: "456407580200",
-            appId: "1:456407580200:web:c475537af2b40742203f1d",
-            measurementId: "G-P7CQFHL86B"
-        };
-
-        const firebaseApp = firebase.initializeApp(firebaseConfig);
-        const db = firebaseApp.firestore();
-        const auth = firebaseApp.auth();
-    </script>
 </head>
 
 <body>
-    <!-- Thanh nav-bar -->
-    <nav class="navbar navbar-expand-sm navbar-dark pl-0 pb-0 pt-1" style="background-color: black;height: 50px;">
+       <!-- Thanh nav-bar -->
+       <nav class="navbar navbar-expand-sm navbar-dark pl-0 pb-0 pt-1" style="background-color: black;height: 50px;">
         <ul class="navbar-nav d-flex">
             <li class="nav-item ">
                 <a href="./HomePage.html"><img class="pb-2" src="../media/Image/logo.png" alt="" style="width: 70px; height: 50px;object-fit: cover;"></a>
@@ -66,7 +47,7 @@
                 <li class="text-warning mt-3 mr-3">Đạt nghiện vào sửa nhé.................. </li>
                 <a class="nav-link dropdown-toggle h5 " href="#" id="navbardrop" data-toggle="dropdown">
                     <i class="h3 bi bi-person-circle"></i>
-                </a>
+                 </a>
                 <div class="dropdown-menu bg-dark">
                     <a class="dropdown-item text-black" href="../login.html">Đăng nhập</a>
                     <a class="dropdown-item text-black" href="../register.html">Đăng kí</a>
@@ -115,7 +96,7 @@
                 <!-- Timeline -->
                 <div class="details w-50 text-white ">
                     <div id="timeline">
-                        <ul id="dates" class="dates">
+                        <ul id="dates" class = "dates">
                             <!-- <li><a href="#1900" class="selected">1900</a></li>
                             <li><a href="#1930">1930</a></li>
                             <li><a href="#1944">1944</a></li>
@@ -127,7 +108,7 @@
                             <li><a href="#2001">2001</a></li>
                             <li><a href="#2011">2011</a></li> -->
                         </ul>
-                        <ul id="issues" class="issues">
+                        <ul id="issues" class = "issues">
                             <!-- <li id="1900" class="selected">
                                 <img src="http://www.csslab.cl/ejemplos/timelinr/latest/images/1.png" />
                                 <h1>1900</h1>

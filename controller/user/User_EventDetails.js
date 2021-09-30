@@ -4,11 +4,6 @@ import data from '../../data/eventDAO.js'
 //dates
 let $ulDates = document.getElementsByClassName('dates')[0];
 
-// let idEvt = localStorage.getItem('idEvent');
-// let id1 = await db.collection('events').doc(idEvt).get();
-// console.log(id1.data());
-// let getChar = id1.data();
-
 for (let item of data) {
     let $liDates = document.createElement('li');
 
