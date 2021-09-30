@@ -15,7 +15,7 @@ async function getListCharacter() {
 
         let $img = document.createElement('img');
         $img.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Quang_Trung_statue_02.jpg/800px-Quang_Trung_statue_02.jpg';
-        // $img.src = data.picture;
+        $img.src = data.picture;
         $img.alt = 'sample72';
 
         let $figcaption = document.createElement('figcaption');
