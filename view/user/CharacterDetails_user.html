@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./CSS_user/CharacterDetails_user.css">
+    <link rel="stylesheet" href="../css/CharacterDetails_user.css">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -13,61 +13,99 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <link rel="stylesheet" href="../css/HomePage.css" />
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-auth-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyB-q_tQfy62e46AE6wHg0jEg9HcZA3OhMQ",
+            authDomain: "historydb-team1.firebaseapp.com",
+            projectId: "historydb-team1",
+            storageBucket: "historydb-team1.appspot.com",
+            messagingSenderId: "456407580200",
+            appId: "1:456407580200:web:c475537af2b40742203f1d",
+            measurementId: "G-P7CQFHL86B"
+        };
+
+        const firebaseApp = firebase.initializeApp(firebaseConfig);
+        const db = firebaseApp.firestore();
+        const auth = firebaseApp.auth();
+    </script>
 </head>
 
 <body>
-    <div class="" style="background-image: radial-gradient(circle, #000000, #160b0a, #21150c, #281e0c, #29290f);">
+    <div class=""
+        style="padding-bottom: 70px; background-image: radial-gradient(circle, #000000, #160b0a, #21150c, #281e0c, #29290f);">
 
         <!-- Thanh nav-bar -->
-        <nav class="navbar navbar-expand-sm navbar-dark pl-0" style="background-color: black;">
+        <nav class="navbar navbar-expand-sm navbar-dark pl-0 pb-0 pt-1" style="background-color: black;height: 50px;">
             <ul class="navbar-nav d-flex">
                 <li class="nav-item ">
-                    <img class="" src="./Image/logo.png" alt="" style="width: 100px; height: 50px;object-fit: cover;">
+                    <a href="./HomePage.html"><img class="pb-2" src="../media/Image/logo.png" alt=""
+                            style="width: 70px; height: 50px;object-fit: cover;"></a>
                 </li>
                 <li class="nav-item ml-3 ">
-                    <a class="nav-link h3" href="#">
+                    <a class="nav-link h5" href="./EventList_user.html">
                         Sự kiện
-                     </a>
+                    </a>
                 </li>
                 <li class="nav-item ml-3 ">
-                    <a class="nav-link h3 " href="#">
-                         Nhân vật
+                    <a class="nav-link h5 " href="./CharacterList_user.html">
+                        Nhân vật
                     </a>
                 </li>
             </ul>
+<<<<<<< HEAD
             <ul class=" navbar-nav ml-auto">
-                <li class="nav-item dropdown ">
-                    <a class="nav-link dropdown-toggle h3 " href="#" id="navbardrop" data-toggle="dropdown"><i class="h3 bi bi-person-circle"></i>
-              
-            </a>
-                    <div class="dropdown-menu bg-dark ">
-                        <a class="dropdown-item text-white " href="#">Đăng nhập</a>
-                        <a class="dropdown-item text-white " href="#">Đăng kí</a>
+                <li class="nav-item dropdown mr-2 ">
+                <li class="text-warning mt-3 mr-3">Đạt nghiện vào sửa nhé.................. </li>
+                <a class="nav-link dropdown-toggle h5 " href="#" id="navbardrop" data-toggle="dropdown">
+                    <i class="h3 bi bi-person-circle"></i>
+                </a>
+                <div class="dropdown-menu bg-dark">
+                    <a class="dropdown-item text-black" href="../login.html">Đăng nhập</a>
+                    <a class="dropdown-item text-black" href="../register.html">Đăng kí</a>
+                </div>
+=======
+            <ul class=" navbar-nav ml-auto ">
+                <div class="text-warning mt-3 mr-3 h5">Chào ........... </div>
+                <li class="nav-item dropdown mr-3 ">
+                    <a class="nav-link dropdown-toggle h5  " href="#" id="navbardrop" data-toggle="dropdown">
+                        <i class="h3 bi bi-person-circle"></i>
+                    </a>
+                    <div class="dropdown-menu bg-dark">
+                        <a class="dropdown-item text-black" href="../login.html">Đăng nhập</a>
+                        <a class="dropdown-item text-black" href="../register.html">Đăng kí</a>
                     </div>
+>>>>>>> e4f890d81f96e71009ad6d84e0eca090a99d32de
                 </li>
             </ul>
-            <li class="btn btn-warning h3" style="text-align: center;">
+            <li class="btn btn-warning mb-2 " style="text-align: center;">
                 Thoát
             </li>
         </nav>
 
         <!-- Ảnh content page -->
-        <div class=" " style="background-image: url(./Image/content1.jpg);height: 55px; background-size: 200px; ">.</div>
+        <div class=" "
+            style="background-image: url(../media/Image/content1.jpg);height: 40px; background-size: 200px; ">.</div>
 
         <!-- Tên nhân vật -->
         <div class="container">
             <div class="name-character">
-                <h1 class="mx-auto text-center display-5 text-white">Danh sách nhân vật</h1>
+                <h1 class="mx-auto text-center display-5 text-white">Chi tiết nhân vật</h1>
             </div>
 
             <!-- Thông tin nhân vật -->
-            <div class="infor-character ">
-                <div class="img-character ">
-                    <img class=" " src=" " alt="IMG ">
+            <div id="#inforCharacter" class="infor-character text-white">
+                <!-- <div class="imgForm">
+                    <img class="img-character" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Statue_of_Tran_Hung_Dao%2C_Ho_Chi_Minh_City%2C_Vietnam.jpg/408px-Statue_of_Tran_Hung_Dao%2C_Ho_Chi_Minh_City%2C_Vietnam.jpg" alt="IMG ">
                 </div>
                 <div class="boxText ">
                     <div class="text-group position-group d-flex ">
@@ -86,18 +124,18 @@
                         <p>Khái quát:</p>
                         <p>31312323</p>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <!-- Cuộc đời-các sự kiện về nhân vật -->
-            <div class="life-character ">
-                <div class="group-life ">
+            <div class="life-character text-white">
+                <!-- <div class="group-life ">
                     <div class="time-life ">
                         <h2>Ngày ??? - ???</h2>
                     </div>
 
-                    <div class="img-life ">
-                        <img src=" " alt="Img ">
+                    <div class="">
+                        <img class="img-life " src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Statue_of_Tran_Hung_Dao%2C_Ho_Chi_Minh_City%2C_Vietnam.jpg/408px-Statue_of_Tran_Hung_Dao%2C_Ho_Chi_Minh_City%2C_Vietnam.jpg" alt="Img ">
                     </div>
 
                     <div class="details ">
@@ -110,17 +148,127 @@
                         <h2>Ngày ??? - ???</h2>
                     </div>
 
-                    <div class="img-life ">
-                        <img src=" " alt="Img ">
+                    <div class="">
+                        <img class="img-life " src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Statue_of_Tran_Hung_Dao%2C_Ho_Chi_Minh_City%2C_Vietnam.jpg/408px-Statue_of_Tran_Hung_Dao%2C_Ho_Chi_Minh_City%2C_Vietnam.jpg" alt="Img ">
                     </div>
 
                     <div class="details ">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam ut dolor et neque fugit. Animi aliquam adipisci, perferendis at corporis autem esse. Consequatur fugiat soluta iusto praesentium beatae nihil eligendi?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem voluptatum adipisci veritatis animi harum? Aut reiciendis maxime eius animi ducimus at omnis voluptates consequatur nemo quidem natus architecto, cupiditate ipsam.</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <script src="../../controller/user/User_CharacterDetails.js" type="module"></script>
+</body>
+
+<footer class="footer-section">
+    <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <div class="cta-text">
+                            <h4>Địa điểm</h4>
+                            <span>Hà Nội, Việt Nam</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="bi bi-telephone-fill"></i>
+                        <div class="cta-text">
+                            <h4>Hotline</h4>
+                            <span>98765432100</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="bi bi-envelope-fill"></i>
+                        <div class="cta-text">
+                            <h4>Email</h4>
+                            <span>mail@info.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a style="text-decoration: none; color: aliceblue;" href="index.html"><img
+                                    src="../media/Image/logo.png" alt="logo" style="height: 100%; width: 130px;">VIETNAM
+                                HISTORY</a>
+                        </div>
+                        <div class="footer-text">
+                            <p>Lịch sử Việt Nam là điều tự hào của đất nước ta, hãy cùng nhau giữ gin và nối dài thành
+                                tích đáng tự hào đó nhé!</p>
+                        </div>
+                        <div class="footer-social-icon">
+                            <span>Theo dõi</span>
+                            <a class="" href="#"><i class="bi bi-facebook h2"></i></a>
+                            <a href="#"><i class="bi bi-twitter h2"></i></a>
+                            <a href="#"><i class="bi bi-instagram h2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Thông tin cần thiết</h3>
+                        </div>
+                        <ul>
+                            <li><a style="text-decoration:none" href="./HomePage.html">Trang chủ</a></li>
+                            <li><a style="text-decoration:none" href="#">Liên lạc</a></li>
+                            <li><a style="text-decoration:none" href="#">Về chúng tôi</a></li>
+                            <li><a style="text-decoration:none" href="#">Địa điểm</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Góp ý</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Mọi người có góp ý để cải thiện về website này, đừng ngần ngại gửi ý kiến cho tụi mình
+                                nhé!</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="bi bi-arrow-right"></i></button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</body>
-
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                    <div class="copyright-text">
+                        <p>Copyright &copy; 2021, All Right Reserved <a style="text-decoration:none"
+                                href="">HistoryTeam</a></p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a style="text-decoration:none" href="./HomePage.html">Trang chủ</a></li>
+                            <li><a style="text-decoration:none" href="#">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 </html>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./CSS_user/EventDetails_user.css">
+    <link rel="stylesheet" href="../css/EventDetails_user.css">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -16,50 +16,53 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://www.csslab.cl/ejemplos/timelinr/latest/js/jquery.timelinr-0.9.54.js"></script>
+
+    <link rel="stylesheet" href="../css/HomePage.css" />
 </head>
 
 <body>
-    <!-- Thanh nav-bar -->
-    <nav class="navbar navbar-expand-sm navbar-dark pl-0" style="background-color: black;">
+       <!-- Thanh nav-bar -->
+       <nav class="navbar navbar-expand-sm navbar-dark pl-0 pb-0 pt-1" style="background-color: black;height: 50px;">
         <ul class="navbar-nav d-flex">
             <li class="nav-item ">
-                <img class="" src="./Image/logo.png" alt="" style="width: 100px; height: 50px;object-fit: cover;">
+                <a href="./HomePage.html"><img class="pb-2" src="../media/Image/logo.png" alt="" style="width: 70px; height: 50px;object-fit: cover;"></a>
             </li>
             <li class="nav-item ml-3 ">
-                <a class="nav-link h3" href="#">
+                <a class="nav-link h5" href="./EventList_user.html">
                     Sự kiện
                  </a>
             </li>
             <li class="nav-item ml-3 ">
-                <a class="nav-link h3 " href="#">
+                <a class="nav-link h5 " href="./CharacterList_user.html">
                      Nhân vật
                 </a>
             </li>
         </ul>
-        <ul class=" navbar-nav ml-auto">
-            <li class="nav-item dropdown ">
-                <a class="nav-link dropdown-toggle h3 " href="#" id="navbardrop" data-toggle="dropdown"><i class="h3 bi bi-person-circle"></i>
-          
-        </a>
-                <div class="dropdown-menu bg-dark ">
-                    <a class="dropdown-item text-white " href="#">Đăng nhập</a>
-                    <a class="dropdown-item text-white " href="#">Đăng kí</a>
+        <ul class=" navbar-nav ml-auto ">
+            <div class="text-warning mt-3 mr-3 h5">Chào ........... </div>
+            <li class="nav-item dropdown mr-3 ">
+                <a class="nav-link dropdown-toggle h5  " href="#" id="navbardrop" data-toggle="dropdown">
+                    <i class="h3 bi bi-person-circle"></i>
+                </a>
+                <div class="dropdown-menu bg-dark">
+                    <a class="dropdown-item text-black" href="../login.html">Đăng nhập</a>
+                    <a class="dropdown-item text-black" href="../register.html">Đăng kí</a>
                 </div>
             </li>
         </ul>
-        <li class="btn btn-warning h3" style="text-align: center;">
+        <li class="btn btn-warning mb-2 " style="text-align: center;">
             Thoát
         </li>
     </nav>
 
     <!-- Ảnh content page -->
-    <div class=" " style="background-image: url(./Image/content1.jpg);height: 55px; background-size: 200px; ">.</div>
+    <div class=" " style="background-image: url(../media/Image/content1.jpg);height: 40px; background-size: 200px; ">.</div>
 
     <!-- Chữ chi tiết sự kiện -->
     <div style="background-image: radial-gradient(circle, #000000, #160b0a, #21150c, #281e0c, #29290f);">
@@ -72,31 +75,31 @@
                 <div class="event w-50 bg-warning ">
                     <div class="d-flex ">
                         <div class="name bg-danger col-sm-6 ">
-                            <h4>Tên sự kiện</h4>
+                            <!-- <h4>Tên sự kiện</h4> -->
                         </div>
                         <div class="date bg-info col-sm-6 ">
-                            <h4>Ngày</h4>
+                            <!-- <h4>Ngày</h4> -->
                         </div>
                     </div>
                     <div class="image h-25 bg-dark ">
-                        <img src=" " alt=" ">
+                        <!-- <img src=" " alt=" "> -->
                     </div>
                     <div class="location bg-info " style="height: 30px; ">
-                        <h5>Đia điểm: </h5>
+                        <!-- <h5>Đia điểm: </h5> -->
                     </div>
                     <div class="introduction h-25 bg-dark ">
-                        <p>Khái quát chung: </p>
+                        <!-- <p>Khái quát chung: </p> -->
                     </div>
                     <div class="result bg-info " style="height: 257px; ">
-                        <p>Kết quả và ý nghĩa lịch sử</p>
+                        <!-- <p>Kết quả và ý nghĩa lịch sử</p> -->
                     </div>
                 </div>
 
                 <!-- Timeline -->
                 <div class="details w-50 text-white ">
                     <div id="timeline">
-                        <ul id="dates">
-                            <li><a href="#1900" class="selected">1900</a></li>
+                        <ul id="dates" class = "dates">
+                            <!-- <li><a href="#1900" class="selected">1900</a></li>
                             <li><a href="#1930">1930</a></li>
                             <li><a href="#1944">1944</a></li>
                             <li><a href="#1950">1950</a></li>
@@ -105,59 +108,69 @@
                             <li><a href="#1989">1989</a></li>
                             <li><a href="#1999">1999</a></li>
                             <li><a href="#2001">2001</a></li>
-                            <li><a href="#2011">2011</a></li>
+                            <li><a href="#2011">2011</a></li> -->
                         </ul>
-                        <ul id="issues">
-                            <li id="1900" class="selected">
+                        <ul id="issues" class = "issues">
+                            <!-- <li id="1900" class="selected">
                                 <img src="http://www.csslab.cl/ejemplos/timelinr/latest/images/1.png" />
                                 <h1>1900</h1>
-                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget
+                                    molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
                             </li>
                             <li id="1930">
                                 <img src="http://www.csslab.cl/ejemplos/timelinr/latest/images/2.png" />
                                 <h1>1930</h1>
-                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget
+                                    molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
                             </li>
                             <li id="1944">
                                 <img src="http://www.csslab.cl/ejemplos/timelinr/latest/images/3.png" />
                                 <h1>1944</h1>
-                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget
+                                    molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
                             </li>
                             <li id="1950">
                                 <img src="http://www.csslab.cl/ejemplos/timelinr/latest/images/4.png" />
                                 <h1>1950</h1>
-                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget
+                                    molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
                             </li>
                             <li id="1971">
                                 <img src="http://www.csslab.cl/ejemplos/timelinr/latest/images/5.png" />
                                 <h1>1971</h1>
-                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget
+                                    molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
                             </li>
                             <li id="1977">
                                 <img src="http://www.csslab.cl/ejemplos/timelinr/latest/images/6.png" />
                                 <h1>1977</h1>
-                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget
+                                    molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
                             </li>
                             <li id="1989">
                                 <img src="http://www.csslab.cl/ejemplos/timelinr/latest/images/7.png" />
                                 <h1>1989</h1>
-                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget
+                                    molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
                             </li>
                             <li id="1999">
                                 <img src="http://www.csslab.cl/ejemplos/timelinr/latest/images/8.png" />
                                 <h1>1999</h1>
-                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget
+                                    molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
                             </li>
                             <li id="2001">
                                 <img src="http://www.csslab.cl/ejemplos/timelinr/latest/images/9.png" />
                                 <h1>2001</h1>
-                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget
+                                    molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
                             </li>
                             <li id="2011">
                                 <img src="http://www.csslab.cl/ejemplos/timelinr/latest/images/10.png" />
                                 <h1>2011</h1>
-                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
-                            </li>
+                                <p>Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget
+                                    molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula.</p>
+                            </li> -->
                         </ul>
                         <div id="grad_top"></div>
                         <div id="grad_bottom"></div>
@@ -172,7 +185,7 @@
                 </div>
 
                 <div class="name-user ">
-                    <h6 class="pl-1 ">name</h6>
+                    <h6 class="pl-1 ">Tên</h6>
                 </div>
                 <div class="input-group mb-3 ">
                     <input type="text " class="form-control " placeholder="Viết bình luận... " aria-label="Recipient 's username" aria-describedby="basic-addon2">
@@ -180,11 +193,17 @@
                     <div class="input-group-append"></div>
                     <button class="btn btn-outline-secondary dropdown-toggle bg-warning" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp; Đánh giá! &nbsp;</button>
                     <div class="dropdown-menu">
+                        <a class="dropdown-item">10 </a>
+                        <a class="dropdown-item">9 </a>
+                        <a class="dropdown-item">8 </a>
+                        <a class="dropdown-item">7 </a>
+                        <a class="dropdown-item">6 </a>
                         <a class="dropdown-item">5 </a>
                         <a class="dropdown-item">4 </a>
                         <a class="dropdown-item">3 </a>
                         <a class="dropdown-item">2 </a>
                         <a class="dropdown-item">1 </a>
+                        <a class="dropdown-item">0 </a>
                     </div>
 
                     <div class="input-group-append">
@@ -197,7 +216,117 @@
         </div>
     </div>
 
-    <script src="../../controller/EventDetails_Timeline.js"></script>
+    <script src="../../controller/user/User_EventDetails.js" type="module"></script>
+
+    <script src="../script/EventDetails_Timeline.js"></script>
 </body>
 
+<footer class="footer-section">
+    <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <div class="cta-text">
+                            <h4>Địa điểm</h4>
+                            <span>Hà Nội, Việt Nam</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="bi bi-telephone-fill"></i>
+                        <div class="cta-text">
+                            <h4>Hotline</h4>
+                            <span>98765432100</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="bi bi-envelope-fill"></i>
+                        <div class="cta-text">
+                            <h4>Email</h4>
+                            <span>mail@info.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a style="text-decoration: none; color: aliceblue;" href="index.html"><img
+                                    src="../media/Image/logo.png" alt="logo" style="height: 100%; width: 130px;">VIETNAM
+                                HISTORY</a>
+                        </div>
+                        <div class="footer-text">
+                            <p>Lịch sử Việt Nam là điều tự hào của đất nước ta, hãy cùng nhau giữ gin và nối dài thành
+                                tích đáng tự hào đó nhé!</p>
+                        </div>
+                        <div class="footer-social-icon">
+                            <span>Theo dõi</span>
+                            <a class="" href="#"><i class="bi bi-facebook h2"></i></a>
+                            <a href="#"><i class="bi bi-twitter h2"></i></a>
+                            <a href="#"><i class="bi bi-instagram h2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Thông tin cần thiết</h3>
+                        </div>
+                        <ul>
+                            <li><a style="text-decoration:none" href="./HomePage.html">Trang chủ</a></li>
+                            <li><a style="text-decoration:none" href="#">Liên lạc</a></li>
+                            <li><a style="text-decoration:none" href="#">Về chúng tôi</a></li>
+                            <li><a style="text-decoration:none" href="#">Địa điểm</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Góp ý</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Mọi người có góp ý để cải thiện về website này, đừng ngần ngại gửi ý kiến cho tụi mình
+                                nhé!</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="bi bi-arrow-right"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                    <div class="copyright-text">
+                        <p>Copyright &copy; 2021, All Right Reserved <a style="text-decoration:none"
+                                href="">HistoryTeam</a></p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a style="text-decoration:none" href="./HomePage.html">Trang chủ</a></li>
+                            <li><a style="text-decoration:none" href="#">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 </html>

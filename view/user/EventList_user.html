@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./CSS_user/EventList_user.css">
+    <link rel="stylesheet" href="../css/EventList_user.css">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -17,45 +17,65 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+
+    <link rel="stylesheet" href="../css/HomePage.css" />
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Trang chủ</a>
+    <!-- Thanh nav-bar -->
+    <nav class="navbar navbar-expand-sm navbar-dark pl-0 pb-0 pt-1" style="background-color: black;height: 50px;">
+        <ul class="navbar-nav d-flex">
+            <li class="nav-item ">
+                <a href="./HomePage.html"><img class="pb-2" src="../media/Image/logo.png" alt=""
+                        style="width: 70px; height: 50px;object-fit: cover;"></a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                    Sự kiện lịch sử
+            <li class="nav-item ml-3 ">
+                <a class="nav-link h5" href="./EventList_user.html">
+                    Sự kiện
                 </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Danh sách sự kiện lịch sử</a>
-                </div>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                    Nhân vật lịch sử
+            <li class="nav-item ml-3 ">
+                <a class="nav-link h5 " href="./CharacterList_user.html">
+                    Nhân vật
                 </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Danh sách nhân vật lịch sử</a>
+            </li>
+        </ul>
+        <ul class=" navbar-nav ml-auto ">
+            <div class="text-warning mt-3 mr-3 h5">Chào ........... </div>
+            <li class="nav-item dropdown mr-3 ">
+                <a class="nav-link dropdown-toggle h5  " href="#" id="navbardrop" data-toggle="dropdown">
+                    <i class="h3 bi bi-person-circle"></i>
+                </a>
+                <div class="dropdown-menu bg-dark">
+                    <a class="dropdown-item text-black" href="../login.html">Đăng nhập</a>
+                    <a class="dropdown-item text-black" href="../register.html">Đăng kí</a>
                 </div>
             </li>
         </ul>
+        <li class="btn btn-warning mb-2 " style="text-align: center;">
+            Thoát
+        </li>
     </nav>
 
-    <div class="container-fluid" style="background-image: radial-gradient(circle, #000000, #160b0a, #21150c, #281e0c, #29290f);">
-        <nav class="header navbar navbar-expand-lg navbar-light ">
+    <!-- Ảnh content page -->
+    <div class=" " style="background-image: url(../media/Image/content1.jpg);height: 40px; background-size: 200px; ">.
+    </div>
+
+
+    <div class="container-fluid"
+        style="background-image: radial-gradient(circle, #000000, #160b0a, #21150c, #281e0c, #29290f);">
+        <nav class="header navbar navbar-expand-lg navbar-light d-flex justify-content-end">
             <input class=" mr-3" type="text">
             <div class="group-button">
                 <button class="btn-search btn btn-primary mr-3">Search</button>
-                <button class="btn-reload btn btn-danger">Reload</button>
             </div>
         </nav>
 
         <div class="content">
             <div class="title">
-                <h1 class="mx-auto  text-center display-5 text-light" style="background:none;">Danh sách sự kiện lịch sử</h1>
+                <h1 class="mx-auto  text-center display-5 text-light" style="background:none;">Danh sách sự kiện lịch sử
+                </h1>
             </div>
             <ul class="list d-flex justify-content-center">
                 <li class="character mr-3 mb-3">
@@ -76,7 +96,8 @@
                 <li class="character mr-3 mb-3">
 
                     <figure class="snip1273">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample72.jpg" alt="sample72" />
+                        <img src="https://bookhunterclub.com/wp-content/uploads/2018/10/content_historypapers-810x436.jpg"
+                            alt="sample72" />
                         <figcaption>
                             <h4>Tên sự kiện</h4>
                             <p>Ngày:</p>
@@ -91,7 +112,8 @@
                 <li class="character mr-3 mb-3">
 
                     <figure class="snip1273">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample72.jpg" alt="sample72" />
+                        <img src="https://edu.viettel.vn/upload/64504/20190705/grabd4e49120209_hanthienhai49.jpg"
+                            alt="sample72" />
                         <figcaption>
                             <h4>Tên sự kiện</h4>
                             <p>Ngày:</p>
@@ -106,7 +128,8 @@
                 <li class="character mr-3 mb-3">
 
                     <figure class="snip1273">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample72.jpg" alt="sample72" />
+                        <img src="https://vcdn1-giaitri.vnecdn.net/2018/09/29/04-Battle-of-Lepanto-07-10-1571-1538210143.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=xnts8jwfhiif1fX_ovWk5g"
+                            alt="sample72" />
                         <figcaption>
                             <h4>Tên sự kiện</h4>
                             <p>Ngày:</p>
@@ -122,8 +145,118 @@
         </div>
     </div>
 
-    <script src="./app.js"></script>
+    <script src="../script/CharacterList.js"></script>
 </body>
-    <script src="../../controller/listHistoryEvent.js" type="module"></script>
-</html>
+<script src="../script/listHistoryEvent.js" type="module"></script>
 
+
+<footer class="footer-section">
+    <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <div class="cta-text">
+                            <h4>Địa điểm</h4>
+                            <span>Hà Nội, Việt Nam</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="bi bi-telephone-fill"></i>
+                        <div class="cta-text">
+                            <h4>Hotline</h4>
+                            <span>98765432100</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="bi bi-envelope-fill"></i>
+                        <div class="cta-text">
+                            <h4>Email</h4>
+                            <span>mail@info.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a style="text-decoration: none; color: aliceblue;" href="index.html"><img
+                                    src="../media/Image/logo.png" alt="logo" style="height: 100%; width: 130px;">VIETNAM
+                                HISTORY</a>
+                        </div>
+                        <div class="footer-text">
+                            <p>Lịch sử Việt Nam là điều tự hào của đất nước ta, hãy cùng nhau giữ gin và nối dài thành
+                                tích đáng tự hào đó nhé!</p>
+                        </div>
+                        <div class="footer-social-icon">
+                            <span>Theo dõi</span>
+                            <a class="" href="#"><i class="bi bi-facebook h2"></i></a>
+                            <a href="#"><i class="bi bi-twitter h2"></i></a>
+                            <a href="#"><i class="bi bi-instagram h2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Thông tin cần thiết</h3>
+                        </div>
+                        <ul>
+                            <li><a style="text-decoration:none" href="./HomePage.html">Trang chủ</a></li>
+                            <li><a style="text-decoration:none" href="#">Liên lạc</a></li>
+                            <li><a style="text-decoration:none" href="#">Về chúng tôi</a></li>
+                            <li><a style="text-decoration:none" href="#">Địa điểm</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Góp ý</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Mọi người có góp ý để cải thiện về website này, đừng ngần ngại gửi ý kiến cho tụi mình
+                                nhé!</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="bi bi-arrow-right"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                    <div class="copyright-text">
+                        <p>Copyright &copy; 2021, All Right Reserved <a style="text-decoration:none"
+                                href="">HistoryTeam</a></p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a style="text-decoration:none" href="./HomePage.html">Trang chủ</a></li>
+                            <li><a style="text-decoration:none" href="#">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>

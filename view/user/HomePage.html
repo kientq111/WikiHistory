@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>History Website</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../css/HomePage.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="mw-100 mh-100" style="font-family: 'Unica One', cursive">
+        <div class="text-container d-flex">
+            <h1 class="mb-0">VietNam History</h1>
+        </div>
+        <div style="height: 100%;">
+            <!-- Thanh nav-bar -->
+            <nav class="navbar navbar-expand-sm navbar-dark pl-0 pb-0 pt-1"
+                style="background-color: black;height: 50px;">
+                <ul class="navbar-nav d-flex">
+                    <li class="nav-item ">
+                        <a href="./HomePage.html"><img class="pb-2" src="../media/Image/logo.png" alt=""
+                            style="width: 70px; height: 50px;object-fit: cover;"></a>
+                    </li>
+                    <li class="nav-item ml-3 ">
+                        <a class="nav-link h5" href="./EventList_user.html">
+                            Sự kiện
+                        </a>
+                    </li>
+                    <li class="nav-item ml-3 ">
+                        <a class="nav-link h5 " href="./CharacterList_user.html">
+                            Nhân vật
+                        </a>
+                    </li>
+                </ul>
+                <ul class=" navbar-nav ml-auto ">
+                    <div class="text-warning mt-3 mr-3 h5">Chào ........... </div>
+                    <li class="nav-item dropdown mr-3 ">
+                        <a class="nav-link dropdown-toggle h5  " href="#" id="navbardrop" data-toggle="dropdown">
+                            <i class="h3 bi bi-person-circle"></i>
+                        </a>
+                        <div class="dropdown-menu bg-dark">
+                            <a class="dropdown-item text-black" href="../login.html">Đăng nhập</a>
+                            <a class="dropdown-item text-black" href="../register.html">Đăng kí</a>
+                        </div>
+                    </li>
+                </ul>
+                <li class="btn btn-warning mb-2 " style="text-align: center;">
+                    Thoát
+                </li>
+            </nav>
+
+            <!-- Ảnh content page -->
+            <div class=" "
+                style="background-image: url(../media/Image/content1.jpg);height: 40px; background-size: 200px; ">.
+            </div>
+
+            <!-- Tóm tắt và video -->
+            <div class="" style="display: flex; width: 100%; height: 100%">
+                <figure id="video_player" class="video_box">
+                    <!-- Main Video -->
+                    <video controls poster="">
+                        <source src="../media/video/video.mp4" type="video/mp4">
+                    </video>
+                    <h1 class=" mt-5 text-white" style="text-align: center;">Tóm tắt lịch sử Việt Nam</h1>
+                    <!-- This is The Playlist Area -->
+                    <figcaption>
+                        <a href="../media/video/video.mp4"><img src="../media/Image/12.jpg" alt="Nambia Timelapse 1"></a>
+                        <a href="../media/video/video2.mp4"><img src="../media/Image/12.jpg" alt="Nambia Timelapse 1"></a>
+                        <a href="../media/video/video3.mp4"><img src="../media/Image/12.jpg" alt="Nambia Timelapse 1"></a>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="d-flex">
+            <figure class="snip1573">
+                <img src="../media/Image/Event.jpg" alt="" />
+                <figcaption>
+                    <h1>Sự kiện</h1>
+                </figcaption>
+                <a href="./EventList_user.html"></a>
+            </figure>
+            <figure class="snip1573 hover">
+                <img src="../media/Image/Auco.jpg" style="height: 100%;" />
+                <figcaption>
+                    <h1>Nhân vật</h1>
+                </figcaption>
+                <a href="./CharacterList_user.html"></a>
+            </figure>
+        </div>
+    </div>
+
+    <script src="../script/homeAnimation.js"></script>
+</body>
+<!-- Site footer -->
+<footer class="footer-section">
+    <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <div class="cta-text">
+                            <h4>Địa điểm</h4>
+                            <span>Hà Nội, Việt Nam</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="bi bi-telephone-fill"></i>
+                        <div class="cta-text">
+                            <h4>Hotline</h4>
+                            <span>98765432100</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="bi bi-envelope-fill"></i>
+                        <div class="cta-text">
+                            <h4>Email</h4>
+                            <span>mail@info.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a style="text-decoration: none; color: aliceblue;" href="index.html"><img
+                                    src="../media/Image/logo.png" alt="logo" style="height: 100%; width: 130px;">VIETNAM
+                                HISTORY</a>
+                        </div>
+                        <div class="footer-text">
+                            <p>Lịch sử Việt Nam là điều tự hào của đất nước ta, hãy cùng nhau giữ gin và nối dài thành
+                                tích đáng tự hào đó nhé!</p>
+                        </div>
+                        <div class="footer-social-icon">
+                            <span>Theo dõi</span>
+                            <a class="" href="#"><i class="bi bi-facebook h2"></i></a>
+                            <a href="#"><i class="bi bi-twitter h2"></i></a>
+                            <a href="#"><i class="bi bi-instagram h2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Thông tin cần thiết</h3>
+                        </div>
+                        <ul>
+                            <li><a style="text-decoration:none" href="./HomePage.html">Trang chủ</a></li>
+                            <li><a style="text-decoration:none" href="#">Liên lạc</a></li>
+                            <li><a style="text-decoration:none" href="#">Về chúng tôi</a></li>
+                            <li><a style="text-decoration:none" href="#">Địa điểm</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Góp ý</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Mọi người có góp ý để cải thiện về website này, đừng ngần ngại gửi ý kiến cho tụi mình
+                                nhé!</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="bi bi-arrow-right"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                    <div class="copyright-text">
+                        <p>Copyright &copy; 2021, All Right Reserved <a style="text-decoration:none"
+                                href="">HistoryTeam</a></p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a style="text-decoration:none" href="./HomePage.html">Trang chủ</a></li>
+                            <li><a style="text-decoration:none" href="#">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>

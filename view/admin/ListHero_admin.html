@@ -16,113 +16,210 @@
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
+    <link rel="stylesheet" href="../css/HomePage.css" />
+
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-auth-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyB-q_tQfy62e46AE6wHg0jEg9HcZA3OhMQ",
+            authDomain: "historydb-team1.firebaseapp.com",
+            projectId: "historydb-team1",
+            storageBucket: "historydb-team1.appspot.com",
+            messagingSenderId: "456407580200",
+            appId: "1:456407580200:web:c475537af2b40742203f1d",
+            measurementId: "G-P7CQFHL86B"
+        };
+
+        const firebaseApp = firebase.initializeApp(firebaseConfig);
+        const db = firebaseApp.firestore();
+        const auth = firebaseApp.auth();
+    </script>
+
 </head>
 
 <body>
-    <div style="font-family: 'Unica One', cursive;">
-        <!-- thanh nav-bar -->
-        <nav class="navbar navbar-expand-sm navbar-dark pl-0" style="background-color: black;">
+    <div style="font-family: 'Lora'">
+        <!-- Thanh nav-bar -->
+        <nav class="navbar navbar-expand-sm navbar-dark pl-0 pb-0 pt-1" style="background-color: black;height: 50px;">
             <ul class="navbar-nav d-flex">
                 <li class="nav-item ">
-                    <img class="" src="./Image/logo.png" alt="" style="width: 100px; height: 50px;object-fit: cover;">
+                    <a href="./HomePage_admin.html"><img class="pb-2" src="../media/Image/logo.png" alt=""
+                            style="width: 70px; height: 50px;object-fit: cover;"> </a>
                 </li>
-                <li class="nav-item dropdown ">
-                    <div class="nav-link dropdown-toggle h3 " href="#" id="navbardrop" data-toggle="dropdown">
+                <li class="nav-item ml-3 dropdown ">
+                    <a class="nav-link h5" href="#" id="navbardrop" data-toggle="dropdown">
                         Sự kiện
-                    </div>
+                    </a>
                     <div class="dropdown-menu bg-dark ">
-                        <a class="dropdown-item text-white " href="#">Danh sách sự kiện</a>
-                        <a class="dropdown-item text-white " href="#">Thêm sự kiện</a>
+                        <a class="dropdown-item text-black " href="./ListHistoryEvent_admin.html">Danh sách sự kiện</a>
+                        <a class="dropdown-item text-black " href="./CreateEvent_admin.html">Thêm sự kiện</a>
                     </div>
                 </li>
-                <li class="nav-item dropdown ">
-                    <div class="nav-link dropdown-toggle h3" href="#" id="navbardrop" data-toggle="dropdown">
+                <li class="nav-item ml-3 dropdown ">
+                    <a class="nav-link h5 " href="#" id="navbardrop" data-toggle="dropdown">
                         Nhân vật
-                    </div>
+                    </a>
                     <div class="dropdown-menu bg-dark">
-                        <a class="dropdown-item text-white " href="#">Danh sách nhân vật</a>
-                        <a class="dropdown-item text-white " href="#">Thêm nhân vật</a>
+                        <a class="dropdown-item text-black " href="./ListHero_admin.html">Danh sách nhân vật</a>
+                        <a class="dropdown-item text-black " href="./CreateCharacter_admin.html">Thêm nhân vật</a>
                     </div>
                 </li>
             </ul>
             <ul class=" navbar-nav ml-auto">
+                <div class="text-warning mt-3 mr-3 h5">Chào ........... </div>
                 <li class="nav-item dropdown ">
-                    <a class="nav-link dropdown-toggle h3 " href="#" id="navbardrop" data-toggle="dropdown"><i class="h3 bi bi-person-circle"></i>
-              
-            </a>
-                    <div class="dropdown-menu bg-dark ">
-                        <a class="dropdown-item text-white " href="#">Đăng nhập</a>
-                        <a class="dropdown-item text-white " href="#">Đăng kí</a>
+                    <a class="nav-link dropdown-toggle h5 mr-3 " href="#" id="navbardrop" data-toggle="dropdown">
+                        <i class="h3 bi bi-person-circle"></i>
+                    </a>
+                    <div class="dropdown-menu bg-dark text-white ">
+                        <a class="dropdown-item " href="../login.html">Đăng nhập</a>
+                        <a class="dropdown-item " href="../register.html">Đăng kí</a>
                     </div>
                 </li>
             </ul>
-            <li class="btn btn-warning h3" style="text-align: center;">
+            <li class="btn btn-warning " style="text-align: center;">
                 Thoát
             </li>
         </nav>
 
         <!-- Ảnh content page -->
-        <div class=" " style="background-image: url(./Image/content1.jpg);height: 55px; background-size: 200px; ">.</div>
+        <div class=" "
+            style="background-image: url(../media/Image/content1.jpg);height: 40px; background-size: 200px; ">.</div>
 
         <!-- Danh sách nhân vật -->
-        <div class=" mw-100 mh-100 pb-5 text-white" style="background-image: radial-gradient(circle, #000000, #160b0a, #21150c, #281e0c, #29290f);">
+        <div class=" mw-100 mh-100 pb-5 text-white"
+            style="background-image: radial-gradient(circle, #000000, #160b0a, #21150c, #281e0c, #29290f);">
             <div class="d-flex justify-content-center display-4">Danh Sách Anh Hùng Lịch Sử</div>
             <table class="table table-bordered text-white mt-4">
                 <thead>
                     <tr>
-                        <th>id</th>
                         <th>Tên nhân vật</th>
                         <th>Ảnh nhân vật</th>
                         <th>Chức danh</th>
-                        <th>Ngày sinh - Ngày mất</th>
+                        <th>Ngày sinh</th>
+                        <th>Ngày mất</th>
                         <th>Quê quán</th>
                         <th>Khái quát nhân vật</th>
-                        <th colspan="2">Hành động</th>
+                        <th colspan="2" style="text-align: center;">Hành động</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Doe</td>
-                        <td>john@example.com</td>
-                        <td>john@example.com</td>
-                        <td>john@example.com</td>
-                        <td>john@example.com</td>
-                        <td>john@example.com</td>
-                        <td><a href="#">Xem chi tiết</a></td>
-                        <td><a href="#">Xóa</a></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Moe</td>
-                        <td>mary@example.com</td>
-                        <td>mary@example.com</td>
-                        <td>mary@example.com</td>
-                        <td>mary@example.com</td>
-                        <td>mary@example.com</td>
-                        <td><a href="#">Xem chi tiết</a></td>
-                        <td><a href="#">Xóa</a></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Dooley</td>
-                        <td>july@example.com</td>
-                        <td>july@example.com</td>
-                        <td>july@example.com</td>
-                        <td>july@example.com</td>
-                        <td>july@example.com</td>
-                        <td><a href="#">Xem chi tiết</a></td>
-                        <td><a href="#">Xóa</a></td>
-                    </tr>
+                    <script src="../../controller/admin/ListHistoryCharacter_admin.js" type="module"></script>
                 </tbody>
             </table>
         </div>
     </div>
 
 </body>
+
+<footer class="footer-section">
+    <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <div class="cta-text">
+                            <h4>Địa điểm</h4>
+                            <span>Hà Nội, Việt Nam</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="bi bi-telephone-fill"></i>
+                        <div class="cta-text">
+                            <h4>Hotline</h4>
+                            <span>98765432100</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="bi bi-envelope-fill"></i>
+                        <div class="cta-text">
+                            <h4>Email</h4>
+                            <span>mail@info.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a style="text-decoration: none; color: aliceblue;" href="index.html"><img src="../media/Image/logo.png" alt="logo" style="height: 100%; width: 130px;">VIETNAM HISTORY</a>
+                        </div>
+                        <div class="footer-text">
+                            <p>Lịch sử Việt Nam là điều tự hào của đất nước ta, hãy cùng nhau giữ gin và nối dài thành tích đáng tự hào đó nhé!</p>
+                        </div>
+                        <div class="footer-social-icon">
+                            <span>Follow us</span>
+                            <a class="" href="#"><i class="bi bi-facebook h2"></i></a>
+                            <a href="#"><i class="bi bi-twitter h2"></i></a>
+                            <a href="#"><i class="bi bi-instagram h2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Thông tin cần thiết</h3>
+                        </div>
+                        <ul>
+                            <li><a href="./HomePage_admin.html">Trang chủ</a></li>
+                            <li><a href="#">Liên lạc</a></li>
+                            <li><a href="#">Về chúng tôi</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Góp ý</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Mọi người có góp ý để cải thiện về website này, đừng ngần ngại gửi ý kiến cho tụi mình nhé!</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="bi bi-arrow-right"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                    <div class="copyright-text">
+                        <p>Copyright &copy; 2021, All Right Reserved <a href="">HistoryTeam</a></p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="./HomePage_admin.html">Trang chủ</a></li>
+                            <li><a href="#">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
 </html>

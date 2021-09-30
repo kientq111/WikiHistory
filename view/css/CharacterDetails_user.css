@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora';
+}
+
+.infor-character {
+    /* background-color: lightslategrey; */
+    width: 100%;
+    height: auto;
+    display: flex;
+
+    border: solid;
+
+}
+
+.imgForm {
+    width: 50%;
+}
+
+.img-character {
+    background-color: cadetblue;
+    width: 75%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.boxText {
+    width: 55%;
+    height: auto;
+    margin: 15px;
+    margin-left: 30px;
+}
+
+.text-group {
+    padding: 5px;
+}
+
+.text-group p {
+    /* padding-right: 20px; */
+
+    width: 65%;
+}
+
+.text-group h6 {
+    /* padding-right: 20px; */
+
+    width: 35%;
+}
+
+div.life-character {
+    /* background-color: darkcyan; */
+    margin-top: 50px;
+}
+
+div.group-life {
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+.group-life {
+    /* background-color: darkgreen; */
+    margin-top: 80px;
+}
+
+.time-life {
+    padding-left: 30px;
+}
+
+.img-life {
+    background-color: darkgrey;
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.details {
+    padding-left: 20px;
+    width: 1086px;
+}
