@@ -86,11 +86,13 @@ div.group-life {
 .commentList {
 	height: 70%;
 	border-radius: 5px;
-	padding: 10px;
+	padding: 15px;
 
 	overflow-y: scroll;
 }
 
 .commentList ul li {
 	margin-bottom: 10px;
+
+	list-style-type: none;
 }
