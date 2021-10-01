@@ -83,7 +83,7 @@ let id1 = await db.collection('characters').doc(id).get();
 console.log('don: ', id1.data());
 let getChar = id1.data();
 
-
+/////
 let $nameEvent = document.getElementsByClassName('name')[0];
 let $textNameEvent = document.createElement('h4');
 $textNameEvent.innerHTML = 'Tên sự kiện: ' + '';
@@ -151,4 +151,34 @@ for (let item of getChar.details) {
     $detailTimeline.append($textDetailTimeline);
     $groupTimeline.append($time, $divImageTimeline, $detailTimeline);
     $timeline.append($groupTimeline);
+}
+
+///User comment
+
+let $commentList = document.getElementsByClassName('commentList')[0];
+for (let item of getChar.details) {
+    let $ul = document.createElement('ul');
+
+    let $li = document.createElement('li');
+
+    let $divEmail = document.createElement('div');
+    $divEmail.className = 'userEmail';
+
+    let $aEmail = document.createElement('a');
+    $aEmail.href = '';
+    $aEmail.innerHTML = 'hoangha@gmail.com';
+
+    let $divComment = document.createElement('div');
+    $divComment.className = 'userComment';
+
+    let $pComment = document.createElement('p');
+    $pComment.innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio iure assumenda soluta enim error dolorum temporibus esse odio, consectetur quas nisi alias voluptate? Earum aspernatur maxime nostrum quasi sequi explicabo.'
+
+
+    $divComment.append($pComment);
+    $divEmail.append($aEmail);
+    $li.append($divEmail, $divComment);
+    $ul.append($li);
+    $commentList.append($ul);
+
 }
