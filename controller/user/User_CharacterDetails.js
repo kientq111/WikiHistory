@@ -5,6 +5,7 @@ let id = localStorage.getItem('id');
 let id1 = await db.collection('characters').doc(id).get();
 console.log('don: ', id1.data());
 let getChar = id1.data();
+
 let $detailCharacter = document.getElementById('#inforCharacter');
 let $divImageCharacter = document.createElement('div');
 $divImageCharacter.className = 'imgForm';

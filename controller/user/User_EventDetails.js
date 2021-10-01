@@ -78,42 +78,43 @@ import data from '../../data/eventDAO.js'
 ///////
 
 //Event Details 2
-let id = localStorage.getItem('id');
-let id1 = await db.collection('characters').doc(id).get();
-console.log('don: ', id1.data());
-let getChar = id1.data();
+let id = localStorage.getItem('idEvent');
+let res = await db.collection('events').doc(id).get();
+console.log(res.data());
+let getChar = res.data();
 
 /////
 let $nameEvent = document.getElementsByClassName('name')[0];
 let $textNameEvent = document.createElement('h4');
-$textNameEvent.innerHTML = 'Tên sự kiện: ' + '';
+$textNameEvent.innerHTML = 'Tên sự kiện: ' + getChar.name;
 $nameEvent.append($textNameEvent);
 
 let $dateEvent = document.getElementsByClassName('date')[0];
 let $textDateEvent = document.createElement('h4');
-$textDateEvent.innerHTML = 'Ngày: ' + '';
+$textDateEvent.innerHTML = 'Ngày: ' + getChar.firstday;
 $dateEvent.append($textDateEvent);
 
 
 let $imgEvent = document.getElementsByClassName('image')[0];
 let $imageEvent = document.createElement('img');
-$imageEvent.src = 'https://upload.wikimedia.org/wikipedia/commons/4/49/C%E1%BB%8Dc_B%E1%BA%A1ch_%C4%90%E1%BA%B1ng.jpg';
+//$imageEvent.src = 'https://upload.wikimedia.org/wikipedia/commons/4/49/C%E1%BB%8Dc_B%E1%BA%A1ch_%C4%90%E1%BA%B1ng.jpg';
+$imageEvent.src = getChar.picture;
 $imageEvent.alt = 'Image';
 $imgEvent.append($imageEvent);
 
 let $locationEvent = document.getElementsByClassName('location')[0];
 let $textLoactionEvent = document.createElement('h5');
-$textLoactionEvent.innerHTML = 'Địa điểm: ' + '';
+$textLoactionEvent.innerHTML = 'Địa điểm: ' + getChar.location;
 $locationEvent.append($textLoactionEvent);
 
 let $introductionEvent = document.getElementsByClassName('introduction')[0];
 let $textIntroductionEvent = document.createElement('p');
-$textIntroductionEvent.innerHTML = 'Khái quát chung: ' + '';
+$textIntroductionEvent.innerHTML = 'Khái quát chung: ' + getChar.general;
 $introductionEvent.append($textIntroductionEvent);
 
 let $resultEvent = document.getElementsByClassName('result')[0];
 let $textResultEvent = document.createElement('p');
-$textResultEvent.innerHTML = 'Kết quả và ý nghĩa lịch sử: ' + ''
+$textResultEvent.innerHTML = 'Kết quả và ý nghĩa lịch sử: ' + getChar.result;
 $resultEvent.append($textResultEvent);
 
 
@@ -128,7 +129,7 @@ for (let item of getChar.details) {
     $time.className = 'time-life';
 
     let $timeText = document.createElement('h2');
-    $timeText.innerHTML = item.date;
+    $timeText.innerHTML = item.dateStart;
 
     let $divImageTimeline = document.createElement('div');
     $divImageTimeline.className = '';
@@ -137,14 +138,15 @@ for (let item of getChar.details) {
     //Picture
     let $imgTimeline = document.createElement('img');
     $imgTimeline.className = 'img-life';
-    $imgTimeline.src = 'https://upload.wikimedia.org/wikipedia/commons/4/49/C%E1%BB%8Dc_B%E1%BA%A1ch_%C4%90%E1%BA%B1ng.jpg';
+    // $imgTimeline.src = 'https://upload.wikimedia.org/wikipedia/commons/4/49/C%E1%BB%8Dc_B%E1%BA%A1ch_%C4%90%E1%BA%B1ng.jpg';
+    $imgTimeline.src = item.picture;
     $imgTimeline.alt = 'Img';
 
     let $detailTimeline = document.createElement('div');
     $detailTimeline.className = 'details';
 
     let $textDetailTimeline = document.createElement('p');
-    $textDetailTimeline.innerHTML = item.description;
+    $textDetailTimeline.innerHTML = item.content;
 
     $time.append($timeText);
     $divImageTimeline.append($imgTimeline);

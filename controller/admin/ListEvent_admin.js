@@ -22,6 +22,16 @@ async function getConversation() {
         let $btnDeltail = document.createElement('a');
         $btnDeltail.innerHTML = 'Xem chi tiết';
         $btnDeltail.href = "#";
+
+        $btnDeltail.onclick = async() => {
+
+            let id1 = await db.collection('characters').doc(doc.id).get();
+
+            console.log(id1.id);
+            localStorage.setItem('idEvent', id1.id);
+            location.href = '../user/EventDetails_user.html';
+        }
+
         let $btnDel = document.createElement('a');
         $btnDel.href = "#";
         $btnDel.innerHTML = 'Xóa';
