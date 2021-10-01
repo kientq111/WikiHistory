@@ -25,7 +25,7 @@ async function getConversation() {
 
         $btnDeltail.onclick = async() => {
 
-            let id1 = await db.collection('characters').doc(doc.id).get();
+            let id1 = await db.collection('events').doc(doc.id).get();
 
             console.log(id1.id);
             localStorage.setItem('idEvent', id1.id);

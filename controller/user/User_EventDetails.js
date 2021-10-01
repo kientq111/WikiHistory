@@ -158,7 +158,7 @@ for (let item of getChar.details) {
 ///User comment
 
 let $commentList = document.getElementsByClassName('commentList')[0];
-for (let item of getChar.details) {
+for (let item of getChar.comment) {
     let $ul = document.createElement('ul');
 
     let $li = document.createElement('li');
@@ -168,14 +168,14 @@ for (let item of getChar.details) {
 
     let $aEmail = document.createElement('a');
     $aEmail.href = '';
-    $aEmail.innerHTML = 'hoangha@gmail.com';
+    $aEmail.innerHTML = item.emails;
 
     let $divComment = document.createElement('div');
     $divComment.className = 'userComment';
 
     let $pComment = document.createElement('p');
-    $pComment.innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio iure assumenda soluta enim error dolorum temporibus esse odio, consectetur quas nisi alias voluptate? Earum aspernatur maxime nostrum quasi sequi explicabo.'
-
+    //  $pComment.innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio iure assumenda soluta enim error dolorum temporibus esse odio, consectetur quas nisi alias voluptate? Earum aspernatur maxime nostrum quasi sequi explicabo.'
+    $pComment.innerHTML = item.cmtContent
 
     $divComment.append($pComment);
     $divEmail.append($aEmail);

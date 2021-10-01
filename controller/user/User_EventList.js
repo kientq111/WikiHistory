@@ -38,10 +38,10 @@ async function getListEvent() {
         $figcaption.append($name, $location, $date, $result, $meaning);
 
         let $link = document.createElement('a');
-        $link.onclick = async () => {
+        $link.onclick = async() => {
             let id1 = await db.collection('events').doc(doc.id).get();
             console.log(id1.id);
-            localStorage.setItem('id', id1.id);
+            localStorage.setItem('idEvent', id1.id);
             location.href = 'EventDetails_user.html';
         }
 
