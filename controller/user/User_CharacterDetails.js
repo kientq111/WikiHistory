@@ -11,7 +11,7 @@ let $divImageCharacter = document.createElement('div');
 $divImageCharacter.className = 'imgForm';
 let $imgCharacter = document.createElement('img');
 $imgCharacter.className = 'img-character';
-$imgCharacter.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Statue_of_Tran_Hung_Dao%2C_Ho_Chi_Minh_City%2C_Vietnam.jpg/408px-Statue_of_Tran_Hung_Dao%2C_Ho_Chi_Minh_City%2C_Vietnam.jpg';
+$imgCharacter.src = getChar.picture;
 $imgCharacter.alt = 'Img';
 
 let $boxText = document.createElement('div');
@@ -37,7 +37,7 @@ let $titleDate = document.createElement('h6');
 $titleDate.innerHTML = 'Ngày sinh/mất: ';
 
 let $textdate = document.createElement('p');
-$textdate.innerHTML = `Sinh: ${getChar.birth} - Mất:${getChar.death}`;
+$textdate.innerHTML = `Sinh: ${getChar.birth} - Mất: ${getChar.death}`;
 
 $textGroupDate.append($titleDate, $textdate);
 
@@ -91,7 +91,8 @@ for (let item of getChar.details) {
     //Picture
     let $imgTimeline = document.createElement('img');
     $imgTimeline.className = 'img-life';
-    $imgTimeline.src = 'https://upload.wikimedia.org/wikipedia/commons/4/49/C%E1%BB%8Dc_B%E1%BA%A1ch_%C4%90%E1%BA%B1ng.jpg';
+    // $imgTimeline.src = 'https://upload.wikimedia.org/wikipedia/commons/4/49/C%E1%BB%8Dc_B%E1%BA%A1ch_%C4%90%E1%BA%B1ng.jpg';
+    $imgTimeline.src = item.picture;
     $imgTimeline.alt = 'Img';
 
     let $detailTimeline = document.createElement('div');
