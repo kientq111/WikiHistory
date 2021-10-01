@@ -134,7 +134,7 @@ function createStage() {
     $container.appendChild($stageContainer);
 }
 
-function saveEvent() {
+async function saveEvent() {
     let data = {
         name: document.getElementById('eventName').value,
         firstDate: document.getElementById('startDate').value,
@@ -160,6 +160,7 @@ function saveEvent() {
         data.details.push(detail);
     }
     console.log(data);
+    await db.collection('conversations').add(data);
 }
 
 function previewEventImage(value) {

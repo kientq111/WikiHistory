@@ -38,7 +38,7 @@ async function getListCharacter() {
         $figcaption.append($name, $job, $date, $countryside, $general);
 
         let $link = document.createElement('a');
-        $link.onclick = async () => {
+        $link.onclick = async() => {
             let id1 = await db.collection('characters').doc(doc.id).get();
             console.log(id1.id);
             localStorage.setItem('id', id1.id);
@@ -50,5 +50,7 @@ async function getListCharacter() {
         $ul.append($li);
     }
 }
+
+
 
 getListCharacter();
