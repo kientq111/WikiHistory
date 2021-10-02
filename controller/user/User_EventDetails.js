@@ -7,7 +7,7 @@ let getChar = res.data();
 /////
 let $nameEvent = document.getElementsByClassName('name')[0];
 let $textNameEvent = document.createElement('h2');
-$textNameEvent.innerHTML =  getChar.name + ' ' + '( ' +getChar.firstday + ' )';
+$textNameEvent.innerHTML = getChar.name + ' ' + '( ' + getChar.firstday + ' )';
 $nameEvent.append($textNameEvent);
 
 // let $dateEvent = document.getElementsByClassName('date')[0];
@@ -113,3 +113,5 @@ for (let item of getChar.comment) {
     $commentList.append($ul);
 
 }
+
+console.log(user);
