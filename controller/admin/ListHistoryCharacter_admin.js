@@ -9,7 +9,6 @@ async function getConversation() {
         let data = doc.data();
 
         let $name = document.createElement('td');
-        let $image = document.createElement('td');
         let $title = document.createElement('td');
         let $birthDay = document.createElement('td');
         let $deathDay = document.createElement('td');
@@ -20,11 +19,15 @@ async function getConversation() {
 
 
         $name.innerHTML = data.name;
-        $image.innerHTML = '#';
         $title.innerHTML = data.title;
         $birthDay.innerHTML = data.birth;
-        $deathDay.innerHTML = data.death;
-        $location.innerHTML = data.title;
+        if (data.death === undefined) {
+            $deathDay.innerHTML = 'Chưa rõ';
+        } else {
+            $deathDay.innerHTML = data.death;
+        }
+
+        $location.innerHTML = data.home;
         $content.innerHTML = data.name;
 
         let $btnDeltail = document.createElement('a');
@@ -62,7 +65,7 @@ async function getConversation() {
 
         let $row = document.createElement('tr');
         $row.append(
-            $name, $image, $title, $birthDay, $deathDay, $location, $detail, $del
+            $name, $title, $birthDay, $deathDay, $location, $detail, $del
         );
         $listCharacter.append($row)
     }
