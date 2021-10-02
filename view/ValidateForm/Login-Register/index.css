@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
 body{
     background: #F8F8F8;
-    background-image: url(/WikiHistory/view/ValidateForm/Login-Register/img/andrew-neel-1-29wyvvLJA-unsplash.jpg);
+    background-image: url(https://miro.medium.com/max/10944/1*qHAZ-wMh2j5bNgOfamNs0g.jpeg);
     background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  background-image: url(/WikiHistory/view/admin/HomePage_admin.html);
 }
 
 *, *::before, *::after{

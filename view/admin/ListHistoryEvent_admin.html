@@ -51,15 +51,15 @@
         <nav class="navbar navbar-expand-sm navbar-dark pl-0 pb-0 pt-1" style="background-color: black;height: 50px;">
             <ul class="navbar-nav d-flex">
                 <li class="nav-item ">
-                    <a href="./HomePage_admin.html"><img class="pb-2" src="../media/Image/logo.png" alt=""
-                            style="width: 70px; height: 50px;object-fit: cover;"> </a>
+                    <a href="./HomePage_admin.html"><img class="pb-2" src="../media/Image/logo.png" alt="" style="width: 70px; height: 50px;object-fit: cover;"> </a>
                 </li>
                 <li class="nav-item ml-3 dropdown ">
                     <a class="nav-link h5" href="#" id="navbardrop" data-toggle="dropdown">
                         Sự kiện
                     </a>
                     <div class="dropdown-menu bg-dark ">
-                        <a class="dropdown-item text-black " href="./ListHistoryEvent_admin.html">Danh sách sự kiện</a>
+                        <a class="dropdown-item text-black " href="./ListHistoryEvent_admin.html">Danh sách sự
+                            kiện</a>
                         <a class="dropdown-item text-black " href="./CreateEvent_admin.html">Thêm sự kiện</a>
                     </div>
                 </li>
@@ -74,18 +74,18 @@
                 </li>
             </ul>
             <ul class=" navbar-nav ml-auto">
-                <div class="text-warning mt-3 mr-3 h5">Chào ........... </div>
-                <li class="nav-item dropdown ">
+                <div id="user" class="text-warning mt-3 mr-3 h5"> </div>
+                <li id="nav-drop" class="nav-item dropdown ">
                     <a class="nav-link dropdown-toggle h5 mr-3 " href="#" id="navbardrop" data-toggle="dropdown">
                         <i class="h3 bi bi-person-circle"></i>
                     </a>
-                    <div class="dropdown-menu bg-dark ">
-                        <a class="dropdown-item text-black " href="../login.html">Đăng nhập</a>
-                        <a class="dropdown-item text-black " href="../register.html">Đăng kí</a>
+                    <div class="dropdown-menu bg-dark text-white ">
+                        <a class="dropdown-item " href="../login.html">Đăng nhập</a>
+                        <a class="dropdown-item " href="../register.html">Đăng kí</a>
                     </div>
                 </li>
             </ul>
-            <button class="btn btn-warning mb-2 " style="text-align: center;">Thoát</button>
+            <button  class="btn btn-warning mb-2 " onclick="logout()" style="text-align: center;">Thoát</button>
         </nav>
 
         <!-- Ảnh content page -->
@@ -231,5 +231,6 @@
     </div>
 </footer>
 
-
+<script src="/WikiHistory/view/ValidateForm/Login-Register/firebase.js"></script>
+<script src="/WikiHistory/view/ValidateForm/Login-Register/welcome.js"></script>
 </html>

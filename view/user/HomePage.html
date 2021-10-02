@@ -51,18 +51,18 @@
                     </li>
                 </ul>
                 <ul class=" navbar-nav ml-auto ">
-                    <div class="text-warning mt-3 mr-3 h5">Chào ........... </div>
+                    <div id="user" class="text-warning mt-3 mr-3 h5"></div>
                     <li class="nav-item dropdown mr-3 ">
-                        <a class="nav-link dropdown-toggle h5  " href="#" id="navbardrop" data-toggle="dropdown">
+                        <a id="nav-drop" class="nav-link dropdown-toggle h5  " href="#" id="navbardrop" data-toggle="dropdown">
                             <i class="h3 bi bi-person-circle"></i>
                         </a>
-                        <div class="dropdown-menu bg-dark">
+                        <div id="drop-bar" class="dropdown-menu bg-dark">
                             <a class="dropdown-item text-black" href="../login.html">Đăng nhập</a>
                             <a class="dropdown-item text-black" href="../register.html">Đăng kí</a>
                         </div>
                     </li>
                 </ul>
-               <button class="btn btn-warning mb-2 " style="text-align: center;">Thoát</button>
+               <button class="btn btn-warning mb-2 " onclick="logout()" style="text-align: center;">Thoát</button>
             </nav>
 
             <!-- Ảnh content page -->
@@ -104,7 +104,10 @@
             </figure>
         </div>
     </div>
-
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-auth-compat.js"></script>
+ 
     <script src="../script/homeAnimation.js"></script>
 </body>
 <!-- Site footer -->
@@ -216,5 +219,7 @@
         </div>
     </div>
 </footer>
+<script src="/WikiHistory/view/ValidateForm/Login-Register/firebase.js"></script>
+<script src="/WikiHistory/view/ValidateForm/Login-Register/welcome.js"></script>
 
 </html>

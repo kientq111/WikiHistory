@@ -76,8 +76,8 @@
                     </li>
                 </ul>
                 <ul class=" navbar-nav ml-auto">
-                    <div class="text-warning mt-3 mr-3 h5">Chào ........... </div>
-                    <li class="nav-item dropdown ">
+                    <div id="user" class="text-warning mt-3 mr-3 h5"> </div>
+                    <li id="nav-drop" class="nav-item dropdown ">
                         <a class="nav-link dropdown-toggle h5 mr-3 " href="#" id="navbardrop" data-toggle="dropdown">
                             <i class="h3 bi bi-person-circle"></i>
                         </a>
@@ -87,7 +87,7 @@
                         </div>
                     </li>
                 </ul>
-                <button class="btn btn-warning mb-2 " style="text-align: center;">Thoát</button>
+                <button  class="btn btn-warning mb-2 " onclick="logout()" style="text-align: center;">Thoát</button>
             </nav>
             <!-- Ảnh content page -->
             <div class=" " style="background-image: url(../media/Image/content1.jpg);height: 40px; background-size: 200px; ">.
@@ -284,5 +284,6 @@
         </div>
     </div>
 </footer>
-
+<script src="/WikiHistory/view/ValidateForm/Login-Register/firebase.js"></script>
+<script src="/WikiHistory/view/ValidateForm/Login-Register/welcome.js"></script>
 </html>
