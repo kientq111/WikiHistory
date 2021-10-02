@@ -27,10 +27,11 @@ async function getListCharacter() {
         $job.innerHTML = `Chức danh: ${data.title}`;
 
         let $date = document.createElement('p');
-        $date.innerHTML = `Ngày sinh - mất: ${data.birth}-${data.death}`;
+
+        $date.innerHTML = `Ngày sinh - mất: ${data.birth}-${data.death === undefined ? 'chưa rõ' : data.death}`;
 
         let $countryside = document.createElement('p');
-        $countryside.innerHTML = `Quê quán: ${data.title}`;
+        $countryside.innerHTML = `Quê quán: ${data.home}`;
 
         let $general = document.createElement('p');
         $general.innerHTML = `Khái quát: ${data.general}`;

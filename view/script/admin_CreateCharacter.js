@@ -24,7 +24,6 @@ function createStage() {
                                 </div>
                             </div>
                         </div>`
-
     $container.appendChild($stageContainer);
 }
 
