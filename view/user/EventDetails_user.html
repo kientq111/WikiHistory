@@ -160,7 +160,7 @@
                     <h6 class="pl-1 ">Tên</h6>
                 </div>
                 <div class="input-group mb-3 ">
-                    <input type="text " class="form-control " placeholder="Viết bình luận... " aria-label="Recipient 's username" aria-describedby="basic-addon2">
+                    <input type="text " class="form-control " id="txtComment" placeholder="Viết bình luận... " aria-label="Recipient 's username" aria-describedby="basic-addon2">
 
                     <div class="input-group-append"></div>
                     <!-- <button class="btn btn-outline-secondary dropdown-toggle bg-warning" type="button"
@@ -181,7 +181,7 @@
                     </div> -->
 
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary bg-success" type="button">&emsp;Gửi&emsp;</button>
+                        <button class="btn btn-outline-secondary bg-success" type="button" onclick="comment()">&emsp;Gửi&emsp;</button>
                     </div>
                 </div>
                 <div class="commentList bg-white">
@@ -335,6 +335,20 @@
         </div>
     </div>
 </footer>
+<script>
+    async function comment() {
+        let id = localStorage.getItem('idEvent');
+        let txtComment = document.getElementById('txtComment').value;
+        let comment = {
+            cmtContent: txtComment,
+            emails: auth.currentUser.email
+        };
+        await db.collection('events').doc(id).update({
+            comment: firebase.firestore.FieldValue.arrayUnion(comment) // thêm 1 phần tử vào mảng messages
+        });
+        window.location.reload();
+    }
+</script>
 <!-- <script src="../ValidateForm/Login-Register/firebase.js"></script> -->
 <script src="../ValidateForm/Login-Register/welcome.js"></script>
 

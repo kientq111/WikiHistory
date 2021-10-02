@@ -114,4 +114,8 @@ for (let item of getChar.comment) {
 
 }
 
-console.log(user);
+function comment() {
+    let $txtComment = document.getElementById('txtComment').value;
+    let user = auth.currentUser;
+    console.log(user.email);
+}
