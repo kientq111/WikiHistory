@@ -3,9 +3,8 @@ body{
     background: #F8F8F8;
     background-image: url(https://miro.medium.com/max/10944/1*qHAZ-wMh2j5bNgOfamNs0g.jpeg);
     background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 *, *::before, *::after{
@@ -48,7 +47,7 @@ body{
 
 .message{
     font-size: 70px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Lora';
     color: steelblue;
 }
 
@@ -56,5 +55,5 @@ body{
     font-size: 18px;
     margin-top: 15px;
     color: yellow;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Lora';
 }
