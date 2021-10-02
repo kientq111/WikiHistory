@@ -113,9 +113,3 @@ for (let item of getChar.comment) {
     $commentList.append($ul);
 
 }
-
-function comment() {
-    let $txtComment = document.getElementById('txtComment').value;
-    let user = auth.currentUser;
-    console.log(user.email);
-}
