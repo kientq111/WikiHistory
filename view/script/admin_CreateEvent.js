@@ -116,11 +116,11 @@ function createStage() {
                 </div>
                 <div class="form-group ">
                     <label for="pwd ">Ngày bắt đầu:</label>
-                    <input type="date" class="form-control stageStartDate" required>
+                    <input type="text" class="form-control stageStartDate" required>
                 </div>
                 <div class="form-group ">
                     <label for="pwd ">Ngày kết thúc</label>
-                    <input type="date" class="form-control stageEndDate" required>
+                    <input type="text" class="form-control stageEndDate" required>
                 </div>
             </div>
         </div>
