@@ -160,7 +160,7 @@ async function saveEvent() {
         data.details.push(detail);
     }
     console.log(data);
-    await db.collection('conversations').add(data);
+    await db.collection('events').add(data);
 }
 
 function previewEventImage(value) {

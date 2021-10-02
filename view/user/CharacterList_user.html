@@ -47,8 +47,7 @@
     <nav class="navbar navbar-expand-sm navbar-dark pl-0 pb-0 pt-1" style="background-color: black;height: 50px;">
         <ul class="navbar-nav d-flex">
             <li class="nav-item ">
-                <a href="./HomePage.html"><img class="pb-2" src="../media/Image/logo.png" alt=""
-                        style="width: 70px; height: 50px;object-fit: cover;"></a>
+                <a href="./HomePage.html"><img class="pb-2" src="../media/Image/logo.png" alt="" style="width: 70px; height: 50px;object-fit: cover;"></a>
             </li>
             <li class="nav-item ml-3 ">
                 <a class="nav-link h5" href="./EventList_user.html">
@@ -81,20 +80,19 @@
     </div>
 
     <!-- Thanh search -->
-    <div class="container-fluid"
-        style="background-image: radial-gradient(circle, #000000, #160b0a, #21150c, #281e0c, #29290f);">
+    <div class="container-fluid" style="background-image: radial-gradient(circle, #000000, #160b0a, #21150c, #281e0c, #29290f);">
         <nav class="header navbar navbar-expand-lg navbar-light d-flex justify-content-end">
-            <input class="search mr-3" size ="28" type="text">
+            <input class="search mr-3" size="28" type="text" id="searchInput">
             <div class="group-button">
-                <button class="btn-search btn btn-primary mr-3">Search</button>
+                <button class="btn-search btn btn-primary mr-3" onclick="searchEvent()">Search</button>
             </div>
         </nav>
 
         <!-- Danh sách nhân vật lịch sử -->
         <div class="content">
             <div class="title">
-                <h1 class="mx-auto  text-center display-5 text-light" style="background:none;">Danh sách nhân vật lịch
-                    sử</h1>
+                <h1 class="mx-auto  text-center display-5 text-light" style="background:none;">Danh sách nhân vật lịch sử
+                </h1>
             </div>
             <ul class="list d-flex justify-content-center">
                 <!-- <li class="character mr-3 mb-3">
@@ -119,7 +117,6 @@
     </div>
 
     <script src="../../controller/user/User_CharacterList.js" type="module"></script>
-    <script src="../../controller/user/Search.js"></script>
 </body>
 
 <footer class="footer-section">
@@ -160,13 +157,11 @@
                 <div class="col-xl-4 col-lg-4 mb-50">
                     <div class="footer-widget">
                         <div class="footer-logo">
-                            <a style="text-decoration: none; color: aliceblue;" href="index.html"><img
-                                    src="../media/Image/logo.png" alt="logo" style="height: 100%; width: 130px;">VIETNAM
-                                HISTORY</a>
+                            <a style="text-decoration: none; color: aliceblue;" href="index.html"><img src="../media/Image/logo.png" alt="logo" style="height: 100%; width: 130px;">VIETNAM HISTORY
+                            </a>
                         </div>
                         <div class="footer-text">
-                            <p>Lịch sử Việt Nam là điều tự hào của đất nước ta, hãy cùng nhau giữ gin và nối dài thành
-                                tích đáng tự hào đó nhé!</p>
+                            <p>Lịch sử Việt Nam là điều tự hào của đất nước ta, hãy cùng nhau giữ gin và nối dài thành tích đáng tự hào đó nhé!</p>
                         </div>
                         <div class="footer-social-icon">
                             <span>Theo dõi</span>
@@ -195,8 +190,8 @@
                             <h3>Góp ý</h3>
                         </div>
                         <div class="footer-text mb-25">
-                            <p>Mọi người có góp ý để cải thiện về website này, đừng ngần ngại gửi ý kiến cho tụi mình
-                                nhé!</p>
+                            <p>Mọi người có góp ý để cải thiện về website này, đừng ngần ngại gửi ý kiến cho tụi mình nhé!
+                            </p>
                         </div>
                         <div class="subscribe-form">
                             <form action="#">
@@ -214,8 +209,7 @@
             <div class="row">
                 <div class="col-xl-6 col-lg-6 text-center text-lg-left">
                     <div class="copyright-text">
-                        <p>Copyright &copy; 2021, All Right Reserved <a style="text-decoration:none"
-                                href="">HistoryTeam</a></p>
+                        <p>Copyright &copy; 2021, All Right Reserved <a style="text-decoration:none" href="">HistoryTeam</a></p>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
