@@ -5,26 +5,26 @@ function createStage() {
     let $stageContainer = document.createElement('div');
     $stageContainer.className = 'stageContainer';
     $stageContainer.innerHTML = `
-    <div class="stageContainer">
-                        <div style="padding-top: 60px;">
-                            <!-- Ảnh -->
-                            <p class="text-center h3">Tạo giai đoạn nhân vật</p>
-                            <div class="mt-1  d-flex align-items-end form-control-file border previewStageImage" style="height: 300px;">
-                                <input type="text" class="stageImage" style="width: 315px;" onchange="previewStageImage(this.value,this)">
-                            </div>
-                            <!-- Thông tin -->
-                            <div class=" ">
-                                <div class="form-group ">
-                                    <label for="pwd ">Ngày bắt đầu:</label>
-                                    <input type="text" class="form-control stageStartDate" required>
-                                </div>
-                                <div class="form-group text-white">
-                                    <label for="comment">Mô tả chi tiết:</label>
-                                    <textarea class="form-control stageDetail" rows="5" required></textarea> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>`
+    <div style="display: flex; padding-top: 60px;">
+        <div class="mt-1 col-sm-3 d-flex align-items-end form-control-file border stageImagePreview">
+            <input type="text" class="stageImage" onchange="previewStageImage(this.value,this)">
+        </div>
+        <div class="col-sm-9 ">
+            <p class="text-center h3">Tạo giai đoạn nhân vật</p>
+            <div>
+                <div class="form-group ">
+                    <label for="pwd ">Ngày bắt đầu:</label>
+                    <input type="text" class="form-control stageStartDate" required>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group text-white" style="display: flex;">
+        <div class="col-sm-12 ">
+            <label for="comment">Mô tả chi tiết:</label>
+            <textarea class="form-control stageDetail" rows="5" required></textarea>
+        </div>
+     </div>`
     $container.appendChild($stageContainer);
 }
 
