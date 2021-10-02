@@ -6,8 +6,8 @@ let getChar = res.data();
 
 /////
 let $nameEvent = document.getElementsByClassName('name')[0];
-let $textNameEvent = document.createElement('h4');
-$textNameEvent.innerHTML = 'Tên sự kiện: ' + getChar.name + '&emsp;&emsp;&emsp;&emsp; Ngày: ' + getChar.firstday;
+let $textNameEvent = document.createElement('h2');
+$textNameEvent.innerHTML =  getChar.name + ' ' + '( ' +getChar.firstday + ' )';
 $nameEvent.append($textNameEvent);
 
 // let $dateEvent = document.getElementsByClassName('date')[0];
