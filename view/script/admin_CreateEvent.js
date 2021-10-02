@@ -161,6 +161,8 @@ async function saveEvent() {
     }
     console.log(data);
     await db.collection('events').add(data);
+    window.location.reload();
+    alert('Tạo sự kiện lịch sử thành công!');
 }
 
 function previewEventImage(value) {

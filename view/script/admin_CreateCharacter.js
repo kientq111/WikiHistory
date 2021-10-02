@@ -51,6 +51,8 @@ async function saveCharacter() {
     }
     console.log(data);
     await db.collection('characters').add(data);
+    window.location.reload();
+    alert('Tạo nhân vật lịch sử thành công!');
 }
 
 function previewEventImage(value) {
