@@ -137,8 +137,8 @@ function createStage() {
 async function saveEvent() {
     let data = {
         name: document.getElementById('eventName').value,
-        firstDay: document.getElementById('startDate').value,
-        lastDay: document.getElementById('endDate').value,
+        firstday: document.getElementById('startDate').value,
+        lastday: document.getElementById('endDate').value,
         location: document.getElementById('location').value,
         general: document.getElementById('general').value,
         result: document.getElementById('result').value,
