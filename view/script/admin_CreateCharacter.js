@@ -5,7 +5,7 @@ function createStage() {
     let $stageContainer = document.createElement('div');
     $stageContainer.className = 'stageContainer';
     $stageContainer.innerHTML = `
-    <div class="stageContainer">
+
                         <div style="padding-top: 60px;">
                             <!-- Ảnh -->
                             <p class="text-center h3">Tạo giai đoạn nhân vật</p>
@@ -23,8 +23,8 @@ function createStage() {
                                     <textarea class="form-control stageDetail" rows="5" required></textarea> 
                                 </div>
                             </div>
-                        </div>
-                    </div>`
+                        </div>`
+
     $container.appendChild($stageContainer);
 }
 
