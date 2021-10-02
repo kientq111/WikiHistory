@@ -31,26 +31,28 @@
             <h1 class="mb-0">VietNam History</h1>
         </div>
         <div style="height: 100%;">
-            <nav class="navbar navbar-expand-sm navbar-dark pl-0 pb-0 pt-1" style="background-color: black;height: 50px;">
+            <nav class="navbar navbar-expand-sm navbar-dark pl-0 pb-0 pt-1"
+                style="background-color: black;height: 50px;">
                 <ul class="navbar-nav d-flex">
                     <li class="nav-item ">
-                        <a href="./HomePage_admin.html"><img class="pb-2" src="../media/Image/logo.png" alt="" style="width: 70px; height: 50px;object-fit: cover;"> </a>
+                        <a href="./HomePage_admin.html"><img class="pb-4" src="../media/Image/logo.png" alt=""
+                                style="width: 100px; height:70px;object-fit: cover;"> </a>
                     </li>
-                    <li class="nav-item ml-3 dropdown ">
-                        <a class="nav-link h5" href="#" id="navbardrop" data-toggle="dropdown">
+                    <li class="nav-item ml-2 mt-3 dropdown ">
+                        <a class="nav-link h5 text-warning" href="#" id="navbardrop" data-toggle="dropdown">
                             Sự kiện
                         </a>
-                        <div class="dropdown-menu bg-dark ">
+                        <div class="dropdown-menu bg-warning ">
                             <a class="dropdown-item text-black " href="./ListHistoryEvent_admin.html">Danh sách sự
                                 kiện</a>
                             <a class="dropdown-item text-black " href="./CreateEvent_admin.html">Thêm sự kiện</a>
                         </div>
                     </li>
-                    <li class="nav-item ml-3 dropdown ">
-                        <a class="nav-link h5 " href="#" id="navbardrop" data-toggle="dropdown">
+                    <li class="nav-item ml-3 mt-3 dropdown ">
+                        <a class="nav-link h5 text-warning " href="#" id="navbardrop" data-toggle="dropdown">
                             Nhân vật
                         </a>
-                        <div class="dropdown-menu bg-dark">
+                        <div class="dropdown-menu bg-warning">
                             <a class="dropdown-item text-black " href="./ListHero_admin.html">Danh sách nhân vật</a>
                             <a class="dropdown-item text-black " href="./CreateCharacter_admin.html">Thêm nhân vật</a>
                         </div>
@@ -58,34 +60,50 @@
                 </ul>
                 <ul class=" navbar-nav ml-auto">
                     <div id="user" class="text-warning mt-3 mr-3 h5"> </div>
-                    <li id="nav-drop" class="nav-item dropdown ">
-                        <a class="nav-link dropdown-toggle h5 mr-3 " href="#" id="navbardrop" data-toggle="dropdown">
+                    <li id="nav-drop" class="nav-item dropdown" style="margin-right: 90px;">
+                        <a class="nav-link h5 mr-3 text-white " href="#" id="navbardrop" data-toggle="dropdown">
                             <i class="h3 bi bi-person-circle"></i>
                         </a>
-                        <div class="dropdown-menu bg-dark text-white ">
-                            <a class="dropdown-item " href="/WikiHistory/view/ValidateForm/Login-Register/index.html">Đăng nhập</a>
-                            <a class="dropdown-item " href="/WikiHistory/view/ValidateForm/Login-Register/index.html">Đăng kí</a>
+                        <div class="dropdown-menu text-white bg-warning ">
+                            <a class="dropdown-item "
+                                href="/WikiHistory/view/ValidateForm/Login-Register/index.html">Đăng nhập</a>
+                            <a class="dropdown-item "
+                                href="/WikiHistory/view/ValidateForm/Login-Register/index.html">Đăng kí</a>
                         </div>
                     </li>
                 </ul>
-                <button id="exit" class="btn btn-warning mb-2 " onclick="logout()" style="text-align: center;">Thoát</button>
+                <button id="exit" class="btn btn-warning mb-2 " onclick="logout()"
+                    style="text-align: center;">Thoát</button>
             </nav>
 
             <!-- Ảnh content page -->
-            <div class=" " style="background-image: url(../media/Image/content1.jpg);height: 40px; background-size: 200px; ">.</div>
+            <div class=" "
+                style="background-image: url(../media/Image/content1.jpg);height: 40px; background-size: 200px; ">.
+            </div>
 
 
             <!-- Tóm tắt và video -->
             <div class=" " style="display: flex; width: 100%;height: 100%; ">
-                <div class=" col-sm-3 " style="background-image: radial-gradient(circle, #000000, #160b0a, #21150c, #281e0c, #29290f); width: 40%; ">
-                    <p class="h5 text-secondary" style="text-align: center;font-weight: bold; margin-top: 10px;">Giới thiệu lịch sử Việt Nam</p>
+                <div class=" col-sm-3 "
+                    style="background-image: radial-gradient(circle, #000000, #160b0a, #21150c, #281e0c, #29290f); width: 40%; ">
+                    <p class="h5 text-secondary" style="text-align: center;font-weight: bold; margin-top: 10px;">Giới
+                        thiệu lịch sử Việt Nam</p>
                     <br>
-                    <p class="text-secondary" style="margin-top: -30px;"> Lịch sử Việt Nam đã trải qua hàng vạn năm trước Công nguyên tính từ khi con người xuất hiện. Trải qua nhiều thời kỳ, nhân và dân ta vẫn một lòng giữ nước, tạo nên đất nước Việt Nam xinh đẹp hình chữ S ngày nay. Quả đúng là: </p>
-                    <p class="text-secondary" style="font-style: italic; margin-top: -18px ;">"Từng nghe:<br> Việc nhân nghĩa cốt ở yên dân,<br> Quân điếu phạt trước lo trừ bạo;<br> Như nước Đại Việt ta từ trước,<br> Vốn xưng nền văn hiến đã lâu,<br> Núi sông bờ cỏi đã chia,<br> Phong tục Bắc Nam cũng khác;<br> Từ Triệu, Đinh,
-                        Lý, Trần bao đời xây nền độc lập<br> Cùng Hán, Đường, Tống, Nguyên mỗi bên hùng cứ một phương;<br> Tuy mạnh yếu có lúc khác nhau,<br> Song hào kiệt thời nào cũng có.<br>
+                    <p class="text-secondary" style="margin-top: -30px;"> Lịch sử Việt Nam đã trải qua hàng vạn năm
+                        trước Công nguyên tính từ khi con người xuất hiện. Trải qua nhiều thời kỳ, nhân và dân ta vẫn
+                        một lòng giữ nước, tạo nên đất nước Việt Nam xinh đẹp hình chữ S ngày nay. Quả đúng là: </p>
+                    <p class="text-secondary" style="font-style: italic; margin-top: -18px ;">"Từng nghe:<br> Việc nhân
+                        nghĩa cốt ở yên dân,<br> Quân điếu phạt trước lo trừ bạo;<br> Như nước Đại Việt ta từ trước,<br>
+                        Vốn xưng nền văn hiến đã lâu,<br> Núi sông bờ cỏi đã chia,<br> Phong tục Bắc Nam cũng khác;<br>
+                        Từ Triệu, Đinh,
+                        Lý, Trần bao đời xây nền độc lập<br> Cùng Hán, Đường, Tống, Nguyên mỗi bên hùng cứ một
+                        phương;<br> Tuy mạnh yếu có lúc khác nhau,<br> Song hào kiệt thời nào cũng có.<br>
 
-                        <br>Cho nên:<br> Lưu Cung tham công nên thất bại;<br> Triệu Tiết thích lớn phải tiêu vong;<br> Cửa Hàm Tử bắt sống Toa Đô<br> Sông Bạch Đằng giết tươi Ô Mã<br> Việc xưa xem xét, chứng cứ còn ghi.<br></p>
-                    <p class="text-secondary" style="text-align: right; font-style: italic; margin-top: -18px ;">- Trích Bình Ngô đại cáo (Nguyễn Trãi)" </p>
+                        <br>Cho nên:<br> Lưu Cung tham công nên thất bại;<br> Triệu Tiết thích lớn phải tiêu vong;<br>
+                        Cửa Hàm Tử bắt sống Toa Đô<br> Sông Bạch Đằng giết tươi Ô Mã<br> Việc xưa xem xét, chứng cứ còn
+                        ghi.<br></p>
+                    <p class="text-secondary" style="text-align: right; font-style: italic; margin-top: -18px ;">- Trích
+                        Bình Ngô đại cáo (Nguyễn Trãi)" </p>
 
                 </div>
                 <div class="video-wrapper d-flex justify-content-end" style="width: 100%;">
@@ -154,10 +172,13 @@
                     <div class="col-xl-4 col-lg-4 mb-50">
                         <div class="footer-widget">
                             <div class="footer-logo">
-                                <a style="text-decoration: none; color: aliceblue;" href="index.html"><img src="../media/Image/logo.png" alt="logo" style="height: 100%; width: 130px;">VIETNAM HISTORY</a>
+                                <a style="text-decoration: none; color: aliceblue;" href="index.html"><img
+                                        src="../media/Image/logo.png" alt="logo"
+                                        style="height: 100%; width: 130px;">VIETNAM HISTORY</a>
                             </div>
                             <div class="footer-text">
-                                <p>Lịch sử Việt Nam là điều tự hào của đất nước ta, hãy cùng nhau giữ gin và nối dài thành tích đáng tự hào đó nhé!</p>
+                                <p>Lịch sử Việt Nam là điều tự hào của đất nước ta, hãy cùng nhau giữ gin và nối dài
+                                    thành tích đáng tự hào đó nhé!</p>
                             </div>
                             <div class="footer-social-icon">
                                 <span>Follow us</span>
@@ -186,7 +207,8 @@
                                 <h3>Góp ý</h3>
                             </div>
                             <div class="footer-text mb-25">
-                                <p>Mọi người có góp ý để cải thiện về website này, đừng ngần ngại gửi ý kiến cho tụi mình nhé!</p>
+                                <p>Mọi người có góp ý để cải thiện về website này, đừng ngần ngại gửi ý kiến cho tụi
+                                    mình nhé!</p>
                             </div>
                             <div class="subscribe-form">
                                 <form action="#">
