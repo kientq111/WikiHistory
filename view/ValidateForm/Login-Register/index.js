@@ -5,7 +5,7 @@ document.getElementById("loginForm").addEventListener("submit",(event)=>{
 firebase.auth().onAuthStateChanged((user)=>{
     // if(user){
     //     // window.location = "/WikiHistory/view/user/HomePage.html"
-     if(user.email == "admin@gmail.com" ) {
+     if(user.email == "admin@gmail.com" || user.email == "admindat@gmail.com" || user.email == "adminkien@gmail.com" || user.email == "adminha@gmail.com" || user.email == "adminhoang@gmail.com" || user.email == "admingiang@gmail.com" ) {
          window.location = "/WikiHistory/view/admin/HomePage_admin.html";
      }else  {
          window.location = "/WikiHistory/view/user/HomePage.html";
