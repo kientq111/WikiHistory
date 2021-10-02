@@ -3,9 +3,13 @@ document.getElementById("loginForm").addEventListener("submit",(event)=>{
 })
 
 firebase.auth().onAuthStateChanged((user)=>{
-    if(user){
-        location.replace("welcome.html")
-    }
+    // if(user){
+    //     // window.location = "/WikiHistory/view/user/HomePage.html"
+     if(user.email == "admin@gmail.com" ) {
+         window.location = "/WikiHistory/view/admin/HomePage_admin.html";
+     }else  {
+         window.location = "/WikiHistory/view/user/HomePage.html";
+     }
 })
 
 function login(){
@@ -30,7 +34,7 @@ function forgotPass(){
     const email = document.getElementById("email").value
     firebase.auth().sendPasswordResetEmail(email)
     .then(() => {
-        alert("Reset link sent to your email id")
+        alert("Một liên kết đổi lại mật khẩu đã được gửi đến tài khoản của bạn")
     })
     .catch((error) => {
         document.getElementById("error").innerHTML = error.message

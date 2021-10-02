@@ -26,31 +26,28 @@
     <body class="d-flex justify-content-center p-5">
         <div class="card">
             <div class="card-header">
-                <center><h3>Login Form</h3></center>
+                <center><h3>Đăng Nhập</h3></center>
             </div>
             <form onsubmit="login()" id="loginForm" class="card-body px-5 py-4">
                 <center><small><span id="error" style="color: red"></span></small></center>
                 <center><label class="custom-field">
                     <input id="email" type="text" class="input" required />
-                    <span class="placeholder">Email Id</span>
+                    <span class="placeholder">Email</span>
                 </label><br />
                 <label class="custom-field">
                     <input id="password" type="password" class="input" required />
-                    <span class="placeholder">Password</span>
+                    <span class="placeholder">Mật khẩu</span>
                 </label></center><br /><br/>
-                <a href="#" onclick="forgotPass()">Forgot Password</a>
-                <center><button type="submit" class="btn btn-primary">Login</button>
-                <button onclick="signUp()" class="btn btn-secondary">Sign Up</button>
+                <a href="#" onclick="forgotPass()">Quên mật khẩu</a>
+                <center><button type="submit" class="btn btn-primary">Đăng nhập</button>
+                <button onclick="signUp()" class="btn btn-secondary">Đăng ký ngay</button>
                 </center>
             </form>
         </div>
         <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
-
-        <!-- TODO: Add SDKs for Firebase products that you want to use
-            https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-auth-compat.js"></script>
 
         <script src="firebase.js"></script>
         <script src="index.js"></script>

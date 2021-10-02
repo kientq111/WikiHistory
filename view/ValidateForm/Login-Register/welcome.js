@@ -1,8 +1,12 @@
 firebase.auth().onAuthStateChanged((user)=>{
     if(!user){
-        location.replace("index.html")
+        window.location= "/WikiHistory/view/ValidateForm/Login-Register/index.html"
+        
     }else{
-        document.getElementById("user").innerHTML = "Hello, "+user.email
+        document.getElementById("user").innerHTML = "Xin Chào, "+user.email
+        document.getElementById("nav-drop").style.display = "none";
+        
+
     }
 })
 
