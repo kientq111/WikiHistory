@@ -53,6 +53,7 @@ async function saveCharacter() {
     await db.collection('characters').add(data);
     window.location.reload();
     alert('Tạo nhân vật lịch sử thành công!');
+    location.href ="./ListHero_admin.html";
 }
 
 function previewEventImage(value) {
