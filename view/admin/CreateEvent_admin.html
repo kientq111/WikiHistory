@@ -99,7 +99,7 @@
                 <div style="display: flex;">
                     <!-- Ảnh -->
                     <div class="mt-1 col-sm-3 d-flex align-items-end form-control-file border" id="imagePreview">
-                        <input type="text" onchange="previewEventImage(this.value)" class="" id="eventImage">
+                        <input type="text" placeholder="Nhập URL ảnh" onchange="previewEventImage(this.value)" class="" id="eventImage">
                     </div>
                     <!-- Thông tin -->
                     <div class="col-sm-9 ">
@@ -114,11 +114,11 @@
                             <input type="text" class="form-control " id="startDate" required>
                         </div>
                         <div class="form-group ">
-                            <label for="pwd ">Ngày kết thúc</label>
+                            <label for="pwd ">Ngày kết thúc:</label>
                             <input type="text" class="form-control " id="endDate" required>
                         </div>
                         <div class="form-group ">
-                            <label for="usr ">Địa điểm</label>
+                            <label for="usr ">Địa điểm:</label>
                             <input type="text " class="form-control " id="location" required>
                         </div>
                         <div class="form-group ">
@@ -145,7 +145,7 @@
                         <div style="display: flex; padding-top: 60px;">
                             <!-- Ảnh -->
                             <div class="mt-1 col-sm-3 d-flex align-items-end form-control-file border previewStageImage">
-                                <input type="text" class="stageImage" onchange="previewStageImage(this.value,this)">
+                                <input type="text" placeholder="Nhập URL ảnh" class="stageImage" onchange="previewStageImage(this.value,this)">
                             </div>
                             <!-- Thông tin -->
                             <div class="col-sm-9 ">
@@ -160,7 +160,7 @@
                                         <input type="text" class="form-control stageStartDate" required>
                                     </div>
                                     <div class="form-group ">
-                                        <label for="pwd ">Ngày kết thúc</label>
+                                        <label for="pwd ">Ngày kết thúc:</label>
                                         <input type="text" class="form-control stageEndDate" required>
                                     </div>
                                 </div>

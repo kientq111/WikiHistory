@@ -105,7 +105,7 @@ function createStage() {
     $stageContainer.innerHTML = `
     <div style="display: flex; padding-top: 60px;">
         <div class="mt-1 col-sm-3 d-flex align-items-end form-control-file border stageImagePreview">
-                <input type="text" class="stageImage" onchange="previewStageImage(this.value,this)">
+                <input type="text" placeholder="Nhập URL ảnh" class="stageImage" onchange="previewStageImage(this.value,this)">
         </div>
         <div class="col-sm-9 ">
                 <p class="text-center h3">Tạo giai đoạn sự kiện</p>
