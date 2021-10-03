@@ -1,55 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login/Register</title>
-        <link
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-        rel="stylesheet"
-        />
-        <link
-        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-        rel="stylesheet"
-        />
-        <link
-        href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css"
-        rel="stylesheet"
-        />
-        <script
-        type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"
-        ></script>
-        <link href="./index.css" rel="stylesheet" />
-    </head>
-    <body class="d-flex justify-content-center p-5">
-        <div class="card">
-            <div class="card-header">
-                <center><h3>Đăng Nhập</h3></center>
-            </div>
-            <form onsubmit="login()" id="loginForm" class="card-body px-5 py-4">
-                <center><small><span id="error" style="color: red"></span></small></center>
-                <center><label class="custom-field">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"></script>
+    <link href="./index.css" rel="stylesheet" />
+</head>
+
+<body class="d-flex justify-content-center p-5 mt-5">
+    <div class="card mt-5">
+        <div class="card-header">
+            <center>
+                <h3>Đăng Nhập</h3>
+            </center>
+        </div>
+        <form onsubmit="login()" id="loginForm" class="card-body px-5 py-4">
+            <center><small><span id="error" style="color: red"></span></small></center>
+            <center><label class="custom-field">
                     <input id="email" type="text" class="input" required />
                     <span class="placeholder">Email</span>
                 </label><br />
                 <label class="custom-field">
                     <input id="password" type="password" class="input" required />
                     <span class="placeholder">Mật khẩu</span>
-                </label></center><br /><br/>
-                <a href="#" onclick="forgotPass()">Quên mật khẩu</a>
-                <center><button type="submit" class="btn btn-primary">Đăng nhập</button>
+                </label>
+            </center>
+            <a class="d-flex justify-content-center mt-3 mb-3" href="#" onclick="forgotPass()">Quên mật khẩu</a>
+            <center class="d-flex justify-content-around"><button type="submit" class="btn btn-primary">Đăng nhập</button>
                 <button onclick="signUp()" class="btn btn-secondary">Đăng ký ngay</button>
-                </center>
-            </form>
-        </div>
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-app-compat.js"></script>
+            </center>
+        </form>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-auth-compat.js"></script>
 
-        <script src="firebase.js"></script>
-        <script src="index.js"></script>
-    </body>
+    <script src="firebase.js"></script>
+    <script src="index.js"></script>
+</body>
+
 </html>
