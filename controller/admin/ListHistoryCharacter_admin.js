@@ -40,7 +40,7 @@ async function getConversation() {
                 let id1 = await db.collection('characters').doc(doc.id).get();
                 console.log(id1.id);
                 localStorage.setItem('id', id1.id);
-                location.href = '../user/CharacterDetails_user.html'
+                location.href = '../admin/CharacterDetails_admin.html'
             }
             //del
         let $btnDel = document.createElement('a');

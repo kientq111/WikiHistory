@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/EventDetails_user.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://www.csslab.cl/ejemplos/timelinr/latest/js/jquery.timelinr-0.9.54.js"></script>
+
+    <link rel="stylesheet" href="../css/HomePage.css" />
+
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-auth-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyB-q_tQfy62e46AE6wHg0jEg9HcZA3OhMQ",
+            authDomain: "historydb-team1.firebaseapp.com",
+            projectId: "historydb-team1",
+            storageBucket: "historydb-team1.appspot.com",
+            messagingSenderId: "456407580200",
+            appId: "1:456407580200:web:c475537af2b40742203f1d",
+            measurementId: "G-P7CQFHL86B"
+        };
+
+        const firebaseApp = firebase.initializeApp(firebaseConfig);
+        const db = firebaseApp.firestore();
+        const auth = firebaseApp.auth();
+    </script>
+</head>
+
+<body>
+    <!-- Thanh nav-bar -->
+    <nav class="navbar navbar-expand-sm navbar-dark pl-0 pb-0 pt-1" style="background-color: black;height: 50px;">
+        <ul class="navbar-nav d-flex">
+            <li class="nav-item ">
+                <a href="./HomePage_admin.html"><img class="pb-2" src="../media/Image/logo.png" alt="" style="width: 70px; height: 50px;object-fit: cover;"> </a>
+            </li>
+            <li class="nav-item ml-3 dropdown ">
+                <a class="nav-link h5 text-warning" href="#" id="navbardrop" data-toggle="dropdown">
+                    Sự kiện
+                </a>
+                <div class="dropdown-menu bg-warning ">
+                    <a class="dropdown-item text-black " href="./ListHistoryEvent_admin.html">Danh sách sự
+                        kiện</a>
+                    <a class="dropdown-item text-black " href="./CreateEvent_admin.html">Thêm sự kiện</a>
+                </div>
+            </li>
+            <li class="nav-item ml-3 dropdown ">
+                <a class="nav-link h5 text-warning " href="#" id="navbardrop" data-toggle="dropdown">
+                    Nhân vật
+                </a>
+                <div class="dropdown-menu bg-warning">
+                    <a class="dropdown-item text-black " href="./ListHero_admin.html">Danh sách nhân vật</a>
+                    <a class="dropdown-item text-black " href="./CreateCharacter_admin.html">Thêm nhân vật</a>
+                </div>
+            </li>
+        </ul>
+        <ul class=" navbar-nav ml-auto">
+            <div id="user" class="text-warning mt-3 mr-3 h5"> </div>
+            <li id="nav-drop" class="nav-item dropdown ">
+                <a class="nav-link h5 text-white mt-2" style="margin-right: 110px;" href="#" id="navbardrop" data-toggle="dropdown">
+                    <i class="h3 bi bi-person-circle"></i>
+                </a>
+                <div class="dropdown-menu bg-warning ">
+                    <a class="dropdown-item " href="../ValidateForm/Login-Register/index.html">Đăng nhập</a>
+                    <a class="dropdown-item " href="../ValidateForm/Login-Register/index.html">Đăng kí</a>
+                </div>
+            </li>
+        </ul>
+        <button id="exit" class="btn btn-warning mb-2 " onclick="logout()" style="text-align: center;">Thoát</button>
+    </nav>
+
+    <!-- Ảnh content page -->
+    <div class=" " style="background-image: url(../media/Image/content1.jpg);height: 40px; background-size: 200px; ">.
+    </div>
+
+    <!-- Chữ chi tiết sự kiện -->
+    <div style="background-image: radial-gradient(circle, #000000, #160b0a, #21150c, #281e0c, #29290f);">
+        <div class=" container " style="margin-bottom: 10px; ">
+            <div class="mx-auto text-center display-5 " style="position: relative; ">
+                <h1 class="text-white pt-2">Chi tiết sự kiện</h1>
+            </div>
+
+            <div class="event text-white">
+                <div class="d-flex ">
+                    <div class="name">
+                        <!-- <h4>Tên sự kiện</h4> -->
+                    </div>
+                    <!-- <div class="date col-sm-6 ">
+                        <h4>Ngày</h4>
+                    </div> -->
+                </div>
+                <div class="image bg-dark ">
+                    <!-- <img src="	https://upload.wikimedia.org/wikipedia/commons/4/49/C%E1%BB%8Dc_B%E1%BA%A1ch_%C4%90%E1%BA%B1ng.jpg" alt=" "> -->
+                </div>
+                <div class="location bg-success">
+                    <!-- <h5>Đia điểm: </h5> -->
+                </div>
+                <div class="introduction bg-dark">
+                    <!-- <p>Khái quát chung: </p> -->
+                </div>
+                <div class="result bg-info">
+                    <!-- <p>Kết quả và ý nghĩa lịch sử</p> -->
+                </div>
+            </div>
+
+            <!-- /////// -->
+            <div class="life-character text-white">
+                <!-- <div class="group-life ">
+                    <div class="time-life ">
+                        <h2>Ngày ??? - ???</h2>
+                    </div>
+
+                    <div class="">
+                        <img class="img-life "
+                            src="https://upload.wikimedia.org/wikipedia/commons/4/49/C%E1%BB%8Dc_B%E1%BA%A1ch_%C4%90%E1%BA%B1ng.jpg"
+                            alt="Img ">
+                    </div>
+
+                    <div class="details ">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem voluptatum adipisci
+                            veritatis animi harum? Aut reiciendis maxime eius animi ducimus at omnis voluptates
+                            consequatur nemo quidem natus architecto, cupiditate ipsam.</p>
+                    </div>
+                </div>
+
+                <div class="group-life ">
+                    <div class="time-life ">
+                        <h2>Ngày ??? - ???</h2>
+                    </div>
+
+                    <div class="">
+                        <img class="img-life "
+                            src="https://upload.wikimedia.org/wikipedia/commons/4/49/C%E1%BB%8Dc_B%E1%BA%A1ch_%C4%90%E1%BA%B1ng.jpg"
+                            alt="Img ">
+                    </div>
+
+                    <div class="details ">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem voluptatum adipisci
+                            veritatis animi harum? Aut reiciendis maxime eius animi ducimus at omnis voluptates
+                            consequatur nemo quidem natus architecto, cupiditate ipsam.</p>
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="comment  " id="commentContainer" style="height: 450px;">
+                <div class=" text-center mt-4 ">
+                    <h2 class="text-white">Bình luận</h2>
+                </div>
+
+                <div class="name-user ">
+                    <h6 class="pl-1 ">Tên</h6>
+                </div>
+                <div class="input-group mb-3 ">
+                    <input type="text " class="form-control " id="txtComment" placeholder="Viết bình luận... " aria-label="Recipient 's username" aria-describedby="basic-addon2">
+
+                    <div class="input-group-append"></div>
+                    <!-- <button class="btn btn-outline-secondary dropdown-toggle bg-warning" type="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&nbsp; Đánh giá!
+                        &nbsp;</button> -->
+                    <!-- <div class="dropdown-menu">
+                        <a class="dropdown-item">10 </a>
+                        <a class="dropdown-item">9 </a>
+                        <a class="dropdown-item">8 </a>
+                        <a class="dropdown-item">7 </a>
+                        <a class="dropdown-item">6 </a>
+                        <a class="dropdown-item">5 </a>
+                        <a class="dropdown-item">4 </a>
+                        <a class="dropdown-item">3 </a>
+                        <a class="dropdown-item">2 </a>
+                        <a class="dropdown-item">1 </a>
+                        <a class="dropdown-item">0 </a>
+                    </div> -->
+
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary bg-warning" type="button" onclick="comment()">&emsp;Gửi&emsp;</button>
+                    </div>
+                </div>
+                <div class="commentList bg-white">
+                    <!-- <ul>
+                        <li>
+                            <div class="userEmail">
+                                <a href="">aaaaa@gmail.com</a>
+                            </div>
+                            <div class="userComment">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio iure assumenda soluta
+                                    enim error dolorum temporibus esse odio, consectetur quas nisi alias voluptate?
+                                    Earum aspernatur maxime nostrum quasi sequi explicabo.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="userEmail">
+                                <a href="">aaaaa@gmail.com</a>
+                            </div>
+                            <div class="userComment">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio iure assumenda soluta
+                                    enim error dolorum temporibus esse odio, consectetur quas nisi alias voluptate?
+                                    Earum aspernatur maxime nostrum quasi sequi explicabo.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="userEmail">
+                                <a href="">aaaaa@gmail.com</a>
+                            </div>
+                            <div class="userComment">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio iure assumenda soluta
+                                    enim error dolorum temporibus esse odio, consectetur quas nisi alias voluptate?
+                                    Earum aspernatur maxime nostrum quasi sequi explicabo.
+                                </p>
+                            </div>
+                        </li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../controller/user/User_EventDetails.js" type="module"></script>
+
+    <!-- <script src="../script/EventDetails_Timeline.js"></script> -->
+</body>
+
+<footer class="footer-section">
+    <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <div class="cta-text">
+                            <h4>Địa điểm</h4>
+                            <span>Hà Nội, Việt Nam</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="bi bi-telephone-fill"></i>
+                        <div class="cta-text">
+                            <h4>Hotline</h4>
+                            <span>98765432100</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="bi bi-envelope-fill"></i>
+                        <div class="cta-text">
+                            <h4>Email</h4>
+                            <span>mail@info.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a style="text-decoration: none; color: aliceblue;" href="index.html"><img src="../media/Image/logo.png" alt="logo" style="height: 100%; width: 130px;">VIETNAM HISTORY
+                            </a>
+                        </div>
+                        <div class="footer-text">
+                            <p>Lịch sử Việt Nam là điều tự hào của đất nước ta, hãy cùng nhau giữ gin và nối dài thành tích đáng tự hào đó nhé!</p>
+                        </div>
+                        <div class="footer-social-icon">
+                            <span>Theo dõi</span>
+                            <a class="" href="#"><i class="bi bi-facebook h2"></i></a>
+                            <a href="#"><i class="bi bi-twitter h2"></i></a>
+                            <a href="#"><i class="bi bi-instagram h2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Thông tin cần thiết</h3>
+                        </div>
+                        <ul>
+                            <li><a style="text-decoration:none" href="./HomePage.html">Trang chủ</a></li>
+                            <li><a style="text-decoration:none" href="#">Liên lạc</a></li>
+                            <li><a style="text-decoration:none" href="#">Về chúng tôi</a></li>
+                            <li><a style="text-decoration:none" href="#">Địa điểm</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Góp ý</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Mọi người có góp ý để cải thiện về website này, đừng ngần ngại gửi ý kiến cho tụi mình nhé!
+                            </p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="bi bi-arrow-right"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                    <div class="copyright-text">
+                        <p>Copyright &copy; 2021, All Right Reserved <a style="text-decoration:none" href="">HistoryTeam</a></p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a style="text-decoration:none" href="./HomePage.html">Trang chủ</a></li>
+                            <li><a style="text-decoration:none" href="#">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    async function comment() {
+        let id = localStorage.getItem('idEvent');
+        let txtComment = document.getElementById('txtComment').value;
+        let comment = {
+            cmtContent: txtComment,
+            emails: auth.currentUser.email
+        };
+        await db.collection('events').doc(id).update({
+            comment: firebase.firestore.FieldValue.arrayUnion(comment) // thêm 1 phần tử vào mảng messages
+        });
+        window.location.reload();
+    }
+</script>
+<!-- <script src="../ValidateForm/Login-Register/firebase.js"></script> -->
+<script src="../script/checkUserComment.js"></script>
+
+</html>

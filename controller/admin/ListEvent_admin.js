@@ -29,7 +29,7 @@ async function getConversation() {
 
             console.log(id1.id);
             localStorage.setItem('idEvent', id1.id);
-            location.href = '../user/EventDetails_user.html';
+            location.href = '../admin/EventDetails_admin.html';
         }
 
         let $btnDel = document.createElement('a');
