@@ -22,3 +22,11 @@ function logout() {
     window.location = "../user/HomePage.html";
 
 }
+
+function removeCharStorage() {
+    localStorage.removeItem('searchChar');
+}
+
+function removeEventStorage() {
+    localStorage.removeItem('searchEvent');
+}
