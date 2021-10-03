@@ -58,7 +58,10 @@ async function searchCharacter(search) {
             console.log('yes', data.name);
         } else if (data.name.includes(search) === false) {
             console.log('Không thấy');
-            $li.style.display = 'none'
+            $li.style.display = 'none';
+            
+            $ul.innerHTML = 'Không tìm thấy nhân vật!';
+            $ul.className = 'list d-flex justify-content-center mt-5';
         } else {
             $li.style.display = 'none'
             console.log('no', data.name);
