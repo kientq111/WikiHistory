@@ -55,7 +55,10 @@ async function getListEvent() {
 
 async function searchEvent(search) {
     let response = await db.collection('events').get();
+    let countOne = 0;
+    let countAll = 0;
     for (let doc of response.docs) {
+        countAll++;
         let data = doc.data();
         let $li = document.createElement('li');
         $li.className = 'character event mr-3 mb-3';
@@ -66,11 +69,10 @@ async function searchEvent(search) {
         if (data.name.includes(search)) {
             console.log('yes', data.name);
         } else if (data.name.includes(search) === false) {
+            countOne++
             console.log('Không thấy');
             $li.style.display = 'none';
 
-            $ul.innerHTML = 'Không tìm thấy sự kiện!';
-            $ul.className = 'list d-flex justify-content-center mt-5';
         } else {
             $li.style.display = 'none';
             console.log('no', data.name);
@@ -110,6 +112,11 @@ async function searchEvent(search) {
         $figure.append($img, $figcaption, $link);
         $li.append($figure);
         $ul.append($li);
+    }
+    if (countOne == countAll) {
+        console.log(countOne, countAll);
+        $ul.innerHTML = 'Không tìm thấy nhân vật!';
+        $ul.className = 'list d-flex justify-content-center mt-5';
     }
 }
 

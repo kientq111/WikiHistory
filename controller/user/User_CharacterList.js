@@ -51,7 +51,10 @@ async function getListCharacter() {
 
 async function searchCharacter(search) {
     let response = await db.collection('characters').get();
+    let countOne = 0;
+    let countAll = 0;
     for (let doc of response.docs) {
+        countAll++;
         let data = doc.data();
         let $li = document.createElement('li');
         if (data.name.includes(search)) {
@@ -59,9 +62,8 @@ async function searchCharacter(search) {
         } else if (data.name.includes(search) === false) {
             console.log('Không thấy');
             $li.style.display = 'none';
+            countOne++;
 
-            $ul.innerHTML = 'Không tìm thấy nhân vật!';
-            $ul.className = 'list d-flex justify-content-center mt-5';
         } else {
             $li.style.display = 'none';
             console.log('no', data.name);
@@ -106,6 +108,11 @@ async function searchCharacter(search) {
         $figure.append($img, $figcaption, $link);
         $li.append($figure);
         $ul.append($li);
+
+    }
+    if (countOne == countAll) {
+        $ul.innerHTML = 'Không tìm thấy nhân vật!';
+        $ul.className = 'list d-flex justify-content-center mt-5';
     }
 }
 
