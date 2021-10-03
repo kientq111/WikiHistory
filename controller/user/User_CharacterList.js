@@ -59,7 +59,7 @@ async function searchCharacter(search) {
         } else if (data.name.includes(search) === false) {
             console.log('Không thấy');
             $li.style.display = 'none';
-            
+
             $ul.innerHTML = 'Không tìm thấy nhân vật!';
             $ul.className = 'list d-flex justify-content-center mt-5';
         } else {
@@ -106,7 +106,6 @@ async function searchCharacter(search) {
         $figure.append($img, $figcaption, $link);
         $li.append($figure);
         $ul.append($li);
-
     }
 }
 
