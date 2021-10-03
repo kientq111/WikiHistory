@@ -13,9 +13,10 @@ async function getListCharacter() {
         let $img = document.createElement('img');
         $img.src = data.picture;
         $img.alt = 'sample72';
+        $img.className = 'rounded';
 
         let $figcaption = document.createElement('figcaption');
-
+        $figcaption.className = 'rounded';
         let $name = document.createElement('h4');
         $name.innerHTML = 'Tên: ' + data.name;
 
