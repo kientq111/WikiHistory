@@ -58,7 +58,7 @@ async function searchEvent(search) {
     for (let doc of response.docs) {
         let data = doc.data();
         let $li = document.createElement('li');
-        $li.className = 'event mr-3 mb-3';
+        $li.className = 'character event mr-3 mb-3';
 
         let $figure = document.createElement('figure');
         $figure.className = 'snip1273';
@@ -67,9 +67,12 @@ async function searchEvent(search) {
             console.log('yes', data.name);
         } else if (data.name.includes(search) === false) {
             console.log('Không thấy');
-            $li.style.display = 'none'
+            $li.style.display = 'none';
+
+            $ul.innerHTML = 'Không tìm thấy sự kiện!';
+            $ul.className = 'list d-flex justify-content-center mt-5';
         } else {
-            $li.style.display = 'none'
+            $li.style.display = 'none';
             console.log('no', data.name);
         }
 

@@ -63,7 +63,7 @@ async function searchCharacter(search) {
             $ul.innerHTML = 'Không tìm thấy nhân vật!';
             $ul.className = 'list d-flex justify-content-center mt-5';
         } else {
-            $li.style.display = 'none'
+            $li.style.display = 'none';
             console.log('no', data.name);
         }
         $li.className = 'character mr-3 mb-3';
