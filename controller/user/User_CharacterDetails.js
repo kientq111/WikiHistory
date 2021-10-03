@@ -22,7 +22,7 @@ let $textGroupJob = document.createElement('div');
 $textGroupJob.className = 'text-group position-group d-flex';
 
 let $titleJob = document.createElement('h6');
-$titleJob.innerHTML = 'Chức danh/Nghề nghiệp: ';
+$titleJob.innerHTML = 'Chức danh: ';
 
 let $textJob = document.createElement('p');
 $textJob.innerHTML = getChar.title;
@@ -34,7 +34,7 @@ let $textGroupDate = document.createElement('div');
 $textGroupDate.className = 'text-group position-group d-flex';
 
 let $titleDate = document.createElement('h6');
-$titleDate.innerHTML = 'Ngày sinh/mất: ';
+$titleDate.innerHTML = 'Ngày sinh/Mất: ';
 
 let $textdate = document.createElement('p');
 $textdate.innerHTML = `Sinh: ${getChar.birth} - Mất: ${getChar.death}`;
