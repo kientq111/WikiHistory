@@ -8,7 +8,7 @@ async function getListEvent() {
     for (let doc of response.docs) {
         let data = doc.data();
         let $li = document.createElement('li');
-        $li.className = 'event mr-3 mb-3';
+        $li.className = 'character event mr-3 mb-3';
 
         let $figure = document.createElement('figure');
         $figure.className = 'snip1273';
