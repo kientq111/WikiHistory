@@ -7,7 +7,7 @@ let getChar = res.data();
 /////
 let $nameEvent = document.getElementsByClassName('name')[0];
 let $textNameEvent = document.createElement('h2');
-$textNameEvent.innerHTML = getChar.name + ' ' + '( ' + getChar.firstday + ' )';
+$textNameEvent.innerHTML = `${getChar.name} (${getChar.firstday} - ${getChar.lastday === undefined ? 'chưa rõ' : getChar.lastday} )`;
 $nameEvent.append($textNameEvent);
 
 // let $dateEvent = document.getElementsByClassName('date')[0];
@@ -35,8 +35,10 @@ $introductionEvent.append($textIntroductionEvent);
 
 let $resultEvent = document.getElementsByClassName('result')[0];
 let $textResultEvent = document.createElement('p');
-$textResultEvent.innerHTML = 'Kết quả và ý nghĩa lịch sử: ' + getChar.result;
-$resultEvent.append($textResultEvent);
+let $textMeaningEvent = document.createElement('p');
+$textResultEvent.innerHTML = 'Kết quả: ' + getChar.result;
+$textMeaningEvent.innerHTML = 'Ý nghĩa lịch sử : ' + getChar.meaning;
+$resultEvent.append($textResultEvent, $textMeaningEvent);
 
 
 //Timeline

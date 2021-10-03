@@ -115,7 +115,7 @@ async function searchEvent(search) {
     }
     if (countOne == countAll) {
         console.log(countOne, countAll);
-        $ul.innerHTML = 'Không tìm thấy nhân vật!';
+        $ul.innerHTML = 'Không tìm thấy sự kiện!';
         $ul.className = 'list d-flex justify-content-center mt-5';
     }
 }

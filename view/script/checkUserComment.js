@@ -16,6 +16,14 @@ firebase.auth().onAuthStateChanged((user) => {
 })
 
 
+function removeCharStorage() {
+    localStorage.removeItem('searchChar');
+}
+
+function removeEventStorage() {
+    localStorage.removeItem('searchEvent');
+}
+
 function logout() {
     firebase.auth().signOut()
     window.location = "../user/HomePage.html";
