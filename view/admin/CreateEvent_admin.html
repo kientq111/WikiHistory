@@ -99,7 +99,7 @@
                 <div style="display: flex;">
                     <!-- Ảnh -->
                     <div class="position-absolute mt-3 d-flex align-items-end form-control-file border rounded" id="imagePreview" style="width: 320px; height: 440px; padding-left: 0; padding-right: 0; margin-left: 12px;">
-                        <input type="text" placeholder="Nhập URL ảnh" onchange="previewEventImage(this.value)" class="w-100 rounded" id="eventImage" style="z-index: 10;">
+                        <input type="text" placeholder="Nhập URL ảnh" onchange="previewEventImage(this.value)" class="w-100 rounded" id="eventImage" onkeyup="checkType();" style="z-index: 10;">
                     </div>
                     <!-- Thông tin -->
                     <div class="col-sm-12 ">
@@ -107,23 +107,23 @@
 
                         <div class="form-group formInfor">
                             <label for="usr ">Tên sự kiện:</label>
-                            <input type="text " class="form-control " id="eventName" required maxlength="255">
+                            <input type="text " class="form-control " id="eventName" required maxlength="255" onkeyup="checkType();">
                         </div>
                         <div class="form-group formInfor">
                             <label for="pwd ">Ngày bắt đầu:</label>
-                            <input type="text" class="form-control " id="startDate" required>
+                            <input type="text" class="form-control " id="startDate" required onkeyup="checkType();">
                         </div>
                         <div class="form-group formInfor">
                             <label for="pwd ">Ngày kết thúc</label>
-                            <input type="text" class="form-control " id="endDate" required>
+                            <input type="text" class="form-control " id="endDate" required onkeyup="checkType();">
                         </div>
                         <div class="form-group formInfor">
                             <label for="usr ">Địa điểm</label>
-                            <input type="text " class="form-control " id="location" required>
+                            <input type="text " class="form-control " id="location" required onkeyup="checkType();">
                         </div>
                         <div class="form-group formInfor">
                             <label for="usr ">Giới thiệu chung:</label>
-                            <input type="text " class="form-control " id="general" required maxlength="255">
+                            <input type="text " class="form-control " id="general" required maxlength="255" onkeyup="checkType();">
                         </div>
                         <style>
                             .formInfor {
@@ -136,11 +136,11 @@
                 <div class="form-group text-white" style="display: flex;">
                     <div class="col-sm-6 ">
                         <label for="comment">Kết quả:</label>
-                        <textarea class="form-control" rows="5" id="result" required></textarea>
+                        <textarea class="form-control" rows="5" id="result" onkeyup="checkType();" required></textarea>
                     </div>
                     <div class="col-sm-6">
                         <label for="comment">Ý nghĩa lịch sử:</label>
-                        <textarea class="form-control" rows="5" id="meaning" required></textarea>
+                        <textarea class="form-control" rows="5" id="meaning" onkeyup="checkType();" required></textarea>
                     </div>
                 </div>
                 <!-- Tạo chi tiết sự kiện -->
@@ -155,7 +155,7 @@
                             </div>
                             <!-- Thông tin -->
                             <div class="">
-                                
+
                                 <div>
                                     <div class="form-group ">
                                         <label for="usr ">Tên giai đoạn:</label>
@@ -192,7 +192,7 @@
 
                 <!-- Button thêm -->
                 <div class="d-flex justify-content-end pb-5 pr-3">
-                    <button type="button" class="btn btn-success " style="width: 70px;" onclick="saveEvent()">&ensp;Tạo&ensp;</button>
+                    <button type="button" class="btn btn-success " id="btnSave" disabled style="width: 70px;" onclick="saveEvent()">&ensp;Tạo&ensp;</button>
                 </div>
             </div>
             <script src="../script/admin_CreateEvent.js"></script>

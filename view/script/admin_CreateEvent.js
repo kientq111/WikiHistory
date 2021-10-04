@@ -165,7 +165,7 @@ async function saveEvent() {
     await db.collection('events').add(data);
     window.location.reload();
     alert('Tạo sự kiện lịch sử thành công!');
-    location.href ="./ListHistoryEvent_admin.html";
+    location.href = "./ListHistoryEvent_admin.html";
 }
 
 function previewEventImage(value) {
@@ -179,4 +179,22 @@ function previewStageImage(value, input) {
     let $imagePreview = input.parentElement;
     $imagePreview.style.backgroundImage = 'url(' + value + ')';
     $imagePreview.style.backgroundSize = 'cover';
+}
+
+function checkType() {
+    // document.getElementById('btnSave').disabled = false;
+    let eventName = document.getElementById('eventName').value;
+    let startDate = document.getElementById('startDate').value;
+    let endDate = document.getElementById('endDate').value;
+    let location = document.getElementById('location').value;
+    let general = document.getElementById('general').value;
+    let result = document.getElementById('result').value;
+    let meaning = document.getElementById('meaning').value;
+    let eventImage = document.getElementById('eventImage').value;
+    if (eventName.length != 0 && startDate.length != 0 && endDate.length != 0 && location.length != 0 && general.length != 0 && result.length != 0 && meaning.length != 0 && eventImage.length != 0) {
+        document.getElementById('btnSave').disabled = false;
+    } else {
+        document.getElementById('btnSave').disabled = true;
+    }
+
 }

@@ -354,7 +354,7 @@
             emails: auth.currentUser.email
         };
         await db.collection('events').doc(id).update({
-            comment: firebase.firestore.FieldValue.arrayUnion(comment) // thêm 1 phần tử vào mảng messages
+            comment: firebase.firestore.FieldValue.arrayUnion(comment)
         });
         window.location.reload();
     }
