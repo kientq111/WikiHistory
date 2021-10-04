@@ -29,15 +29,15 @@ $textLoactionEvent.innerHTML = '<b>Địa điểm:</b> ' + getChar.location;
 $locationEvent.append($textLoactionEvent);
 
 let $introductionEvent = document.getElementsByClassName('introduction')[0];
-let $textIntroductionEvent = document.createElement('p');
+let $textIntroductionEvent = document.createElement('h5');
 $textIntroductionEvent.innerHTML = '<b>Khái quát chung:</b> ' + getChar.general;
 $introductionEvent.append($textIntroductionEvent);
 
 let $resultEvent = document.getElementsByClassName('result')[0];
-let $textResultEvent = document.createElement('p');
-let $textMeaningEvent = document.createElement('p');
+let $textResultEvent = document.createElement('h5');
+let $textMeaningEvent = document.createElement('h5');
 $textResultEvent.innerHTML = '<b>Kết quả:</b> ' + getChar.result;
-$textMeaningEvent.innerHTML = '<b>Ý nghĩa lịch sử :</b> ' + getChar.meaning;
+$textMeaningEvent.innerHTML = '<b><br>Ý nghĩa lịch sử :</b> ' + getChar.meaning;
 $resultEvent.append($textResultEvent, $textMeaningEvent);
 
 
