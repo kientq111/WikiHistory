@@ -21,8 +21,10 @@ $boxText.className = 'boxText';
 let $textGroupJob = document.createElement('div');
 $textGroupJob.className = 'text-group position-group d-flex';
 
-let $titleJob = document.createElement('h6');
-$titleJob.innerHTML = '<b>Chức danh:</b> ';
+let $titleJob = document.createElement('h5');
+$titleJob.innerHTML = '<b>Chức danh:</b>';
+$titleJob.style.fontWeight = 'bold';
+$titleJob.style.width = '200px';
 
 let $textJob = document.createElement('p');
 $textJob.innerHTML = getChar.title;
@@ -33,11 +35,13 @@ $textGroupJob.append($titleJob, $textJob);
 let $textGroupDate = document.createElement('div');
 $textGroupDate.className = 'text-group position-group d-flex';
 
-let $titleDate = document.createElement('h6');
-$titleDate.innerHTML = '<b>Ngày sinh/Mất: </b> ';
+let $titleDate = document.createElement('h5');
+$titleDate.innerHTML = '<b>Ngày sinh / mất:</b>';
+$titleDate.style.fontWeight = 'bold';
+$titleDate.style.width = '200px';
 
 let $textdate = document.createElement('p');
-$textdate.innerHTML = `Sinh: ${getChar.birth} - Mất: ${getChar.death}`;
+$textdate.innerHTML = `Sinh ${getChar.birth} - Mất ${getChar.death}`;
 
 $textGroupDate.append($titleDate, $textdate);
 
@@ -45,8 +49,10 @@ $textGroupDate.append($titleDate, $textdate);
 let $textGroupCountry = document.createElement('div');
 $textGroupCountry.className = 'text-group position-group d-flex';
 
-let $titleCountry = document.createElement('h6');
-$titleCountry.innerHTML = '</b>Quê quán: </b> ';
+let $titleCountry = document.createElement('h5');
+$titleCountry.innerHTML = '</b>Quê quán:</b>';
+$titleCountry.style.fontWeight = 'bold';
+$titleCountry.style.width = '200px';
 
 let $textCountry = document.createElement('p');
 $textCountry.innerHTML = getChar.home;
@@ -57,8 +63,11 @@ $textGroupCountry.append($titleCountry, $textCountry);
 let $textGroupGeneral = document.createElement('div');
 $textGroupGeneral.className = 'text-group position-group d-flex';
 
-let $titleGeneral = document.createElement('h6');
-$titleGeneral.innerHTML = '</b>Khái quát: </b> ';
+let $titleGeneral = document.createElement('h5');
+$titleGeneral.innerHTML = '</b>Khái quát:</b>';
+$titleGeneral.style.fontWeight = 'bold';
+$titleGeneral.style.width = '200px';
+
 
 let $textGeneral = document.createElement('p');
 $textGeneral.innerHTML = getChar.general;
