@@ -71,31 +71,33 @@ async function searchCharacter(search) {
             console.log('no', data.name);
         }
         $li.className = 'character mr-3 mb-3';
+
         let $figure = document.createElement('figure');
-        $figure.className = 'snip1273';
+        $figure.className = 'snip1273 rounded';
 
         let $img = document.createElement('img');
-        $img.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Quang_Trung_statue_02.jpg/800px-Quang_Trung_statue_02.jpg';
         $img.src = data.picture;
         $img.alt = 'sample72';
+        $img.className = 'rounded';
 
         let $figcaption = document.createElement('figcaption');
-
-        let $name = document.createElement('h4');
-        $name.innerHTML = 'Tên: ' + data.name;
+        $figcaption.className = 'rounded';
+        let $name = document.createElement('h3');
+        $name.innerHTML = data.name;
+        $name.className = 'text-warning text-center';
 
         let $job = document.createElement('p');
-        $job.innerHTML = `Chức danh: ${data.title}`;
+        $job.innerHTML = `<b class="text-warning">Chức danh:</b> ${data.title}`;
 
         let $date = document.createElement('p');
 
-        $date.innerHTML = `Ngày sinh - mất: ${data.birth}-${data.death === undefined ? 'chưa rõ' : data.death}`;
+        $date.innerHTML = `<b class="text-warning">Ngày sinh - mất:</b> ${data.birth} - ${data.death === undefined ? 'chưa rõ' : data.death}`;
 
         let $countryside = document.createElement('p');
-        $countryside.innerHTML = `Quê quán: ${data.home}`;
+        $countryside.innerHTML = `<b class="text-warning">Quê quán:</b> ${data.home}`;
 
         let $general = document.createElement('p');
-        $general.innerHTML = `Khái quát: ${data.general}`;
+        $general.innerHTML = `<b class="text-warning">Khái quát:</b> ${data.general}`;
 
         $figcaption.append($name, $job, $date, $countryside, $general);
 
