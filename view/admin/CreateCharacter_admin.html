@@ -99,7 +99,7 @@
                 <div style="display: flex;">
                     <!-- Ảnh -->
                     <div class="position-absolute mt-3 d-flex align-items-end form-control-file border rounded" id="imagePreview" style="width: 320px; height: 440px; padding-left: 0; padding-right: 0; margin-left: 12px;">
-                        <input type="text" placeholder="Nhập URL ảnh" onchange="previewEventImage(this.value)" class="w-100 rounded" id="eventImage" style="z-index: 10;">
+                        <input type="text" placeholder="Nhập URL ảnh" onchange="previewEventImage(this.value)" onkeyup="checkType();" class="w-100 rounded" id="eventImage" style="z-index: 10;">
                     </div>
                     <!-- Thông tin -->
                     <div class="col-sm-12 ">
@@ -107,27 +107,27 @@
 
                         <div class="form-group formInfor">
                             <label for="usr ">Tên nhân vật:</label>
-                            <input type="text " class="form-control " id="eventName" required maxlength="255">
+                            <input type="text " class="form-control " id="eventName" onkeyup="checkType();" required maxlength="255">
                         </div>
                         <div class="form-group formInfor">
                             <label for="pwd ">Chức danh:</label>
-                            <input type="text" class="form-control " id="title" required>
+                            <input type="text" class="form-control " onkeyup="checkType();" id="title" required>
                         </div>
                         <div class="form-group formInfor">
                             <label for="pwd ">Năm sinh:</label>
-                            <input type="text" class="form-control " id="startDate" required>
+                            <input type="text" class="form-control " onkeyup="checkType();" id="startDate" required>
                         </div>
                         <div class="form-group formInfor">
                             <label for="pwd ">Năm mất:</label>
-                            <input type="text" class="form-control " id="endDate" required>
+                            <input type="text" class="form-control " onkeyup="checkType();" id="endDate" required>
                         </div>
                         <div class="form-group formInfor">
                             <label for="usr ">Quê quán:</label>
-                            <input type="text " class="form-control " id="location" required>
+                            <input type="text " class="form-control " onkeyup="checkType();" id="location" required>
                         </div>
                         <div class="form-group ">
                             <label for="usr ">Khái quát:</label>
-                            <textarea type="text " class="form-control " id="general" required maxlength="255"></textarea>
+                            <textarea type="text " class="form-control " onkeyup="checkType();" id="general" required maxlength="255"></textarea>
                         </div>
                         <style>
                             .formInfor {
@@ -172,7 +172,7 @@
 
                 <!-- Button thêm -->
                 <div class="d-flex justify-content-end pb-5 pr-3">
-                    <button type="button" class="btn btn-success " style="width: 70px;" onclick="saveCharacter()">&ensp;Tạo&ensp;</button>
+                    <button type="button" class="btn btn-success " style="width: 70px;" id='btnSave' disabled onclick="saveCharacter()">&ensp;Tạo&ensp;</button>
                 </div>
             </div>
             <script src="../script/admin_CreateCharacter.js"></script>

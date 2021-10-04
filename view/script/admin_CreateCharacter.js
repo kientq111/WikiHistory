@@ -53,7 +53,7 @@ async function saveCharacter() {
     await db.collection('characters').add(data);
     window.location.reload();
     alert('Tạo nhân vật lịch sử thành công!');
-    location.href ="./ListHero_admin.html";
+    location.href = "./ListHero_admin.html";
 }
 
 function previewEventImage(value) {
@@ -67,4 +67,22 @@ function previewStageImage(value, input) {
     let $imagePreview = input.parentElement;
     $imagePreview.style.backgroundImage = 'url(' + value + ')';
     $imagePreview.style.backgroundSize = 'cover';
+}
+
+
+function checkType() {
+    // document.getElementById('btnSave').disabled = false;
+    let eventName = document.getElementById('eventName').value;
+    let title = document.getElementById('title').value;
+    let startDate = document.getElementById('startDate').value;
+    let endDate = document.getElementById('endDate').value;
+    let location = document.getElementById('location').value;
+    let general = document.getElementById('general').value;
+    let eventImage = document.getElementById('eventImage').value;
+    if (eventName.length != 0 && startDate.length != 0 && endDate.length != 0 && location.length != 0 && general.length != 0 && title.length != 0 && eventImage.length != 0) {
+        document.getElementById('btnSave').disabled = false;
+    } else {
+        document.getElementById('btnSave').disabled = true;
+    }
+
 }
