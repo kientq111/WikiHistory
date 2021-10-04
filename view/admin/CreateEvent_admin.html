@@ -98,33 +98,38 @@
                 <!-- Khung trên -->
                 <div style="display: flex;">
                     <!-- Ảnh -->
-                    <div class="mt-1 col-sm-3 d-flex align-items-end form-control-file border" id="imagePreview">
-                        <input type="text" onchange="previewEventImage(this.value)" class="" id="eventImage">
+                    <div class="position-absolute mt-3 d-flex align-items-end form-control-file border rounded" id="imagePreview" style="width: 320px; height: 440px; padding-left: 0; padding-right: 0; margin-left: 12px;">
+                        <input type="text" onchange="previewEventImage(this.value)" class="w-100 rounded" id="eventImage" style="z-index: 10;">
                     </div>
                     <!-- Thông tin -->
-                    <div class="col-sm-9 ">
-                        <p class="text-center h3">Tạo sự kiện</p>
+                    <div class="col-sm-12 ">
+                        <p class="formInfor text-center h3">Tạo sự kiện</p>
 
-                        <div class="form-group ">
+                        <div class="form-group formInfor">
                             <label for="usr ">Tên sự kiện:</label>
                             <input type="text " class="form-control " id="eventName" required maxlength="255">
                         </div>
-                        <div class="form-group ">
+                        <div class="form-group formInfor">
                             <label for="pwd ">Ngày bắt đầu:</label>
                             <input type="text" class="form-control " id="startDate" required>
                         </div>
-                        <div class="form-group ">
+                        <div class="form-group formInfor">
                             <label for="pwd ">Ngày kết thúc</label>
                             <input type="text" class="form-control " id="endDate" required>
                         </div>
-                        <div class="form-group ">
+                        <div class="form-group formInfor">
                             <label for="usr ">Địa điểm</label>
                             <input type="text " class="form-control " id="location" required>
                         </div>
-                        <div class="form-group ">
+                        <div class="form-group formInfor">
                             <label for="usr ">Giới thiệu chung:</label>
                             <input type="text " class="form-control " id="general" required maxlength="255">
                         </div>
+                        <style>
+                            .formInfor {
+                                margin-left: 350px;
+                            }
+                        </style>
                     </div>
                 </div>
                 <!-- Khung dưới -->
@@ -142,14 +147,15 @@
                 <div class="stageEvent container text-white" style=" height: 100%; margin-top: 50px;">
                     <!-- Khung trên -->
                     <div class="stageContainer">
-                        <div style="display: flex; padding-top: 60px;">
+                        <div style="padding-top: 60px;">
                             <!-- Ảnh -->
-                            <div class="mt-1 col-sm-3 d-flex align-items-end form-control-file border previewStageImage">
-                                <input type="text" class="stageImage" onchange="previewStageImage(this.value,this)">
+                            <p class="text-center h3">Tạo giai đoạn sự kiện</p>
+                            <div class="mt-1  d-flex align-items-end form-control-file border previewStageImage" style="height: 300px;">
+                                <input type="text" class="stageImage" style="width: 315px;" onchange="previewStageImage(this.value,this)">
                             </div>
                             <!-- Thông tin -->
-                            <div class="col-sm-9 ">
-                                <p class="text-center h3">Tạo giai đoạn sự kiện</p>
+                            <div class="">
+                                
                                 <div>
                                     <div class="form-group ">
                                         <label for="usr ">Tên giai đoạn:</label>
@@ -168,7 +174,7 @@
                         </div>
                         <!-- Khung dưới -->
                         <div class="form-group text-white" style="display: flex;">
-                            <div class="col-sm-12 ">
+                            <div class="w-100">
                                 <label for="comment">Mô tả chi tiết:</label>
                                 <textarea class="form-control stageDetail" rows="5" required></textarea>
                             </div>
