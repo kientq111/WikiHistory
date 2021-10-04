@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="../media/Image/logo.png">
+    <link rel="icon" type="image/x-icon" href="./view/media/Image/logo.png">
     <title>History Website</title>
 
     <!-- Latest compiled and minified CSS -->
@@ -17,7 +17,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="../css/HomePage.css" />
+    <link rel="stylesheet" href="./view/css/HomePage.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
@@ -36,15 +36,15 @@
             <nav class="navbar navbar-expand-sm navbar-dark pl-0 pb-0 pt-1" style="background-color: black;height: 50px;">
                 <ul class="navbar-nav d-flex">
                     <li class="nav-item ">
-                        <a href="./HomePage.html"><img class="pb-4" src="../media/Image/logo.png" alt="" style="width: 100px; height: 100px;object-fit: cover;"></a>
+                        <a href="./HomePage.html"><img class="pb-4" src="./view/media/Image/logo.png" alt="" style="width: 100px; height: 100px;object-fit: cover;"></a>
                     </li>
                     <li class="nav-item ml-2 mt-4 ">
-                        <a class="nav-link h5 text-warning" href="./EventList_user.html" onclick="removeEventStorage();">
+                        <a class="nav-link h5 text-warning" href="./view/user/EventList_user.html" onclick="removeEventStorage();">
                             Sự kiện
                         </a>
                     </li>
                     <li class="nav-item ml-3 mt-4 ">
-                        <a class="nav-link h5 text-warning " href="./CharacterList_user.html" onclick="removeCharStorage();">
+                        <a class="nav-link h5 text-warning " href="./view/user/CharacterList_user.html" onclick="removeCharStorage();">
                             Nhân vật
                         </a>
                     </li>
@@ -56,9 +56,9 @@
                             <i class="h3 bi bi-person-circle"></i>
                         </a>
                         <div id="drop-bar" class="dropdown-menu text-white bg-warning">
-                            <a class="dropdown-item text-dark " href="../ValidateForm/Login-Register/index.html">Đăng
+                            <a class="dropdown-item text-dark " href="./view/ValidateForm/Login-Register/index.html">Đăng
                                 nhập</a>
-                            <a class="dropdown-item text-dark " href="../ValidateForm/Login-Register/index.html">Đăng
+                            <a class="dropdown-item text-dark " href="./view/ValidateForm/Login-Register/index.html">Đăng
                                 kí</a>
                         </div>
                     </li>
@@ -67,40 +67,46 @@
             </nav>
 
             <!-- Ảnh content page -->
-            <div class=" " style="background-image: url(../media/Image/content1.jpg);height: 40px; background-size: 200px; ">.
+            <div class=" " style="background-image: url(./view/media/Image/content1.jpg);height: 40px; background-size: 200px; ">.
             </div>
 
+
             <!-- Tóm tắt và video -->
-            <div class="" style="display: flex; width: 100%; height: 100%">
-                <figure id="video_player" class="video_box">
-                    <!-- Main Video -->
-                    <video controls poster="">
-                        <source src="../media/video/video.mp4" type="video/mp4">
+            <!-- Tóm tắt và video -->
+            <div class=" " style="display: flex; width: 100%;height: 100%; ">
+                <div class=" col-sm-3 " style="background-image: radial-gradient(circle, #000000, #160b0a, #21150c, #281e0c, #29290f); width: 40%; ">
+                    <p class="h5 text-secondary" style="text-align: center;font-weight: bold; margin-top: 10px;">Giới thiệu lịch sử Việt Nam</p>
+                    <br>
+                    <p class="text-secondary" style="margin-top: -30px;"> Lịch sử Việt Nam đã trải qua hàng vạn năm trước Công nguyên tính từ khi con người xuất hiện. Trải qua nhiều thời kỳ, nhân và dân ta vẫn một lòng giữ nước, tạo nên đất nước Việt Nam xinh đẹp hình chữ S ngày nay. Quả đúng là: </p>
+                    <p class="text-secondary" style="font-style: italic; margin-top: -18px ;">"Từng nghe:<br> Việc nhân nghĩa cốt ở yên dân,<br> Quân điếu phạt trước lo trừ bạo;<br> Như nước Đại Việt ta từ trước,<br> Vốn xưng nền văn hiến đã lâu,<br> Núi sông bờ cỏi đã chia,<br> Phong tục Bắc Nam cũng khác;<br> Từ Triệu, Đinh,
+                        Lý, Trần bao đời xây nền độc lập<br> Cùng Hán, Đường, Tống, Nguyên mỗi bên hùng cứ một phương;
+                        <br> Tuy mạnh yếu có lúc khác nhau,<br> Song hào kiệt thời nào cũng có.<br>
+
+                        <br>Cho nên:<br> Lưu Cung tham công nên thất bại;<br> Triệu Tiết thích lớn phải tiêu vong;<br> Cửa Hàm Tử bắt sống Toa Đô<br> Sông Bạch Đằng giết tươi Ô Mã<br> Việc xưa xem xét, chứng cứ còn ghi.
+                        <br></p>
+                    <p class="text-secondary" style="text-align: right; font-style: italic; margin-top: -18px ;">- Trích Bình Ngô đại cáo (Nguyễn Trãi)" </p>
+
+                </div>
+                <div class="video-wrapper d-flex justify-content-end" style="width: 100%;">
+                    <video src="./view/media/video/video.mp4 " width="100% " height="100%" autoplay muted>
                     </video>
-                    <h1 class=" mt-5 text-white" style="text-align: center;">Tóm tắt lịch sử Việt Nam</h1>
-                    <!-- This is The Playlist Area -->
-                    <figcaption>
-                        <a href="../media/video/video.mp4"><img src="../media/Image/12.jpg" alt="Nambia Timelapse 1"></a>
-                        <a href="../media/video/video2.mp4"><img src="../media/Image/12.jpg" alt="Nambia Timelapse 1"></a>
-                        <a href="../media/video/video3.mp4"><img src="../media/Image/12.jpg" alt="Nambia Timelapse 1"></a>
-                    </figcaption>
-                </figure>
+                </div>
             </div>
         </div>
         <div class="d-flex">
             <figure class="snip1573">
-                <img src="../media/Image/Event.jpg" alt="" />
+                <img src="./view/media/Image/Event.jpg" alt="" />
                 <figcaption>
                     <h1>Sự kiện</h1>
                 </figcaption>
-                <a href="./EventList_user.html" onclick="removeEventStorage();"></a>
+                <a href="./view/user/EventList_user.html" onclick="removeEventStorage();"></a>
             </figure>
             <figure class="snip1573 hover">
-                <img src="../media/Image/Auco.jpg" style="height: 100%;" />
+                <img src="./view/media/Image/Auco.jpg" style="height: 100%;" />
                 <figcaption>
                     <h1>Nhân vật</h1>
                 </figcaption>
-                <a href="./CharacterList_user.html" onclick="removeCharStorage()"></a>
+                <a href="./view/user/CharacterList_user.html" onclick="removeCharStorage()"></a>
             </figure>
         </div>
     </div>
@@ -108,7 +114,7 @@
     <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-auth-compat.js"></script>
 
-    <script src="../script/homeAnimation.js"></script>
+    <script src="./view/script/homeAnimation.js"></script>
 </body>
 <!-- Site footer -->
 <footer class="footer-section">
@@ -149,7 +155,7 @@
                 <div class="col-xl-4 col-lg-4 mb-50">
                     <div class="footer-widget">
                         <div class="footer-logo">
-                            <a style="text-decoration: none; color: aliceblue;" href=""><img src="../media/Image/logo.png" alt="logo" style="height: 100%; width: 130px;">VIETNAM HISTORY
+                            <a style="text-decoration: none; color: aliceblue;" href=""><img src="./view/media/Image/logo.png" alt="logo" style="height: 100%; width: 130px;">VIETNAM HISTORY
                             </a>
                         </div>
                         <div class="footer-text">
@@ -216,7 +222,7 @@
         </div>
     </div>
 </footer>
-<script src="../ValidateForm/Login-Register/firebase.js"></script>
-<script src="../ValidateForm/Login-Register/welcome.js"></script>
+<script src="./view/ValidateForm/Login-Register/firebase.js"></script>
+<script src="./view/ValidateForm/Login-Register/welcome.js"></script>
 
 </html>

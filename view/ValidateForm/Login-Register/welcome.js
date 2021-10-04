@@ -19,7 +19,7 @@ firebase.auth().onAuthStateChanged((user) => {
 
 function logout() {
     firebase.auth().signOut()
-    window.location = "../user/HomePage.html";
+    window.location = "../../HomePage.html";
 
 }
 
