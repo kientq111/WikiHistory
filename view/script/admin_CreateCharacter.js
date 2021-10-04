@@ -10,7 +10,7 @@ function createStage() {
                             <!-- Ảnh -->
                             <p class="text-center h3">Tạo giai đoạn nhân vật</p>
                             <div class="mt-1  d-flex align-items-end form-control-file border previewStageImage" style="height: 300px;">
-                                <input type="text" class="stageImage" style="width: 315px;" onchange="previewStageImage(this.value,this)">
+                                <input type="text" placeholder="Nhập URL ảnh" class="stageImage" style="width: 315px;" onchange="previewStageImage(this.value,this)">
                             </div>
                             <!-- Thông tin -->
                             <div class=" ">
@@ -53,6 +53,7 @@ async function saveCharacter() {
     await db.collection('characters').add(data);
     window.location.reload();
     alert('Tạo nhân vật lịch sử thành công!');
+    location.href ="./ListHero_admin.html";
 }
 
 function previewEventImage(value) {

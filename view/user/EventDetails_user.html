@@ -25,7 +25,7 @@
 
     <link rel="stylesheet" href="../css/HomePage.css" />
 
-  
+
 
     <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-firestore-compat.js"></script>
@@ -162,7 +162,7 @@
                     <h6 class="pl-1 ">Tên</h6>
                 </div>
                 <div class="input-group mb-3 ">
-                    <input type="text " class="form-control " id="txtComment" placeholder="Viết bình luận... " aria-label="Recipient 's username" aria-describedby="basic-addon2">
+                    <input type="text " onkeyup="checkType();" class="form-control " id="txtComment" placeholder="Viết bình luận... " aria-label="Recipient 's username" aria-describedby="basic-addon2">
 
                     <div class="input-group-append"></div>
                     <!-- <button class="btn btn-outline-secondary dropdown-toggle bg-warning" type="button"
@@ -183,7 +183,7 @@
                     </div> -->
 
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary bg-warning" type="button" onclick="comment()">&emsp;Gửi&emsp;</button>
+                        <button class="btn btn-outline-secondary bg-warning" id="btnComment" type="button" onclick="comment()" disabled>&emsp;Gửi&emsp;</button>
                     </div>
                 </div>
                 <div class="commentList bg-white">
@@ -226,7 +226,15 @@
             </div>
         </div>
     </div>
-
+    <script>
+        function checkType() {
+            let txt = document.getElementById("txtComment").value;
+            document.getElementById("btnComment").disabled = false;
+            if (txt.length == 0) {
+                document.getElementById("btnComment").disabled = true;
+            }
+        }
+    </script>
     <script src="../../controller/user/User_EventDetails.js" type="module"></script>
 
     <!-- <script src="../script/EventDetails_Timeline.js"></script> -->
@@ -270,7 +278,7 @@
                 <div class="col-xl-4 col-lg-4 mb-50">
                     <div class="footer-widget">
                         <div class="footer-logo">
-                            <a style="text-decoration: none; color: aliceblue;" href="index.html"><img src="../media/Image/logo.png" alt="logo" style="height: 100%; width: 130px;">VIETNAM HISTORY
+                            <a style="text-decoration: none; color: aliceblue;" href=""><img src="../media/Image/logo.png" alt="logo" style="height: 100%; width: 130px;">VIETNAM HISTORY
                             </a>
                         </div>
                         <div class="footer-text">
