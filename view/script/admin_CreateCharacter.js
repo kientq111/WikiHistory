@@ -32,7 +32,7 @@ async function saveCharacter() {
         name: document.getElementById('eventName').value,
         title: document.getElementById('title').value,
         birth: document.getElementById('startDate').value,
-        deadth: document.getElementById('endDate').value,
+        death: document.getElementById('endDate').value,
         home: document.getElementById('location').value,
         general: document.getElementById('general').value,
         picture: document.getElementById('eventImage').value,
