@@ -54,11 +54,11 @@ for (let item of getChar.details) {
     let $timeText = document.createElement('h2');
 
     if (item.dateStart === undefined || item.dateStart === '') {
-        $timeText.innerHTML = `Chưa rõ`;
+        $timeText.innerHTML = `${item.name} (thời gian: chưa rõ)`;
     } else if (item.dateEnd === undefined || item.dateEnd === '') {
-        $timeText.innerHTML = `${item.dateStart} - Chưa rõ`;
+        $timeText.innerHTML = `${item.name} (${item.dateStart} - chưa rõ)`;
     } else {
-        $timeText.innerHTML = `${item.dateStart} - ${item.dateEnd}`
+        $timeText.innerHTML = `${item.name} (${item.dateStart} - ${item.dateEnd})`
     }
 
 
