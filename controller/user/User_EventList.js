@@ -21,20 +21,21 @@ async function getListEvent() {
 
         let $figcaption = document.createElement('figcaption');
 
-        let $name = document.createElement('h4');
-        $name.innerHTML = 'Tên: ' + data.name;
+        let $name = document.createElement('h5');
+        $name.innerHTML = data.name;
+        $name.className = 'text-warning text-center';
 
         let $location = document.createElement('p');
-        $location.innerHTML = `Diễn ra tại: ${data.location}`;
+        $location.innerHTML = `<b class='text-warning'>Diễn ra tại:</b> ${data.location}`;
 
         let $date = document.createElement('p');
-        $date.innerHTML = `Ngày bắt đầu - kết thúc: ${data.firstday}-${data.lastday}`;
+        $date.innerHTML = `<b class='text-warning'>Thời gian:</b> ${data.firstday}-${data.lastday}`;
 
         let $result = document.createElement('p');
-        $result.innerHTML = `Kết quả: ${data.result}`;
+        $result.innerHTML = `<b class='text-warning'>Kết quả:</b> ${data.result}`;
 
         let $meaning = document.createElement('p');
-        $meaning.innerHTML = `Ý nghĩa: ${data.meaning}`;
+        $meaning.innerHTML = `<b class='text-warning'>Ý nghĩa:</b> ${data.meaning}`;
 
         $figcaption.append($name, $location, $date, $result, $meaning);
 
