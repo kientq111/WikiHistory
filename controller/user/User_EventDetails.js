@@ -25,19 +25,19 @@ $imgEvent.append($imageEvent);
 
 let $locationEvent = document.getElementsByClassName('location')[0];
 let $textLoactionEvent = document.createElement('h5');
-$textLoactionEvent.innerHTML = 'Địa điểm: ' + getChar.location;
+$textLoactionEvent.innerHTML = '<b>Địa điểm:</b> ' + getChar.location;
 $locationEvent.append($textLoactionEvent);
 
 let $introductionEvent = document.getElementsByClassName('introduction')[0];
 let $textIntroductionEvent = document.createElement('p');
-$textIntroductionEvent.innerHTML = 'Khái quát chung: ' + getChar.general;
+$textIntroductionEvent.innerHTML = '<b>Khái quát chung:</b> ' + getChar.general;
 $introductionEvent.append($textIntroductionEvent);
 
 let $resultEvent = document.getElementsByClassName('result')[0];
 let $textResultEvent = document.createElement('p');
 let $textMeaningEvent = document.createElement('p');
-$textResultEvent.innerHTML = 'Kết quả: ' + getChar.result;
-$textMeaningEvent.innerHTML = 'Ý nghĩa lịch sử : ' + getChar.meaning;
+$textResultEvent.innerHTML = '<b>Kết quả:</b> ' + getChar.result;
+$textMeaningEvent.innerHTML = '<b>Ý nghĩa lịch sử :</b> ' + getChar.meaning;
 $resultEvent.append($textResultEvent, $textMeaningEvent);
 
 

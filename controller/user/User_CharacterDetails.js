@@ -22,7 +22,7 @@ let $textGroupJob = document.createElement('div');
 $textGroupJob.className = 'text-group position-group d-flex';
 
 let $titleJob = document.createElement('h6');
-$titleJob.innerHTML = 'Chức danh: ';
+$titleJob.innerHTML = '<b>Chức danh:</b> ';
 
 let $textJob = document.createElement('p');
 $textJob.innerHTML = getChar.title;
@@ -34,7 +34,7 @@ let $textGroupDate = document.createElement('div');
 $textGroupDate.className = 'text-group position-group d-flex';
 
 let $titleDate = document.createElement('h6');
-$titleDate.innerHTML = 'Ngày sinh/Mất: ';
+$titleDate.innerHTML = '<b>Ngày sinh/Mất: </b> ';
 
 let $textdate = document.createElement('p');
 $textdate.innerHTML = `Sinh: ${getChar.birth} - Mất: ${getChar.death}`;
@@ -46,7 +46,7 @@ let $textGroupCountry = document.createElement('div');
 $textGroupCountry.className = 'text-group position-group d-flex';
 
 let $titleCountry = document.createElement('h6');
-$titleCountry.innerHTML = 'Quê quán: ';
+$titleCountry.innerHTML = '</b>Quê quán: </b> ';
 
 let $textCountry = document.createElement('p');
 $textCountry.innerHTML = getChar.home;
@@ -58,7 +58,7 @@ let $textGroupGeneral = document.createElement('div');
 $textGroupGeneral.className = 'text-group position-group d-flex';
 
 let $titleGeneral = document.createElement('h6');
-$titleGeneral.innerHTML = 'Khái quát: ';
+$titleGeneral.innerHTML = '</b>Khái quát: </b> ';
 
 let $textGeneral = document.createElement('p');
 $textGeneral.innerHTML = getChar.general;
