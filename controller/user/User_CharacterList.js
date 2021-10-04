@@ -8,7 +8,7 @@ async function getListCharacter() {
         $li.className = 'character mr-3 mb-3';
 
         let $figure = document.createElement('figure');
-        $figure.className = 'snip1273';
+        $figure.className = 'snip1273 rounded';
 
         let $img = document.createElement('img');
         $img.src = data.picture;
